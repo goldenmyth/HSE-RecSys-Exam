@@ -1,0 +1,206 @@
+{
+  "candidate_count": 6649,
+  "checks": {
+    "no_test_viewing_used": true,
+    "old_submission_and_all_old_results_unchanged": true,
+    "unit_test_output": "test_batch_boundary_and_invalid_configuration (test_content_based.ContentBasedTests.test_batch_boundary_and_invalid_configuration) ... ok\ntest_binary_and_log_profiles_match_manual_cosines_and_unknown_users (test_content_based.ContentBasedTests.test_binary_and_log_profiles_match_manual_cosines_and_unknown_users) ... ok\ntest_calendar_train_filter_excludes_future_metadata_and_boundary_touch (test_content_based.ContentBasedTests.test_calendar_train_filter_excludes_future_metadata_and_boundary_touch) ... ok\ntest_extended_feature_set_and_missing_observed_metadata (test_content_based.ContentBasedTests.test_extended_feature_set_and_missing_observed_metadata) ... ok\ntest_metadata_union_handles_genre_order_names_and_initial_year (test_content_based.ContentBasedTests.test_metadata_union_handles_genre_order_names_and_initial_year) ... ok\ntest_tfidf_uses_train_item_documents_and_scores_unobserved_known_item (test_content_based.ContentBasedTests.test_tfidf_uses_train_item_documents_and_scores_unobserved_known_item) ... ok\ntest_duplicate_population_user_is_rejected (test_evaluation.MetricTests.test_duplicate_population_user_is_rejected) ... ok\ntest_duplicate_prediction_occupies_rank_without_extra_hit (test_evaluation.MetricTests.test_duplicate_prediction_occupies_rank_without_extra_hit) ... ok\ntest_duplicate_truth_does_not_inflate_denominator (test_evaluation.MetricTests.test_duplicate_truth_does_not_inflate_denominator) ... ok\ntest_empty_population_is_zero (test_evaluation.MetricTests.test_empty_population_is_zero) ... ok\ntest_empty_truth_or_predictions (test_evaluation.MetricTests.test_empty_truth_or_predictions) ... ok\ntest_explicit_population_includes_missing_truth_and_predictions (test_evaluation.MetricTests.test_explicit_population_includes_missing_truth_and_predictions) ... ok\ntest_iterable_inputs (test_evaluation.MetricTests.test_iterable_inputs) ... ok\ntest_nonpositive_k_raises_even_for_empty_inputs (test_evaluation.MetricTests.test_nonpositive_k_raises_even_for_empty_inputs) ... ok\ntest_one_relevant_item_at_third_rank (test_evaluation.MetricTests.test_one_relevant_item_at_third_rank) ... ok\ntest_only_first_k_ranks_are_evaluated (test_evaluation.MetricTests.test_only_first_k_ranks_are_evaluated) ... ok\ntest_perfect_lists_use_minimum_of_k_and_truth_size (test_evaluation.MetricTests.test_perfect_lists_use_minimum_of_k_and_truth_size) ... ok\ntest_two_hits_at_first_and_third_rank (test_evaluation.MetricTests.test_two_hits_at_first_and_third_rank) ... ok\ntest_unavailable_relevant_item_remains_in_denominator (test_evaluation.MetricTests.test_unavailable_relevant_item_remains_in_denominator) ... ok\ntest_fit_all_variants_and_preserve_long_user_ids (test_evaluation.PopularityTests.test_fit_all_variants_and_preserve_long_user_ids) ... ok\ntest_fit_rejects_repeated_pair_across_user_groups (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_across_user_groups) ... ok\ntest_fit_rejects_repeated_pair_within_user_group (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_within_user_group) ... ok\ntest_fit_rejects_validation_rows (test_evaluation.PopularityTests.test_fit_rejects_validation_rows) ... ok\ntest_nonpositive_candidate_id_is_rejected (test_evaluation.PopularityTests.test_nonpositive_candidate_id_is_rejected) ... ok\ntest_too_few_distinct_candidates_is_rejected (test_evaluation.PopularityTests.test_too_few_distinct_candidates_is_rejected) ... ok\ntest_top_five_uses_allowed_candidates_and_numeric_ties (test_evaluation.PopularityTests.test_top_five_uses_allowed_candidates_and_numeric_ties) ... ok\ntest_zero_score_fallback_still_has_five_distinct_candidates (test_evaluation.PopularityTests.test_zero_score_fallback_still_has_five_distinct_candidates) ... ok\ntest_accepted_split_parts_are_one_airing_in_final_window (test_final_submission.FinalTrainingWindowTests.test_accepted_split_parts_are_one_airing_in_final_window) ... ok\ntest_distinct_airings_cannot_combine_seconds_to_reach_threshold (test_final_submission.FinalTrainingWindowTests.test_distinct_airings_cannot_combine_seconds_to_reach_threshold) ... ok\ntest_final_end_clips_crossing_views_and_excludes_test_only_item (test_final_submission.FinalTrainingWindowTests.test_final_end_clips_crossing_views_and_excludes_test_only_item) ... ok\ntest_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds (test_final_submission.FinalTrainingWindowTests.test_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds) ... ok\ntest_short_parts_of_one_airing_qualify_only_in_full_window (test_final_submission.FinalTrainingWindowTests.test_short_parts_of_one_airing_qualify_only_in_full_window) ... ok\ntest_calendar_candidates_include_overnight_airing_from_previous_file (test_final_submission.SubmissionFileTests.test_calendar_candidates_include_overnight_airing_from_previous_file) ... ok\ntest_invalid_top_five_and_template_row_count_are_rejected (test_final_submission.SubmissionFileTests.test_invalid_top_five_and_template_row_count_are_rejected) ... ok\ntest_popularity_default_rejects_final_and_validation_cannot_be_fit (test_final_submission.SubmissionFileTests.test_popularity_default_rejects_final_and_validation_cannot_be_fit) ... ok\ntest_popularity_explicit_final_period_counts_unique_users (test_final_submission.SubmissionFileTests.test_popularity_explicit_final_period_counts_unique_users) ... ok\ntest_submission_cannot_overwrite_original_template (test_final_submission.SubmissionFileTests.test_submission_cannot_overwrite_original_template) ... ok\ntest_submission_preserves_long_user_ids_order_schema_and_rank (test_final_submission.SubmissionFileTests.test_submission_preserves_long_user_ids_order_schema_and_rank) ... ok\ntest_binary_confidence_preserves_sparse_unseen_and_input (test_matrix_factorization.MatrixFactorizationTests.test_binary_confidence_preserves_sparse_unseen_and_input) ... ok\ntest_invalid_stored_counts_are_rejected (test_matrix_factorization.MatrixFactorizationTests.test_invalid_stored_counts_are_rejected) ... ok\ntest_log_count_confidence_uses_log1p_only_for_observed_entries (test_matrix_factorization.MatrixFactorizationTests.test_log_count_confidence_uses_log1p_only_for_observed_entries) ... ok\ntest_manual_factor_products_and_unknown_nan (test_matrix_factorization.MatrixFactorizationTests.test_manual_factor_products_and_unknown_nan) ... ok\ntest_real_tiny_fit_has_user_item_orientation_and_cpu_settings (test_matrix_factorization.MatrixFactorizationTests.test_real_tiny_fit_has_user_item_orientation_and_cpu_settings) ... ok\ntest_two_seeded_fits_have_equal_scores_and_ranking (test_matrix_factorization.MatrixFactorizationTests.test_two_seeded_fits_have_equal_scores_and_ranking) ... ok\ntest_empty_personal_history_uses_same_fallback_once (test_personal_repeat_fusion.FusionTests.test_empty_personal_history_uses_same_fallback_once) ... ok\ntest_invalid_component_inputs_are_rejected (test_personal_repeat_fusion.FusionTests.test_invalid_component_inputs_are_rejected) ... ok\ntest_item_below_fifth_rank_can_win_rrf (test_personal_repeat_fusion.FusionTests.test_item_below_fifth_rank_can_win_rrf) ... ok\ntest_popularity_component_and_zero_weight_are_not_double_counted (test_personal_repeat_fusion.FusionTests.test_popularity_component_and_zero_weight_are_not_double_counted) ... ok\ntest_ranked_lists_filters_unknowns_without_fallback_padding (test_personal_repeat_fusion.FusionTests.test_ranked_lists_filters_unknowns_without_fallback_padding) ... ok\ntest_raw_score_scaling_cannot_change_rank_fusion (test_personal_repeat_fusion.FusionTests.test_raw_score_scaling_cannot_change_rank_fusion) ... ok\ntest_frequency_scores_keep_counts_and_numeric_ties (test_personal_repeat_fusion.PersonalRepeatTests.test_frequency_scores_keep_counts_and_numeric_ties) ... ok\ntest_future_last_watch_is_rejected_even_without_recency (test_personal_repeat_fusion.PersonalRepeatTests.test_future_last_watch_is_rejected_even_without_recency) ... ok\ntest_invalid_counts_patterns_and_half_life_are_rejected (test_personal_repeat_fusion.PersonalRepeatTests.test_invalid_counts_patterns_and_half_life_are_rejected) ... ok\ntest_recency_halves_score_after_one_half_life (test_personal_repeat_fusion.PersonalRepeatTests.test_recency_halves_score_after_one_half_life) ... ok\ntest_unknown_users_items_and_unseen_pairs_are_nan (test_personal_repeat_fusion.PersonalRepeatTests.test_unknown_users_items_and_unseen_pairs_are_nan) ... ok\ntest_isolates_return_mass_to_own_seed_and_unknowns_stay_nan (test_personalized_pagerank.PersonalizedPageRankTests.test_isolates_return_mass_to_own_seed_and_unknowns_stay_nan) ... ok\ntest_log_seed_and_batching_match_manual_solution (test_personalized_pagerank.PersonalizedPageRankTests.test_log_seed_and_batching_match_manual_solution) ... ok\ntest_nonconvergence_and_invalid_parameters_raise (test_personalized_pagerank.PersonalizedPageRankTests.test_nonconvergence_and_invalid_parameters_raise) ... ok\ntest_topk_has_no_loops_and_breaks_ties_by_numeric_item_id (test_personalized_pagerank.PersonalizedPageRankTests.test_topk_has_no_loops_and_breaks_ties_by_numeric_item_id) ... ok\ntest_two_node_closed_form_and_distinct_personalisation (test_personalized_pagerank.PersonalizedPageRankTests.test_two_node_closed_form_and_distinct_personalisation) ... ok\ntest_user_normalisation_downweights_long_histories (test_personalized_pagerank.PersonalizedPageRankTests.test_user_normalisation_downweights_long_histories) ... ok\ntest_ambiguous_seconds_do_not_help_reach_threshold (test_prepare_interactions.IntervalPreparationTests.test_ambiguous_seconds_do_not_help_reach_threshold) ... ok\ntest_back_to_back_airings_of_same_item_count_separately (test_prepare_interactions.IntervalPreparationTests.test_back_to_back_airings_of_same_item_count_separately) ... ok\ntest_clock_gap_timestamp_roundtrip_preserves_calendar_labels (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_timestamp_roundtrip_preserves_calendar_labels) ... ok\ntest_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap) ... ok\ntest_cross_period_seconds_cannot_combine_to_pass_threshold (test_prepare_interactions.IntervalPreparationTests.test_cross_period_seconds_cannot_combine_to_pass_threshold) ... ok\ntest_duplicate_and_nested_same_item_airings_do_not_repeat_seconds (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_nested_same_item_airings_do_not_repeat_seconds) ... ok\ntest_duplicate_and_overlapping_views_are_unioned_before_counting (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_overlapping_views_are_unioned_before_counting) ... ok\ntest_fragmented_view_reaches_threshold_within_one_airing (test_prepare_interactions.IntervalPreparationTests.test_fragmented_view_reaches_threshold_within_one_airing) ... ok\ntest_long_view_finds_every_intersection_across_gaps (test_prepare_interactions.IntervalPreparationTests.test_long_view_finds_every_intersection_across_gaps) ... ok\ntest_merge_unsorted_overlapping_and_touching_views (test_prepare_interactions.IntervalPreparationTests.test_merge_unsorted_overlapping_and_touching_views) ... ok\ntest_missing_calendar_hour_is_rejected (test_prepare_interactions.IntervalPreparationTests.test_missing_calendar_hour_is_rejected) ... ok\ntest_nested_conflicting_airings_are_ambiguous_only_in_overlap (test_prepare_interactions.IntervalPreparationTests.test_nested_conflicting_airings_are_ambiguous_only_in_overlap) ... ok\ntest_one_view_can_intersect_multiple_airings (test_prepare_interactions.IntervalPreparationTests.test_one_view_can_intersect_multiple_airings) ... ok\ntest_period_slices_clip_and_exclude_right_boundary (test_prepare_interactions.IntervalPreparationTests.test_period_slices_clip_and_exclude_right_boundary) ... ok\ntest_same_item_on_two_channels_does_not_double_count_time_or_airings (test_prepare_interactions.IntervalPreparationTests.test_same_item_on_two_channels_does_not_double_count_time_or_airings) ... ok\ntest_strict_merge_preserves_adjacent_airings (test_prepare_interactions.IntervalPreparationTests.test_strict_merge_preserves_adjacent_airings) ... ok\ntest_threshold_is_inclusive (test_prepare_interactions.IntervalPreparationTests.test_threshold_is_inclusive) ... ok\ntest_touching_intervals_have_no_overlap (test_prepare_interactions.IntervalPreparationTests.test_touching_intervals_have_no_overlap) ... ok\ntest_zero_and_labelled_overlap_is_not_silently_assigned (test_prepare_interactions.IntervalPreparationTests.test_zero_and_labelled_overlap_is_not_silently_assigned) ... ok\ntest_fusion_uses_ranks_not_raw_score_scale (test_ranking.RankingTests.test_fusion_uses_ranks_not_raw_score_scale) ... ok\ntest_invalid_fallback_rejected (test_ranking.RankingTests.test_invalid_fallback_rejected) ... ok\ntest_numeric_tie_and_fallback_without_repeats (test_ranking.RankingTests.test_numeric_tie_and_fallback_without_repeats) ... ok\ntest_seen_items_are_not_filtered (test_ranking.RankingTests.test_seen_items_are_not_filtered) ... ok\ntest_unknown_user_fusion_is_same_popularity (test_ranking.RankingTests.test_unknown_user_fusion_is_same_popularity) ... ok\ntest_50_percent_is_strict (test_session_interactions.SessionInteractionTests.test_50_percent_is_strict) ... ok\ntest_80_percent_is_strict_and_81_percent_qualifies (test_session_interactions.SessionInteractionTests.test_80_percent_is_strict_and_81_percent_qualifies) ... ok\ntest_adjacent_airings_of_same_item_remain_two_watches (test_session_interactions.SessionInteractionTests.test_adjacent_airings_of_same_item_remain_two_watches) ... ok\ntest_cross_channel_same_item_union_and_clock_gap_use_existing_coordinates (test_session_interactions.SessionInteractionTests.test_cross_channel_same_item_union_and_clock_gap_use_existing_coordinates) ... ok\ntest_duplicate_and_overlapping_qualifying_rows_count_airing_once (test_session_interactions.SessionInteractionTests.test_duplicate_and_overlapping_qualifying_rows_count_airing_once) ... ok\ntest_period_clipping_keeps_full_airing_denominator (test_session_interactions.SessionInteractionTests.test_period_clipping_keeps_full_airing_denominator) ... ok\ntest_schedule_ambiguity_is_not_bridged_and_zero_is_not_an_item (test_session_interactions.SessionInteractionTests.test_schedule_ambiguity_is_not_bridged_and_zero_is_not_an_item) ... ok\ntest_separate_and_touching_original_rows_are_not_accumulated (test_session_interactions.SessionInteractionTests.test_separate_and_touching_original_rows_are_not_accumulated) ... ok\ntest_short_programmes_can_qualify_below_60_seconds (test_session_interactions.SessionInteractionTests.test_short_programmes_can_qualify_below_60_seconds) ... ok\ntest_touching_positive_segments_same_airing_join_only_inside_one_row (test_session_interactions.SessionInteractionTests.test_touching_positive_segments_same_airing_join_only_inside_one_row) ... ok\ntest_trimmed_continuous_piece_can_still_qualify (test_session_interactions.SessionInteractionTests.test_trimmed_continuous_piece_can_still_qualify) ... ok\ntest_unknown_other_channel_splits_original_row_without_summing (test_session_interactions.SessionInteractionTests.test_unknown_other_channel_splits_original_row_without_summing) ... ok\ntest_invalid_programme_lists_leave_existing_output_unchanged (test_submission_v2.PersonalSubmissionTests.test_invalid_programme_lists_leave_existing_output_unchanged) ... ok\ntest_missing_extra_duplicate_users_schema_and_row_count_are_rejected (test_submission_v2.PersonalSubmissionTests.test_missing_extra_duplicate_users_schema_and_row_count_are_rejected) ... ok\ntest_original_template_cannot_be_overwritten (test_submission_v2.PersonalSubmissionTests.test_original_template_cannot_be_overwritten) ... ok\ntest_per_user_lists_preserve_twenty_digit_ids_leading_zeros_and_order (test_submission_v2.PersonalSubmissionTests.test_per_user_lists_preserve_twenty_digit_ids_leading_zeros_and_order) ... ok\n\n----------------------------------------------------------------------\nRan 101 tests in 0.066s\n\nOK",
+    "unit_tests_passed": true,
+    "whole_final_window_rebuilt_from_raw_sessions": true
+  },
+  "config": {
+    "normalisation": "user_cosine",
+    "restart": 0.3,
+    "weighting": "log_count"
+  },
+  "fallback": {
+    "method": "unique-user popularity, full 60-second final train",
+    "top5": [
+      2400480,
+      240081,
+      6500479,
+      2400508,
+      2400467
+    ],
+    "user_fraction": 0.0031746031746031746,
+    "users": 4
+  },
+  "kaggle_score_v2": null,
+  "kaggle_submitted": false,
+  "model_audit": {
+    "convergence": {
+      "all_seeded_rows_converged": true,
+      "batch_size": 32,
+      "continuation_probability": 0.7,
+      "dangling_items": 0,
+      "dangling_policy": "redistribute dangling mass to the same user's seed",
+      "elapsed_seconds": 2.571582040982321,
+      "iterations_per_batch": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        36,
+        37,
+        37,
+        36,
+        36,
+        36,
+        37,
+        36,
+        38,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        36,
+        36,
+        37,
+        37,
+        37,
+        36,
+        36,
+        37,
+        36,
+        36,
+        37,
+        37,
+        36,
+        37,
+        37,
+        37
+      ],
+      "known_candidate_columns": 2947,
+      "max_iter": 200,
+      "max_iterations_used": 38,
+      "max_l1_residual": 9.9100318086466e-09,
+      "max_probability_mass_error": 8.881784197001252e-15,
+      "query_rows": 1260,
+      "repeat_policy": "seed items remain eligible; no already-watched filter",
+      "restart_probability": 0.3,
+      "seed_normalisation": "own train binary/log1p counts divided by row sum",
+      "seeded_user_rows": 1256,
+      "tol_l1_per_user": 1e-08,
+      "unknown_candidate_columns": 3702,
+      "unknown_user_rows": 4,
+      "unseeded_known_user_rows": 0,
+      "weighting": "log_count"
+    },
+    "graph": {
+      "block_size": 64,
+      "dangling_items": 0,
+      "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+      "edge_tie_break": "similarity descending, numeric item ID ascending",
+      "edges": 200246,
+      "elapsed_seconds": 0.48429891699925065,
+      "full_dense_item_matrix_created": false,
+      "history_signal": "binary train interactions; raw counts do not weight graph edges",
+      "items": 4025,
+      "max_nonempty_row_sum_error": 5.551115123125783e-16,
+      "max_out_degree": 50,
+      "max_similarity_block_nnz": 192554,
+      "max_similarity_block_shape": [
+        64,
+        4025
+      ],
+      "neighbors": 50,
+      "normalisation": "user_cosine",
+      "train_user_item_pairs": 290867,
+      "user_normalisation": "divide each binary user row by sqrt(user degree)",
+      "users": 4866
+    },
+    "zero_mass_ranking_policy": "unreachable candidates omitted"
+  },
+  "model_timing": {
+    "score_seconds": 2.574170707957819,
+    "train_seconds": 0.48689491697587073
+  },
+  "protected_sha256": {
+    "data/processed/final_interactions.csv": "2b3115d8a904f1fc50d24094da958af297a07569208140f821db7cb92ebd2f69",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/final_submission.json": "9abce440e52334d82f235f7f3d9c5672edcd708e46d9c3c70a042d6e6ed83fb9",
+    "results/model_comparison.json": "26d5a8060d7efc62c60042de27b88358673529bf426679e1260e621022ecd07a",
+    "results/model_recommendations.csv": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "results/strict_experiments.json": "aa9c3a916b4380349282b8711be43e050586ffe4f3c8e9789731fd58e622db16",
+    "results/strict_recommendations.csv": "e5aa1c44da584369909d38536a304c7319b74276994559365bc7961dc3923c94",
+    "submission.csv": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854"
+  },
+  "runtime": {
+    "peak_rss_mib": 228.984375,
+    "wall_seconds": 11.14256370801013
+  },
+  "selected_strategy": "ppr_2",
+  "submission": {
+    "bytes": 75742,
+    "columns": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "five_distinct_positive_candidates_per_row": true,
+    "path": "submission_v2.csv",
+    "rows": 1260,
+    "sha256": "ce923f598ad82a7a3380fc0ae65d19e8e5cab6e4a052afd671b3183900396d9b",
+    "string_user_ids_preserved": true,
+    "users_and_order_match_template": true
+  },
+  "test_window": [
+    "2020-07-27 00:00:00",
+    "2020-10-19 00:00:00"
+  ],
+  "train_window": [
+    "2020-03-09 00:00:00",
+    "2020-07-27 00:00:00"
+  ],
+  "training_interactions": {
+    "bytes": 20106874,
+    "path": "data/processed/session_final_train_50.csv",
+    "programmes": 4025,
+    "sha256": "4a99f9845d5659244240be57219a06320e544ff5c58593bdc27d0fc6a69a5bdf",
+    "total_watch_seconds": 2089345170,
+    "user_programme_pairs": 290867,
+    "users": 4866,
+    "watch_count": 736490
+  },
+  "training_rule": {
+    "airing_deduplication": "one qualifying user/channel/airing irrespective of qualifying source-row count",
+    "channel_ambiguity": "remove simultaneous different-channel time; each remaining continuous piece is independent",
+    "comparison": "strictly greater, integer cross multiplication",
+    "denominator": "full canonical airing duration; period clipping never shortens denominator",
+    "id": "single-session-unambiguous-v1",
+    "schedule_policy": "existing half-open channel/time index, zero IDs and conflicting airings excluded",
+    "sitting": "one original log row after exact deduplication; no merging across original rows",
+    "source_status": "participant description, not confirmed Kaggle judge code; devices and actual switches unobservable",
+    "thresholds_percent": [
+      50,
+      80
+    ]
+  },
+  "training_source": "data/processed/session_final_train_50.csv",
+  "unique_recommended_programmes": 169,
+  "validation_evidence": {
+    "paired_improvement": {
+      "bootstrap_samples": 1000,
+      "convincing_for_v2": true,
+      "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+      "mean_map_delta": 0.08532936507936507,
+      "paired_bootstrap_95_interval": [
+        0.07406983575837743,
+        0.09597700617283951
+      ],
+      "seed": 42,
+      "users_improved": 685,
+      "users_worsened": 288,
+      "v2_criterion": "mean improvement >= 0.005 and paired-bootstrap lower bound > 0"
+    },
+    "strict_map_at_5": 0.5174276895943563
+  }
+}

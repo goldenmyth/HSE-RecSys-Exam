@@ -1,0 +1,99 @@
+{
+  "earlier_window_limitation": null,
+  "event_policy": "one >50% qualified user/channel/canonical-airing event; full airing bounds and first/last qualified watch endpoints",
+  "generated_outputs": [
+    "train_airings"
+  ],
+  "history_index": {
+    "ambiguous_seconds": 1800,
+    "ambiguous_segments": 1,
+    "ambiguous_with_zero_seconds": 1800,
+    "canonical_airings": 2148624,
+    "invalid_intervals": 1,
+    "labelled_seconds": 793067880,
+    "merged_overlapping_same_item_rows": 4,
+    "segments": 2148624,
+    "source_rows": 2148629,
+    "unlabelled_seconds": 4031954280
+  },
+  "implementation_sha256": {
+    "scripts/prepare_history_context.py": "910e7c16f0654374682e2bb485446c40ca47f4a7f8150dc306470d3a8820aab9",
+    "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+    "scripts/prepare_sessions.py": "fc8b7eb26323d13bd396e194a76ca8d274d346f0aa4ac83e83b75804bdc9faf7",
+    "src/session_interactions.py": "4091f4318c0ac7cfaf587761a4d13ea3f717a84ebbb09e21b8264c525159b6f1"
+  },
+  "mode": "final",
+  "outputs": {
+    "train_50": {
+      "bytes": 20106874,
+      "path": "data/processed/session_final_train_50.csv",
+      "programmes": 4025,
+      "sha256": "4a99f9845d5659244240be57219a06320e544ff5c58593bdc27d0fc6a69a5bdf",
+      "total_watch_seconds": 2089345170,
+      "user_programme_pairs": 290867,
+      "users": 4866,
+      "watch_count": 736490
+    },
+    "train_airings": {
+      "bytes": 91898908,
+      "path": "data/processed/history_final_airings.csv",
+      "rows": 736536,
+      "sha256": "ddd7b1bbcd95713f1f628fd0d38f3ba178c9fb4ea0c37de13f979d271016035a"
+    }
+  },
+  "periods": {
+    "final_train": [
+      "2020-03-09 00:00:00",
+      "2020-07-27 00:00:00"
+    ]
+  },
+  "runtime_seconds_shared_pass": 59.71602879196871,
+  "session_diagnostics": {
+    "final_train": {
+      "absent_channel_piece_seconds": 100899786,
+      "absent_channel_session_rows": 113578,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 5579024,
+      "cross_channel_ambiguous_user_channel_seconds": 1155124045,
+      "cross_channel_ambiguous_user_seconds": 524314274,
+      "cross_channel_mask_evaluated_users": 4914,
+      "deduplicated_session_rows": 5821970,
+      "deduplicated_session_seconds": 8619206214,
+      "exact_duplicate_session_rows": 17,
+      "fully_ambiguous_session_rows": 490597,
+      "matched_labelled_pieces": 3592945,
+      "outside_schedule_piece_seconds": 345021549,
+      "qualified_user_airings_50": 736536,
+      "qualifying_pieces_50": 742961,
+      "row_weighted_cross_channel_ambiguous_seconds": 1215065113,
+      "sessions_split_by_cross_channel_overlap": 117944,
+      "sessions_with_cross_channel_overlap": 793427,
+      "source_session_rows": 5821987,
+      "source_session_seconds": 8619215224,
+      "total_unique_seconds_50": 2089345170,
+      "unique_user_channel_covered_seconds": 8502989921,
+      "unlabelled_overlap_seconds": 3044313192,
+      "user_programme_pairs_50": 290867,
+      "watch_count_50": 736490
+    }
+  },
+  "source_signature": {
+    "data/dataset11-30.csv": {
+      "bytes": 396216555,
+      "mtime_ns": 1793528357893727343
+    },
+    "data/export_arh_11-20-final.csv": {
+      "bytes": 153322643,
+      "mtime_ns": 1793528357973890593
+    },
+    "data/export_arh_21-30-final.csv": {
+      "bytes": 154366907,
+      "mtime_ns": 1793528358056672306
+    },
+    "data/processed/session_final_train_50.csv": {
+      "bytes": 20106874,
+      "mtime_ns": 1793535701406007981
+    }
+  },
+  "source_view_rows": 5821987
+}

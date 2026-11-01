@@ -1,0 +1,51 @@
+user_id,selection,method,rank,tv_show_id,title,category,strict_validation_relevant
+11595812149006555679,train activity near p90,ppr_2,1,2400480,ТСН.,Инфо,True
+11595812149006555679,train activity near p90,ppr_2,2,240081,Факты.,Инфо,False
+11595812149006555679,train activity near p90,ppr_2,3,2400508,Сегодня.,Инфо,True
+11595812149006555679,train activity near p90,ppr_2,4,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,False
+11595812149006555679,train activity near p90,ppr_2,5,5800509,Реальная мистика.,Развлечения,False
+11595812149006555679,train activity near p90,repeat_1,1,2400480,ТСН.,Инфо,True
+11595812149006555679,train activity near p90,repeat_1,2,240081,Факты.,Инфо,False
+11595812149006555679,train activity near p90,repeat_1,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,False
+11595812149006555679,train activity near p90,repeat_1,4,2400508,Сегодня.,Инфо,True
+11595812149006555679,train activity near p90,repeat_1,5,5800509,Реальная мистика.,Развлечения,False
+11595812149006555679,train activity near p90,saved_als_2,1,90060765,Х/ф 'Такси'.,Фильмы,False
+11595812149006555679,train activity near p90,saved_als_2,2,10003014,"Т/с 'Отдел 44', 19 с.",Сериалы,False
+11595812149006555679,train activity near p90,saved_als_2,3,10003102,"Т/с 'Опер по вызову', 2 сезон, 12 с.",Сериалы,True
+11595812149006555679,train activity near p90,saved_als_2,4,200403,'Облом.UA'.,Развлечения,False
+11595812149006555679,train activity near p90,saved_als_2,5,2500415,'Месть природы'.,Инфо,False
+11595812149006555679,train activity near p90,saved_content_3,1,200477,'Завтрак. Выходной'.,Развлечения,False
+11595812149006555679,train activity near p90,saved_content_3,2,500346,'Право на власть'.,Развлечения,False
+11595812149006555679,train activity near p90,saved_content_3,3,500368,Ток-шоу '60 минут' с Ольгой Скабеевой и Евгением Поповым.,Развлечения,False
+11595812149006555679,train activity near p90,saved_content_3,4,200337,Утро с Интером.,Развлечения,False
+11595812149006555679,train activity near p90,saved_content_3,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,False
+11595812149006555679,train activity near p90,saved_popularity,1,2400480,ТСН.,Инфо,True
+11595812149006555679,train activity near p90,saved_popularity,2,240081,Факты.,Инфо,False
+11595812149006555679,train activity near p90,saved_popularity,3,2400508,Сегодня.,Инфо,True
+11595812149006555679,train activity near p90,saved_popularity,4,6500479,'Мир наизнанку'.,Познавательное,False
+11595812149006555679,train activity near p90,saved_popularity,5,2400467,'Викна-Новости'.,Инфо,True
+8150816946177670084,minimum positive train history,ppr_2,1,2400480,ТСН.,Инфо,False
+8150816946177670084,minimum positive train history,ppr_2,2,240081,Факты.,Инфо,True
+8150816946177670084,minimum positive train history,ppr_2,3,2400508,Сегодня.,Инфо,False
+8150816946177670084,minimum positive train history,ppr_2,4,6500479,'Мир наизнанку'.,Познавательное,False
+8150816946177670084,minimum positive train history,ppr_2,5,2400467,'Викна-Новости'.,Инфо,False
+8150816946177670084,minimum positive train history,repeat_1,1,2400480,ТСН.,Инфо,False
+8150816946177670084,minimum positive train history,repeat_1,2,240081,Факты.,Инфо,True
+8150816946177670084,minimum positive train history,repeat_1,3,2400508,Сегодня.,Инфо,False
+8150816946177670084,minimum positive train history,repeat_1,4,6500479,'Мир наизнанку'.,Познавательное,False
+8150816946177670084,minimum positive train history,repeat_1,5,2400467,'Викна-Новости'.,Инфо,False
+8150816946177670084,minimum positive train history,saved_als_2,1,90053098,Х/ф 'Мужество в бою'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_als_2,2,90051380,Х/ф 'Черный дождь'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_als_2,3,90075859,Х/ф 'Экипаж'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_als_2,4,90053352,"Х/ф 'В поисках Галактики', 1 ч.",Фильмы,False
+8150816946177670084,minimum positive train history,saved_als_2,5,90055201,"Х/ф 'Интимный словарь', 1 ч.",Фильмы,False
+8150816946177670084,minimum positive train history,saved_content_3,1,90053098,Х/ф 'Мужество в бою'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_content_3,2,90026021,Х/ф 'Осада'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_content_3,3,90041855,Х/ф 'Доблесть'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_content_3,4,90052034,Х/ф 'Большое дело'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_content_3,5,90042923,Х/ф 'Город ангелов'.,Фильмы,False
+8150816946177670084,minimum positive train history,saved_popularity,1,2400480,ТСН.,Инфо,False
+8150816946177670084,minimum positive train history,saved_popularity,2,240081,Факты.,Инфо,True
+8150816946177670084,minimum positive train history,saved_popularity,3,2400508,Сегодня.,Инфо,False
+8150816946177670084,minimum positive train history,saved_popularity,4,6500479,'Мир наизнанку'.,Познавательное,False
+8150816946177670084,minimum positive train history,saved_popularity,5,2400467,'Викна-Новости'.,Инфо,False

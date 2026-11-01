@@ -1,0 +1,65 @@
+{
+  "designated_final": "V4",
+  "historical_generation_flags_policy": "The original generation metadata still says kaggle_submitted=false because scripts generated files locally; user manual submissions are recorded separately here.",
+  "no_kaggle_request_performed_for_this_history": true,
+  "schema_version": 1,
+  "score_evidence": "user statements; this update did not independently verify scores via screenshots, API or UI; V4 screenshot is missing",
+  "versions": [
+    {
+      "designated_final": false,
+      "generation_artifact": "results/final_submission.json",
+      "generation_artifact_kaggle_submitted": false,
+      "independently_verified_via_kaggle": false,
+      "method": "Popularity",
+      "private": 0.27809,
+      "public": 0.28234,
+      "score_source": "user-reported after manual Kaggle submission; screenshot availability was not re-audited in this update",
+      "screenshot_provided": null,
+      "submission_path": "submission.csv",
+      "submission_sha256_from_generation_artifact": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854",
+      "version": "V1"
+    },
+    {
+      "designated_final": false,
+      "generation_artifact": "results/submission_v2.json",
+      "generation_artifact_kaggle_submitted": false,
+      "independently_verified_via_kaggle": false,
+      "method": "PPR",
+      "private": 0.38282,
+      "public": 0.40902,
+      "score_source": "user-reported after manual Kaggle submission; screenshot availability was not re-audited in this update",
+      "screenshot_provided": null,
+      "submission_path": "submission_v2.csv",
+      "submission_sha256_from_generation_artifact": "ce923f598ad82a7a3380fc0ae65d19e8e5cab6e4a052afd671b3183900396d9b",
+      "version": "V2"
+    },
+    {
+      "designated_final": false,
+      "generation_artifact": "results/submission_v3.json",
+      "generation_artifact_kaggle_submitted": false,
+      "independently_verified_via_kaggle": false,
+      "method": "PPR + schedule availability",
+      "private": 0.39105,
+      "public": null,
+      "score_source": "user-reported after manual Kaggle submission; screenshot availability was not re-audited in this update",
+      "screenshot_provided": null,
+      "submission_path": "submission_v3.csv",
+      "submission_sha256_from_generation_artifact": "cdfc66aa33544175f7a0712c9cc18a347a11a8b471421171e0b3046fad2d0377",
+      "version": "V3"
+    },
+    {
+      "designated_final": true,
+      "generation_artifact": "results/submission_v4_hgb.json",
+      "generation_artifact_kaggle_submitted": false,
+      "independently_verified_via_kaggle": false,
+      "method": "HGB D over PPR/V3/ALS/CBF/history/context",
+      "private": 0.42216,
+      "public": null,
+      "score_source": "user-reported after manual Kaggle submission; no screenshot supplied in the conversation",
+      "screenshot_provided": false,
+      "submission_path": "submission_v4.csv",
+      "submission_sha256_from_generation_artifact": "fba4b3459e194b8bacd1915e59ffacf145f4d368ac81b25ff60dac214e51e3c0",
+      "version": "V4"
+    }
+  ]
+}

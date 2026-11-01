@@ -1,0 +1,2119 @@
+{
+  "context_audit": {
+    "confirmed_airing_events": 400472,
+    "day_semantics": "watch_start calendar date, not normalised-second day number",
+    "distinct_user_item_days": 325808,
+    "elapsed_seconds": 3.3661899579456076,
+    "end_exclusive": "2020-05-18 00:00:00",
+    "hour_bin_hours": 3,
+    "period": "train",
+    "preference_unit": "one confirmed user/channel/canonical airing, no source-row repetition",
+    "recency_policy": "mean per-event exp2(-(cutoff-watch_end)/(30 days)); no count-wide last-time substitution",
+    "start_inclusive": "2020-03-09 00:00:00",
+    "user_item_pairs": 154718,
+    "users_with_events": 4781
+  },
+  "convincing_for_v3": true,
+  "decision_rule": {
+    "early_min_delta": 0.0025,
+    "early_selection": "one main winner frozen before early evaluation; no runner-up search on early",
+    "main_min_delta": 0.005,
+    "positive_bootstrap_lower_bound_in_both_windows": true,
+    "scope": "descriptive post-selection intervals; earlier window is temporal robustness, not untouched confirmation"
+  },
+  "early_check": {
+    "candidate_count": 4412,
+    "methods": {
+      "frozen_main_winner": {
+        "actual_training_unknown_users": null,
+        "fallback_users": 23,
+        "recipe": {
+          "neighbors": 50,
+          "post": "availability",
+          "restart": 0.3,
+          "seed": "log_count",
+          "strength": 0.25
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 13,
+                "users_without_validation_truth": 10
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6655597014925373,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.29631299332119004,
+                "users": 183,
+                "users_without_validation_truth": 33
+              },
+              "medium_51_200": {
+                "map_at_5": 0.53005256869773,
+                "users": 930,
+                "users_without_validation_truth": 8
+              }
+            },
+            "map_at_5": 0.5050469576719576
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 3,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6655597014925373,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.36150185185185185,
+                "users": 150,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.534651723306821,
+                "users": 922,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5263516680452164
+          }
+        },
+        "timing": {
+          "cached_components_reused": true,
+          "elapsed_seconds": 0.08844083303119987,
+          "graph_build_seconds": 0.04218041698914021,
+          "ppr_inference_seconds": 0.8814941250020638
+        },
+        "training_source": "data/processed/early_train_50.csv",
+        "unique_recommended_programmes": 271
+      },
+      "ppr_control": {
+        "actual_training_unknown_users": null,
+        "fallback_users": 23,
+        "recipe": {
+          "neighbors": 50,
+          "post": "none",
+          "restart": 0.3,
+          "seed": "log_count"
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 13,
+                "users_without_validation_truth": 10
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6620708955223881,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2970324833029751,
+                "users": 183,
+                "users_without_validation_truth": 33
+              },
+              "medium_51_200": {
+                "map_at_5": 0.5222502986857825,
+                "users": 930,
+                "users_without_validation_truth": 8
+              }
+            },
+            "map_at_5": 0.49902160493827163
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 3,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6620708955223881,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.3623796296296296,
+                "users": 150,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.5267817546396723,
+                "users": 922,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5200721441044022
+          }
+        },
+        "timing": {
+          "cached_components_reused": false,
+          "elapsed_seconds": 0.9663430419750512,
+          "graph_build_seconds": 0.04218041698914021,
+          "ppr_inference_seconds": 0.8814941250020638
+        },
+        "training_source": "data/processed/early_train_50.csv",
+        "unique_recommended_programmes": 291
+      }
+    },
+    "no_early_holdout_in_graph_seed_preferences_or_fallback": true,
+    "no_retuning_after_early": true,
+    "nonempty_gt_users": 1209,
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-04-13 00:00:00"
+    ],
+    "users": 1260,
+    "validation": [
+      "2020-04-13 00:00:00",
+      "2020-05-18 00:00:00"
+    ],
+    "versus_control": {
+      "bootstrap_samples": 1000,
+      "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+      "mean_map_delta": 0.006025352733686067,
+      "paired_bootstrap_95_interval": [
+        0.003218904320987654,
+        0.008918176807760138
+      ],
+      "relevant_recommendations_added": 95,
+      "relevant_recommendations_removed": 65,
+      "seed": 42,
+      "users_improved": 150,
+      "users_worsened": 89
+    }
+  },
+  "external_methodology": "No new external methodology or code; extends existing PPR and rank fusion implementations.",
+  "feature_preparation": {
+    "early": {
+      "earlier_window_limitation": "earlier temporal robustness check, not an untouched confirmatory test",
+      "event_policy": "one >50% qualified user/channel/canonical-airing event; full airing bounds and first/last qualified watch endpoints",
+      "generated_outputs": [
+        "train_airings",
+        "train_50",
+        "train_60",
+        "validation_80"
+      ],
+      "history_index": {
+        "ambiguous_seconds": 1800,
+        "ambiguous_segments": 1,
+        "ambiguous_with_zero_seconds": 1800,
+        "canonical_airings": 2148624,
+        "invalid_intervals": 1,
+        "labelled_seconds": 793067880,
+        "merged_overlapping_same_item_rows": 4,
+        "segments": 2148624,
+        "source_rows": 2148629,
+        "unlabelled_seconds": 4031954280
+      },
+      "implementation_sha256": {
+        "scripts/prepare_history_context.py": "910e7c16f0654374682e2bb485446c40ca47f4a7f8150dc306470d3a8820aab9",
+        "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+        "scripts/prepare_sessions.py": "fc8b7eb26323d13bd396e194a76ca8d274d346f0aa4ac83e83b75804bdc9faf7",
+        "src/session_interactions.py": "4091f4318c0ac7cfaf587761a4d13ea3f717a84ebbb09e21b8264c525159b6f1"
+      },
+      "mode": "early",
+      "outputs": {
+        "train_50": {
+          "bytes": 5091747,
+          "path": "data/processed/early_train_50.csv",
+          "sha256": "d69e71e264b624ae61d9d5cdaed196c45024e59dcba319c03cb127c7103389b3",
+          "total_watch_seconds": 452756179,
+          "user_programme_pairs": 81177,
+          "watch_count": 200925
+        },
+        "train_60": {
+          "bytes": 27365419,
+          "path": "data/processed/early_train_60.csv",
+          "sha256": "fca702bc6edfe202cdf048924a5574b91a6daa167c05fb87992268a0c44f104f",
+          "total_watch_seconds": 1142325596,
+          "user_programme_pairs": 438615,
+          "watch_count": 896755
+        },
+        "train_airings": {
+          "bytes": 23779543,
+          "path": "data/processed/history_early_airings.csv",
+          "rows": 200934,
+          "sha256": "de7f5677b8505c4e253e4877116154ccd38d5e146c91ea6c1b53fc8f77220718"
+        },
+        "validation_80": {
+          "bytes": 3715114,
+          "path": "data/processed/early_validation_80.csv",
+          "sha256": "574a780bf4be03f9f0c7ad7d5fd2112cd8a5c4990e7185e63bfa9700979108d0",
+          "total_watch_seconds": 304839173,
+          "user_programme_pairs": 54778,
+          "watch_count": 118943
+        }
+      },
+      "periods": {
+        "train": [
+          "2020-03-09 00:00:00",
+          "2020-04-13 00:00:00"
+        ],
+        "validation": [
+          "2020-04-13 00:00:00",
+          "2020-05-18 00:00:00"
+        ]
+      },
+      "runtime_seconds_shared_pass": 73.44682508404367,
+      "session_diagnostics": {
+        "train": {
+          "absent_channel_piece_seconds": 32968617,
+          "absent_channel_session_rows": 42784,
+          "ambiguous_schedule_overlap_seconds": 0,
+          "continuous_pieces": 2061512,
+          "cross_channel_ambiguous_user_channel_seconds": 292523316,
+          "cross_channel_ambiguous_user_seconds": 127211883,
+          "cross_channel_mask_evaluated_users": 4841,
+          "deduplicated_session_rows": 2166635,
+          "deduplicated_session_seconds": 2519451392,
+          "exact_duplicate_session_rows": 8,
+          "fully_ambiguous_session_rows": 198911,
+          "matched_labelled_pieces": 1141975,
+          "outside_schedule_piece_seconds": 243315045,
+          "qualified_user_airings_50": 200934,
+          "qualified_user_airings_80": 115409,
+          "qualifying_pieces_50": 202567,
+          "qualifying_pieces_80": 116137,
+          "row_weighted_cross_channel_ambiguous_seconds": 319321436,
+          "sessions_split_by_cross_channel_overlap": 47426,
+          "sessions_with_cross_channel_overlap": 310325,
+          "source_session_rows": 2166643,
+          "source_session_seconds": 2519458773,
+          "total_unique_seconds_50": 452756179,
+          "total_unique_seconds_80": 237322075,
+          "unique_user_channel_covered_seconds": 2477211039,
+          "unlabelled_overlap_seconds": 906549708,
+          "user_programme_pairs_50": 81177,
+          "user_programme_pairs_80": 44500,
+          "watch_count_50": 200925,
+          "watch_count_80": 115409
+        },
+        "validation": {
+          "absent_channel_piece_seconds": 24775534,
+          "absent_channel_session_rows": 31396,
+          "ambiguous_schedule_overlap_seconds": 0,
+          "continuous_pieces": 1702119,
+          "cross_channel_ambiguous_user_channel_seconds": 331876049,
+          "cross_channel_ambiguous_user_seconds": 149294579,
+          "cross_channel_mask_evaluated_users": 4803,
+          "deduplicated_session_rows": 1779222,
+          "deduplicated_session_seconds": 2405244669,
+          "exact_duplicate_session_rows": 3,
+          "fully_ambiguous_session_rows": 152726,
+          "matched_labelled_pieces": 1083557,
+          "outside_schedule_piece_seconds": 93311419,
+          "qualified_user_airings_50": 199470,
+          "qualified_user_airings_80": 118944,
+          "qualifying_pieces_50": 201342,
+          "qualifying_pieces_80": 119948,
+          "row_weighted_cross_channel_ambiguous_seconds": 350189972,
+          "sessions_split_by_cross_channel_overlap": 36966,
+          "sessions_with_cross_channel_overlap": 247443,
+          "source_session_rows": 1779225,
+          "source_session_seconds": 2405245060,
+          "total_unique_seconds_50": 534132721,
+          "total_unique_seconds_80": 304839173,
+          "unique_user_channel_covered_seconds": 2370531385,
+          "unlabelled_overlap_seconds": 848082407,
+          "user_programme_pairs_50": 97630,
+          "user_programme_pairs_80": 54778,
+          "watch_count_50": 199453,
+          "watch_count_80": 118943
+        }
+      },
+      "source_signature": {
+        "data/dataset11-30.csv": {
+          "bytes": 396216555,
+          "mtime_ns": 1793528357893727343
+        },
+        "data/export_arh_11-20-final.csv": {
+          "bytes": 153322643,
+          "mtime_ns": 1793528357973890593
+        },
+        "data/export_arh_21-30-final.csv": {
+          "bytes": 154366907,
+          "mtime_ns": 1793528358056672306
+        }
+      },
+      "source_view_rows": 5821987
+    },
+    "main": {
+      "earlier_window_limitation": null,
+      "event_policy": "one >50% qualified user/channel/canonical-airing event; full airing bounds and first/last qualified watch endpoints",
+      "generated_outputs": [
+        "train_airings"
+      ],
+      "history_index": {
+        "ambiguous_seconds": 1800,
+        "ambiguous_segments": 1,
+        "ambiguous_with_zero_seconds": 1800,
+        "canonical_airings": 2148624,
+        "invalid_intervals": 1,
+        "labelled_seconds": 793067880,
+        "merged_overlapping_same_item_rows": 4,
+        "segments": 2148624,
+        "source_rows": 2148629,
+        "unlabelled_seconds": 4031954280
+      },
+      "implementation_sha256": {
+        "scripts/prepare_history_context.py": "910e7c16f0654374682e2bb485446c40ca47f4a7f8150dc306470d3a8820aab9",
+        "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+        "scripts/prepare_sessions.py": "fc8b7eb26323d13bd396e194a76ca8d274d346f0aa4ac83e83b75804bdc9faf7",
+        "src/session_interactions.py": "4091f4318c0ac7cfaf587761a4d13ea3f717a84ebbb09e21b8264c525159b6f1"
+      },
+      "mode": "main",
+      "outputs": {
+        "train_50": {
+          "bytes": 9740727,
+          "path": "data/processed/session_train_50.csv",
+          "programmes": 2649,
+          "sha256": "99183b7b8062e9d4439430efe43d299054bbcb96a0b46cf1258d62dc72cb1754",
+          "total_watch_seconds": 987287503,
+          "user_programme_pairs": 154718,
+          "users": 4781,
+          "watch_count": 400446
+        },
+        "train_60": {
+          "aggregate_totals_reconciled": true,
+          "bytes": 52688236,
+          "known_string_user_ids": true,
+          "last_watch_within_period": true,
+          "path": "data/processed/train_interactions.csv",
+          "positive_candidate_ids_only": true,
+          "positive_counts_and_seconds": true,
+          "rows": 842247,
+          "sha256": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+          "total_watch_seconds": 2398763386,
+          "unique_user_programme_pairs": true,
+          "user_programme_pairs": 842247,
+          "watch_count": 1772219
+        },
+        "train_airings": {
+          "bytes": 47479559,
+          "path": "data/processed/history_main_airings.csv",
+          "rows": 400472,
+          "sha256": "108ed174d7dcf6268831c6e963a6c34250ec7e208435d838af221b4a580adf41"
+        },
+        "validation_80": {
+          "bytes": 7410246,
+          "path": "data/processed/session_validation_80.csv",
+          "programmes": 2769,
+          "sha256": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e",
+          "total_watch_seconds": 750268148,
+          "user_programme_pairs": 108877,
+          "users": 4620,
+          "watch_count": 226386
+        }
+      },
+      "periods": {
+        "train": [
+          "2020-03-09 00:00:00",
+          "2020-05-18 00:00:00"
+        ],
+        "validation": [
+          "2020-05-18 00:00:00",
+          "2020-07-27 00:00:00"
+        ]
+      },
+      "runtime_seconds_shared_pass": 73.41576204204466,
+      "session_diagnostics": {
+        "train": {
+          "absent_channel_piece_seconds": 57744151,
+          "absent_channel_session_rows": 74160,
+          "ambiguous_schedule_overlap_seconds": 0,
+          "continuous_pieces": 3762992,
+          "cross_channel_ambiguous_user_channel_seconds": 624399365,
+          "cross_channel_ambiguous_user_seconds": 276506462,
+          "cross_channel_mask_evaluated_users": 4876,
+          "deduplicated_session_rows": 3945162,
+          "deduplicated_session_seconds": 4924696061,
+          "exact_duplicate_session_rows": 11,
+          "fully_ambiguous_session_rows": 351593,
+          "matched_labelled_pieces": 2225174,
+          "outside_schedule_piece_seconds": 336626464,
+          "qualified_user_airings_50": 400472,
+          "qualified_user_airings_80": 234385,
+          "qualifying_pieces_50": 403977,
+          "qualifying_pieces_80": 236117,
+          "row_weighted_cross_channel_ambiguous_seconds": 669511408,
+          "sessions_split_by_cross_channel_overlap": 84395,
+          "sessions_with_cross_channel_overlap": 557710,
+          "source_session_rows": 3945173,
+          "source_session_seconds": 4924703833,
+          "total_unique_seconds_50": 987287503,
+          "total_unique_seconds_80": 542358084,
+          "unique_user_channel_covered_seconds": 4847742424,
+          "unlabelled_overlap_seconds": 1754632115,
+          "user_programme_pairs_50": 154718,
+          "user_programme_pairs_80": 84473,
+          "watch_count_50": 400446,
+          "watch_count_80": 234384
+        }
+      },
+      "source_signature": {
+        "data/dataset11-30.csv": {
+          "bytes": 396216555,
+          "mtime_ns": 1793528357893727343
+        },
+        "data/export_arh_11-20-final.csv": {
+          "bytes": 153322643,
+          "mtime_ns": 1793528357973890593
+        },
+        "data/export_arh_21-30-final.csv": {
+          "bytes": 154366907,
+          "mtime_ns": 1793528358056672306
+        },
+        "data/processed/session_train_50.csv": {
+          "bytes": 9740727,
+          "mtime_ns": 1793535330429613815
+        },
+        "data/processed/session_validation_80.csv": {
+          "bytes": 7410246,
+          "mtime_ns": 1793535330429819101
+        },
+        "data/processed/train_interactions.csv": {
+          "bytes": 52688236,
+          "mtime_ns": 1793530182239073809
+        }
+      },
+      "source_view_rows": 5821987
+    }
+  },
+  "implementation_signature": {
+    "scripts/refine_ppr.py": "19feeecd6b87d85ababe326d7055807563d74de5b1c407940ba9eb5b6f26bc07",
+    "src/history_reranking.py": "f6377fd254aef6419d32ecf2b07e7e0867deb960ffdd54b45af263324d1437cb",
+    "src/personalized_pagerank.py": "bf6929e3572f514b7c47603bc38ab645c6d015edc34ef4d58b0aab6389fd0276"
+  },
+  "limitations": [
+    "Repeated selection on one holdout; bootstrap intervals are descriptive, not selection-adjusted.",
+    "Early data already occur in main training; temporal robustness is not an untouched independent test.",
+    "Calendar channel/time preferences are proxies; absolute timezone and actual devices remain unknown."
+  ],
+  "methods": {
+    "ppr_control": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "none",
+        "restart": 0.3,
+        "seed": "log_count"
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6045730208881868,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.2369854280510018,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.45521532773780976,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5174276895943563
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6074519400352734,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.29502267573696145,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4627051594556165,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5283297316765712
+        }
+      },
+      "timing": {
+        "cached_components_reused": false,
+        "elapsed_seconds": 1.9991483750054613,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 246,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": 0.0,
+        "paired_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "relevant_recommendations_added": 0,
+        "relevant_recommendations_removed": 0,
+        "seed": 42,
+        "users_improved": 0,
+        "users_worsened": 0
+      }
+    },
+    "repeat_boost_20": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "repeat_boost",
+        "restart": 0.3,
+        "seed": "log_count",
+        "strength": 0.2
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6037199403194664,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.23534608378870675,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4557998601119105,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5171776895943563
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6065947971781305,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.29298185941043087,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4632993093642088,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5280744642535566
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 0.1779130829963833,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 254,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.0002500000000000003,
+        "paired_bootstrap_95_interval": [
+          -0.0025379960317460314,
+          0.002325661375661375
+        ],
+        "relevant_recommendations_added": 85,
+        "relevant_recommendations_removed": 80,
+        "seed": 42,
+        "users_improved": 98,
+        "users_worsened": 110
+      }
+    },
+    "restart_45": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.55,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.1813087089685723,
+          "iterations_per_batch": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            23,
+            24,
+            24,
+            23,
+            24,
+            24,
+            24
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 24,
+          "max_l1_residual": 9.922721017508008e-09,
+          "max_probability_mass_error": 6.8833827526759706e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.45,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "none",
+        "restart": 0.45,
+        "seed": "log_count"
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6046770229945586,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.22598360655737706,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4532204236610711,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5160670194003527
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6075564373897707,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2813265306122449,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4606774324598822,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.526940392580587
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 1.276782999979332,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.1838079580338672
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 279,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.0013606701940035279,
+        "paired_bootstrap_95_interval": [
+          -0.005758151455026454,
+          0.0034440310846560835
+        ],
+        "relevant_recommendations_added": 246,
+        "relevant_recommendations_removed": 236,
+        "seed": 42,
+        "users_improved": 195,
+        "users_worsened": 234
+      }
+    },
+    "rrf_ppr80_repeat20": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "rrf",
+        "repeat_weight": 0.2,
+        "restart": 0.3,
+        "seed": "log_count"
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6063160435316833,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.2369854280510018,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4554401478816947,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.518402557319224
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6092032627865961,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.29502267573696145,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4629336786512289,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5293251395641995
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 0.1567434169119224,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 249,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": 0.0009748677248677243,
+        "paired_bootstrap_95_interval": [
+          -0.0010503968253968256,
+          0.0029224537037037023
+        ],
+        "relevant_recommendations_added": 73,
+        "relevant_recommendations_removed": 61,
+        "seed": 42,
+        "users_improved": 59,
+        "users_worsened": 67
+      }
+    },
+    "schedule_availability_25": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "availability",
+        "restart": 0.3,
+        "seed": "log_count",
+        "strength": 0.25
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6147059856064595,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.23904371584699455,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4598236410871303,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.524651455026455
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6176331569664902,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2975850340136055,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4673892951452367,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.535705699621826
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 0.1555642921011895,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 228,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": 0.007223765432098765,
+        "paired_bootstrap_95_interval": [
+          0.004497200176366843,
+          0.01013794642857143
+        ],
+        "relevant_recommendations_added": 119,
+        "relevant_recommendations_removed": 71,
+        "seed": 42,
+        "users_improved": 175,
+        "users_worsened": 101
+      }
+    },
+    "schedule_channel_25": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "channel",
+        "restart": 0.3,
+        "seed": "log_count",
+        "strength": 0.25
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5960417763735298,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.2177777777777778,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4499985011990407,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5099098324514991
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5988800705467372,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.27111111111111114,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4574024984765387,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5206534755987754
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 3.0097747499821708,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 253,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.007517857142857143,
+        "paired_bootstrap_95_interval": [
+          -0.01214128086419753,
+          -0.0032899360670194024
+        ],
+        "relevant_recommendations_added": 204,
+        "relevant_recommendations_removed": 235,
+        "seed": 42,
+        "users_improved": 211,
+        "users_worsened": 293
+      }
+    },
+    "schedule_slot_25": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7548729159170762,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "slot",
+        "restart": 0.3,
+        "seed": "log_count",
+        "strength": 0.25
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5976320870633667,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.22204918032786886,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4528602118305356,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5121783509700176
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6004779541446209,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2764285714285714,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.46031129392646764,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5229697911039078
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 4.94231266702991,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7572221669834107
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 245,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.005249338624338624,
+        "paired_bootstrap_95_interval": [
+          -0.008331586199294532,
+          -0.0023820160934744277
+        ],
+        "relevant_recommendations_added": 69,
+        "relevant_recommendations_removed": 88,
+        "seed": 42,
+        "users_improved": 88,
+        "users_worsened": 140
+      }
+    },
+    "seed_recency_30": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.766748792026192,
+          "iterations_per_batch": [
+            36,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            37,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            37,
+            37,
+            36,
+            37,
+            36,
+            37,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.966498621062058e-09,
+          "max_probability_mass_error": 6.994405055138486e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "supplied nonnegative own train-item weights divided by row sum; no binary/log transform",
+          "seed_source": "external_restart_weights",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "half_life_days": 30,
+        "neighbors": 50,
+        "post": "none",
+        "restart": 0.3,
+        "seed": "recency"
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6000105318588731,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.21846994535519124,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4442555955235812,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5094029982363315
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6028677248677249,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.27197278911564626,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4515651025797278,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5201359625427696
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 1.8635183750884607,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7691499589709565
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 360,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.00802469135802469,
+        "paired_bootstrap_95_interval": [
+          -0.014394819223985892,
+          -0.001463982583774249
+        ],
+        "relevant_recommendations_added": 360,
+        "relevant_recommendations_removed": 379,
+        "seed": 42,
+        "users_improved": 303,
+        "users_worsened": 386
+      }
+    },
+    "seed_regularity": {
+      "actual_training_unknown_users": null,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.76782299997285,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 6.8833827526759706e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "supplied nonnegative own train-item weights divided by row sum; no binary/log transform",
+          "seed_source": "external_restart_weights",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.14733299997169524,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        }
+      },
+      "fallback_users": 15,
+      "recipe": {
+        "neighbors": 50,
+        "post": "none",
+        "restart": 0.3,
+        "seed": "regularity"
+      },
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6013529050377392,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.23091985428051,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4550939248601119,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5154627425044092
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6042164902998236,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.28747165532879815,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4625817590899858,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.526323383756528
+        }
+      },
+      "timing": {
+        "cached_components_reused": true,
+        "elapsed_seconds": 1.8660662500187755,
+        "graph_build_seconds": 0.14733299997169524,
+        "ppr_inference_seconds": 1.7701515840599313
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 243,
+      "versus_control": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": -0.0019649470899470896,
+        "paired_bootstrap_95_interval": [
+          -0.004461226851851852,
+          0.0006933201058201061
+        ],
+        "relevant_recommendations_added": 70,
+        "relevant_recommendations_removed": 83,
+        "seed": 42,
+        "users_improved": 92,
+        "users_worsened": 115
+      }
+    }
+  },
+  "protocol": "unchanged strict >80% GT, 1260 users, 6384 candidates; empty AP=0; numeric tie-break",
+  "reported_kaggle_v2": {
+    "private": 0.38282,
+    "public": 0.40902,
+    "source": "user-reported; not used in selection"
+  },
+  "runtime": {
+    "peak_rss_mib": 841.3125,
+    "wall_seconds": 37.82286795892287
+  },
+  "schedule_audit": {
+    "calendar_slot": "weekday and three-hour bin of max(airing_start, forecast_start), in original calendar labels",
+    "candidate_count": 6384,
+    "candidate_pool_unchanged": true,
+    "candidates_with_exposure": 6384,
+    "canonical_forecast_airings": 121587,
+    "elapsed_seconds": 6.216174166998826,
+    "end_exclusive": "2020-07-27 00:00:00",
+    "exposure_unit": "one fully unambiguous canonical channel/airing intersecting forecast window",
+    "forecast_source_rows_including_zero": 1074644,
+    "preference_normalisation": "train event count / user's maximum event count; mean over canonical forecast airings",
+    "source_attributes_used": [
+      "tv_show_id",
+      "channel_id",
+      "start_time",
+      "duration"
+    ],
+    "source_schedule_rows": 2148629,
+    "start_inclusive": "2020-05-18 00:00:00"
+  },
+  "schedule_preparation_seconds": 6.216243832954206,
+  "selected": "schedule_availability_25",
+  "train": [
+    "2020-03-09 00:00:00",
+    "2020-05-18 00:00:00"
+  ],
+  "validation": [
+    "2020-05-18 00:00:00",
+    "2020-07-27 00:00:00"
+  ]
+}

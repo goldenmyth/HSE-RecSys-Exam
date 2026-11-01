@@ -1,0 +1,2418 @@
+{
+  "catalog_and_history": {
+    "calendar_candidates": {
+      "test": 6649,
+      "train": 5842,
+      "validation": 6384
+    },
+    "cbf_known_validation_candidates": 3993,
+    "cbf_train_metadata_items": 5842,
+    "final_train_50": {
+      "bytes": 20106874,
+      "path": "data/processed/session_final_train_50.csv",
+      "programmes": 4025,
+      "sha256": "4a99f9845d5659244240be57219a06320e544ff5c58593bdc27d0fc6a69a5bdf",
+      "total_watch_seconds": 2089345170,
+      "user_programme_pairs": 290867,
+      "users": 4866,
+      "watch_count": 736490
+    },
+    "frozen60_cold_primary_users": 10,
+    "ppr_als_known_validation_candidates": 1977,
+    "schedule_file_nonzero_ids": {
+      "export_arh_11-20-final.csv": 5847,
+      "export_arh_21-30-final.csv": 6363,
+      "export_arh_31-42-final.csv": 6636
+    },
+    "strict50_unknown_primary_users": 15,
+    "train_50": {
+      "bytes": 9740727,
+      "path": "data/processed/session_train_50.csv",
+      "programmes": 2649,
+      "sha256": "99183b7b8062e9d4439430efe43d299054bbcb96a0b46cf1258d62dc72cb1754",
+      "total_watch_seconds": 987287503,
+      "user_programme_pairs": 154718,
+      "users": 4781,
+      "watch_count": 400446
+    },
+    "train_80": {
+      "bytes": 5308877,
+      "path": "data/processed/session_train_80.csv",
+      "programmes": 2354,
+      "sha256": "e7e4f5eec9bc9bd7030a22e226e8548da324d74263e19b0594eb106962442301",
+      "total_watch_seconds": 542358084,
+      "user_programme_pairs": 84473,
+      "users": 4725,
+      "watch_count": 234384
+    },
+    "v3_final": {
+      "candidate_count": 6649,
+      "fallback_users": 4,
+      "history_items": 4025,
+      "history_pairs": 290867,
+      "history_users": 4866,
+      "recipe": {
+        "neighbors": 50,
+        "post": "availability",
+        "restart": 0.3,
+        "seed": "log_count",
+        "strength": 0.25
+      },
+      "submission": {
+        "bytes": 75824,
+        "columns": [
+          "user_id",
+          "tv_show_id"
+        ],
+        "five_distinct_positive_candidates_per_row": true,
+        "path": "submission_v3.csv",
+        "rows": 1260,
+        "sha256": "cdfc66aa33544175f7a0712c9cc18a347a11a8b471421171e0b3046fad2d0377",
+        "string_user_ids_preserved": true,
+        "users_and_order_match_template": true
+      },
+      "unique_items": 157
+    },
+    "validation_80_all_users": {
+      "bytes": 7410246,
+      "path": "data/processed/session_validation_80.csv",
+      "programmes": 2769,
+      "sha256": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e",
+      "total_watch_seconds": 750268148,
+      "user_programme_pairs": 108877,
+      "users": 4620,
+      "watch_count": 226386
+    }
+  },
+  "checks": {
+    "all_example_metadata_found": true,
+    "all_source_hashes_unchanged": true,
+    "example_ap_exact_fractions": true,
+    "hgb_examples_are_saved_main_validation_predictions": true,
+    "hgb_metadata_reuses_previously_checked_validation_display_modes": true,
+    "no_kaggle_request": true,
+    "no_models_run": true,
+    "original_60_rows_preserved_byte_for_byte": true,
+    "report_csv_rows": 70,
+    "seven_methods_each_top5": true,
+    "legacy_six_methods_rows_preserved": true,
+    "two_fixed_users": true
+  },
+  "designated_final": {
+    "artifact_method": "D",
+    "generation_artifact_kaggle_submitted": false,
+    "independently_verified_via_kaggle": false,
+    "method": "HGB",
+    "path": "submission_v4.csv",
+    "private_score_user_reported": 0.42216,
+    "public_score": null,
+    "screenshot_provided": false,
+    "version": "V4"
+  },
+  "environment_current": {
+    "dependencies": {
+      "implicit": "0.7.3",
+      "joblib": "1.6.0",
+      "kagglehub": "1.0.3",
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "threadpoolctl": "3.7.0"
+    },
+    "python": "3.12.14"
+  },
+  "examples": [
+    {
+      "all_personalised_methods_are_fallback_in_this_example": false,
+      "hgb_ap_delta_vs_v3": 0.0,
+      "methods": {
+        "ALS": {
+          "ap_at_5": 0.1,
+          "ap_fraction": "1/10",
+          "artifact_method": "als50_2",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Сериалы",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "Т/с 'Отдел 44', 19 с.",
+              "tv_show_id": 10003014
+            },
+            {
+              "category": "Сериалы",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Т/с 'Опер по вызову', 2 сезон, 12 с.",
+              "tv_show_id": 10003102
+            },
+            {
+              "category": "Сериалы",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Т/с 'Агенты справедливости', 3 сезон.",
+              "tv_show_id": 10003178
+            },
+            {
+              "category": "Развлечения",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "Дизель-шоу. Дайджест.",
+              "tv_show_id": 200432
+            },
+            {
+              "category": "Сериалы",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "Т/с 'CSI: Место преступления', 11 сезон, 1 с.",
+              "tv_show_id": 1000381
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "CBF": {
+          "ap_at_5": 0.2,
+          "ap_fraction": "1/5",
+          "artifact_method": "content50",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Утро с Украиной.",
+              "tv_show_id": 5900256
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "'Центральное телевидение' с Вадимом Такменевым.",
+              "tv_show_id": 5900276
+            },
+            {
+              "category": "Инфо",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Утро России'.",
+              "tv_show_id": 5900275
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "Премьера. 'С бодрым утром!'.",
+              "tv_show_id": 5900484
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "HGB": {
+          "ap_at_5": 0.3333333333333333,
+          "ap_fraction": "1/3",
+          "artifact_method": "D",
+          "hits_at_5": 2,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 1,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "Утро с Украиной.",
+              "tv_show_id": 5900256
+            },
+            {
+              "category": "Развлечения",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+              "tv_show_id": 20088
+            }
+          ],
+          "training_source": "data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18)"
+        },
+        "PPR": {
+          "ap_at_5": 0.3333333333333333,
+          "ap_fraction": "1/3",
+          "artifact_method": "ppr_2",
+          "hits_at_5": 2,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Развлечения",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+              "tv_show_id": 20088
+            },
+            {
+              "category": "Развлечения",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "Реальная мистика.",
+              "tv_show_id": 5800509
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "Popularity": {
+          "ap_at_5": 0.4533333333333333,
+          "ap_fraction": "34/75",
+          "artifact_method": "saved_popularity",
+          "hits_at_5": 3,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 1,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/train_interactions.csv (60 seconds)"
+        },
+        "Repeat": {
+          "ap_at_5": 0.3,
+          "ap_fraction": "3/10",
+          "artifact_method": "repeat_1",
+          "hits_at_5": 2,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Развлечения",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+              "tv_show_id": 20088
+            },
+            {
+              "category": "Инфо",
+              "rank": 4,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Развлечения",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "Реальная мистика.",
+              "tv_show_id": 5800509
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "V3": {
+          "ap_at_5": 0.3333333333333333,
+          "ap_fraction": "1/3",
+          "artifact_method": "v3_control",
+          "hits_at_5": 2,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 1,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 0,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 1,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Развлечения",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+              "tv_show_id": 20088
+            },
+            {
+              "category": "Развлечения",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "Реальная мистика.",
+              "tv_show_id": 5800509
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        }
+      },
+      "popularity_ap_greater_than_hgb": true,
+      "popularity_ap_greater_than_ppr": true,
+      "selection_reason": "chosen previously near p90 of 60-second train unique-item activity",
+      "strict_gt": [
+        {
+          "category": "Инфо",
+          "title": "'Викна-Новости'.",
+          "tv_show_id": 2400467
+        },
+        {
+          "category": "Инфо",
+          "title": "ТСН.",
+          "tv_show_id": 2400480
+        },
+        {
+          "category": "Инфо",
+          "title": "Сегодня.",
+          "tv_show_id": 2400508
+        },
+        {
+          "category": "Познавательное",
+          "title": "ДжеДАИ.",
+          "tv_show_id": 6200371
+        },
+        {
+          "category": "Другое",
+          "title": "'Секретные материалы'.",
+          "tv_show_id": 6700482
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Здравствуй, мама!', 25 с.",
+          "tv_show_id": 10002065
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Две жизни', 6 с.",
+          "tv_show_id": 10002764
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Криминолог', 7 с.",
+          "tv_show_id": 10002821
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Владимирская, 15', 27 с.",
+          "tv_show_id": 10002839
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Нити судьбы', 18 с.",
+          "tv_show_id": 10002997
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Женский доктор 3', 30 с.",
+          "tv_show_id": 10003011
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Окно жизни', 17 с.",
+          "tv_show_id": 10003013
+        },
+        {
+          "category": "Сериалы",
+          "title": "Т/с 'Опер по вызову', 2 сезон, 12 с.",
+          "tv_show_id": 10003102
+        }
+      ],
+      "strict_gt_size": 13,
+      "train_60s": {
+        "total_watch_seconds": 1910027,
+        "unique_programmes": 396,
+        "watch_count": 1302
+      },
+      "train_session_50": {
+        "total_watch_seconds": 652383,
+        "unique_programmes": 66,
+        "watch_count": 284
+      },
+      "user_id": "11595812149006555679"
+    },
+    {
+      "all_personalised_methods_are_fallback_in_this_example": true,
+      "hgb_ap_delta_vs_v3": 0.0,
+      "methods": {
+        "ALS": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "als50_2",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "CBF": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "content50",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "HGB": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "D",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18)"
+        },
+        "PPR": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "ppr_2",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "Popularity": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "saved_popularity",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/train_interactions.csv (60 seconds)"
+        },
+        "Repeat": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "repeat_1",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        },
+        "V3": {
+          "ap_at_5": 0.5,
+          "ap_fraction": "1/2",
+          "artifact_method": "v3_control",
+          "hits_at_5": 1,
+          "top5": [
+            {
+              "category": "Инфо",
+              "rank": 1,
+              "strict_validation_relevant": 0,
+              "title": "ТСН.",
+              "tv_show_id": 2400480
+            },
+            {
+              "category": "Инфо",
+              "rank": 2,
+              "strict_validation_relevant": 1,
+              "title": "Факты.",
+              "tv_show_id": 240081
+            },
+            {
+              "category": "Инфо",
+              "rank": 3,
+              "strict_validation_relevant": 0,
+              "title": "Сегодня.",
+              "tv_show_id": 2400508
+            },
+            {
+              "category": "Познавательное",
+              "rank": 4,
+              "strict_validation_relevant": 0,
+              "title": "'Мир наизнанку'.",
+              "tv_show_id": 6500479
+            },
+            {
+              "category": "Инфо",
+              "rank": 5,
+              "strict_validation_relevant": 0,
+              "title": "'Викна-Новости'.",
+              "tv_show_id": 2400467
+            }
+          ],
+          "training_source": "data/processed/session_train_50.csv"
+        }
+      },
+      "popularity_ap_greater_than_hgb": false,
+      "popularity_ap_greater_than_ppr": false,
+      "selection_reason": "chosen previously for minimum positive 60-second train history; cold under strict-50 definition",
+      "strict_gt": [
+        {
+          "category": "Инфо",
+          "title": "Факты.",
+          "tv_show_id": 240081
+        }
+      ],
+      "strict_gt_size": 1,
+      "train_60s": {
+        "total_watch_seconds": 2753,
+        "unique_programmes": 1,
+        "watch_count": 1
+      },
+      "train_session_50": {
+        "total_watch_seconds": 0,
+        "unique_programmes": 0,
+        "watch_count": 0
+      },
+      "user_id": "8150816946177670084"
+    }
+  ],
+  "ground_truth_definition_effect": {
+    "old_60s": {
+      "candidate_coverage_fraction": 1.0,
+      "nonempty_users": 1246,
+      "programmes_per_user": {
+        "count": 1260,
+        "mean": 182.46507936507936,
+        "p0": 0,
+        "p1": 0.0,
+        "p10": 52.900000000000006,
+        "p100": 820,
+        "p25": 88.0,
+        "p50": 159.5,
+        "p75": 245.25,
+        "p90": 348.0,
+        "p95": 416.04999999999995,
+        "p99": 607.0
+      },
+      "user_programme_pairs": 229906,
+      "users": 1260
+    },
+    "overlap_pairs": 30172,
+    "pairs_added": 0,
+    "pairs_removed": 199734,
+    "strict_session_80": {
+      "candidate_coverage_fraction": 1.0,
+      "nonempty_users": 1234,
+      "programmes_per_user": {
+        "count": 1260,
+        "mean": 23.946031746031746,
+        "p0": 0,
+        "p1": 0.0,
+        "p10": 4.0,
+        "p100": 155,
+        "p25": 9.0,
+        "p50": 16.0,
+        "p75": 29.0,
+        "p90": 54.100000000000136,
+        "p95": 74.0,
+        "p99": 116.0
+      },
+      "user_programme_pairs": 30172,
+      "users": 1260
+    }
+  },
+  "hgb_experiments": {
+    "OOF_snapshots": {
+      "main_snapshot": {
+        "bounds": [
+          "2020-03-09 00:00:00",
+          "2020-05-18 00:00:00",
+          "2020-07-27 00:00:00"
+        ],
+        "feature_cutoff": "2020-05-18 00:00:00",
+        "features": 33,
+        "pairs": 959200,
+        "path": "data/processed/hgb/main.npz",
+        "positive_labels": 48140,
+        "runtime_seconds": 37.39779566694051,
+        "target_interval": [
+          "2020-05-18 00:00:00",
+          "2020-07-27 00:00:00"
+        ],
+        "users": 4796
+      },
+      "training_snapshot": {
+        "bounds": [
+          "2020-03-09 00:00:00",
+          "2020-04-13 00:00:00",
+          "2020-05-18 00:00:00"
+        ],
+        "feature_cutoff": "2020-04-13 00:00:00",
+        "features": 33,
+        "pairs": 933000,
+        "path": "data/processed/hgb/early.npz",
+        "positive_labels": 32977,
+        "runtime_seconds": 27.152540041017346,
+        "target_interval": [
+          "2020-04-13 00:00:00",
+          "2020-05-18 00:00:00"
+        ],
+        "users": 4665
+      }
+    },
+    "candidate_diagnostics_primary": {
+      "any_hit_fraction": 0.9650793650793651,
+      "candidates_per_user": 200,
+      "macro_recall_at_200": 0.5478153143060305,
+      "micro_recall_at_200": 0.4677184144239692,
+      "nonempty_gt_users": 1234,
+      "nonempty_macro_recall_at_200": 0.559357614283305,
+      "oracle_map_at_5": 0.9041931216931217,
+      "relevant_candidate_pairs": 14112,
+      "relevant_pairs": 30172,
+      "users": 1260
+    },
+    "candidate_generation": "V3 Top5 plus native V3 Top100; unseen items interleaved Repeat/ALS/CBF/popularity until exactly 200",
+    "convincing_for_v4": true,
+    "decision": {
+      "minimum_main_delta": 0.01,
+      "positive_descriptive_bootstrap_lower_bound": true,
+      "reference": "V3 strict MAP 0.524651455026455",
+      "selection": "best of four predeclared feature groups"
+    },
+    "diagnostics": {
+      "D_native_top100_expansion": {
+        "D_outside_native_slot_precision": 0.0,
+        "D_relevant_slots_outside_native_top100": 0,
+        "D_relevant_slots_unknown_to_native_ppr": 0,
+        "D_slots_outside_v3_native_top100": 3,
+        "D_slots_outside_v3_native_top100_fraction": 0.00048192771084337347,
+        "D_slots_unknown_to_native_ppr": 0,
+        "D_users_with_recommendation_outside_native_top100": 3,
+        "D_warm_recommendation_slots": 6225,
+        "cold_users": 15,
+        "native_top100_verified_by_finite_v3_rank": true,
+        "warm_rows_with_exactly_100_native_candidates": 1245,
+        "warm_users": 1245
+      },
+      "D_versus_v3": {
+        "added_slot_precision": 0.42557803468208094,
+        "added_slots": 1384,
+        "average_top5_overlap_items": 3.9015873015873015,
+        "candidate_sets_changed_users": 944,
+        "from": "v3_control",
+        "map_delta": 0.027672619047619047,
+        "map_gain_from_changed_sets": 0.028763007054673714,
+        "map_gain_from_unchanged_sets_ordering": -0.0010903880070546742,
+        "net_relevant_slots": 185,
+        "order_only_changed_users": 221,
+        "ordered_lists_changed_users": 1165,
+        "overlap_histogram": {
+          "0": 3,
+          "1": 14,
+          "2": 58,
+          "3": 270,
+          "4": 599,
+          "5": 316
+        },
+        "relevant_added": 589,
+        "relevant_removed": 404,
+        "removed_slot_precision": 0.29190751445086704,
+        "removed_slots": 1384,
+        "to": "D",
+        "users_ap_improved": 421,
+        "users_ap_unchanged": 603,
+        "users_ap_worsened": 236
+      },
+      "activity_group_definition": "train60 aggregate distinct-item groups retained from baseline evaluation; different from strict50 profile availability (15 cold profiles vs 10 train60 cold users)",
+      "activity_groups_from_saved_evaluation": [
+        {
+          "A_incremental_delta": 0.0,
+          "A_map_at_5": 0.17083333333333334,
+          "B_incremental_delta": 0.0,
+          "B_map_at_5": 0.17083333333333334,
+          "C_incremental_delta": 0.0,
+          "C_map_at_5": 0.17083333333333334,
+          "D_delta_vs_v3": 0.0,
+          "D_incremental_delta": 0.0,
+          "D_map_at_5": 0.17083333333333334,
+          "group": "cold_0",
+          "users": 10,
+          "users_without_validation_truth": 2,
+          "v3_map_at_5": 0.17083333333333334
+        },
+        {
+          "A_incremental_delta": 0.003916096190977769,
+          "A_map_at_5": 0.6186220817974373,
+          "B_incremental_delta": 0.014558539582236296,
+          "B_map_at_5": 0.6331806213796736,
+          "C_incremental_delta": 0.001519220642443364,
+          "C_map_at_5": 0.6346998420221169,
+          "D_delta_vs_v3": 0.02260795155344919,
+          "D_incremental_delta": 0.002614095137791761,
+          "D_map_at_5": 0.6373139371599087,
+          "group": "heavy_201_plus",
+          "users": 633,
+          "users_without_validation_truth": 3,
+          "v3_map_at_5": 0.6147059856064595
+        },
+        {
+          "A_incremental_delta": 0.02311475409836064,
+          "A_map_at_5": 0.2621584699453552,
+          "B_incremental_delta": -0.004275956284153004,
+          "B_map_at_5": 0.2578825136612022,
+          "C_incremental_delta": -0.0012386156648451774,
+          "C_map_at_5": 0.256643897996357,
+          "D_delta_vs_v3": 0.02560564663023676,
+          "D_incremental_delta": 0.008005464480874303,
+          "D_map_at_5": 0.2646493624772313,
+          "group": "light_1_50",
+          "users": 61,
+          "users_without_validation_truth": 12,
+          "v3_map_at_5": 0.23904371584699455
+        },
+        {
+          "A_incremental_delta": 0.01709532374100714,
+          "A_map_at_5": 0.47691896482813745,
+          "B_incremental_delta": 0.011422362110311779,
+          "B_map_at_5": 0.4883413269384492,
+          "C_incremental_delta": 0.0005940247801758947,
+          "C_map_at_5": 0.4889353517186251,
+          "D_delta_vs_v3": 0.03416316946442849,
+          "D_incremental_delta": 0.005051458832933675,
+          "D_map_at_5": 0.4939868105515588,
+          "group": "medium_51_200",
+          "users": 556,
+          "users_without_validation_truth": 9,
+          "v3_map_at_5": 0.4598236410871303
+        }
+      ],
+      "checks": {
+        "all_15_strict50_cold_users_keep_exact_popularity_top5": true,
+        "all_four_saved_add_remove_and_improved_worsened_counts_match": true,
+        "all_method_rows_in_primary_user_order": true,
+        "all_top5_belong_to_saved_200_candidates": true,
+        "all_top5_unique_and_allowed": true,
+        "manual_ap_matches_all_five_json_metrics": true,
+        "saved_candidate_labels_match_processed_full_gt": true
+      },
+      "cohort": {
+        "candidate_pool_items": 6384,
+        "common_popularity_top5": [
+          2400480,
+          240081,
+          2400508,
+          6500479,
+          2400467
+        ],
+        "nonempty_strict_gt_users": 1234,
+        "recommendation_slots_per_method": 6300,
+        "relevant_pairs": 30172,
+        "users": 1260
+      },
+      "incremental_group_comparisons": [
+        {
+          "added_slot_precision": 0.39080459770114945,
+          "added_slots": 1218,
+          "average_top5_overlap_items": 4.033333333333333,
+          "candidate_sets_changed_users": 888,
+          "from": "v3_control",
+          "map_delta": 0.010630070546737213,
+          "map_gain_from_changed_sets": 0.01201432980599645,
+          "map_gain_from_unchanged_sets_ordering": -0.0013842592592592596,
+          "net_relevant_slots": 122,
+          "order_only_changed_users": 268,
+          "ordered_lists_changed_users": 1156,
+          "overlap_histogram": {
+            "0": 1,
+            "1": 10,
+            "2": 49,
+            "3": 198,
+            "4": 630,
+            "5": 372
+          },
+          "relevant_added": 476,
+          "relevant_removed": 354,
+          "removed_slot_precision": 0.29064039408866993,
+          "removed_slots": 1218,
+          "to": "A",
+          "users_ap_improved": 357,
+          "users_ap_unchanged": 631,
+          "users_ap_worsened": 272
+        },
+        {
+          "added_slot_precision": 0.4714828897338403,
+          "added_slots": 526,
+          "average_top5_overlap_items": 4.582539682539682,
+          "candidate_sets_changed_users": 490,
+          "from": "A",
+          "map_delta": 0.012147266313932982,
+          "map_gain_from_changed_sets": 0.010416887125220459,
+          "map_gain_from_unchanged_sets_ordering": 0.0017303791887125222,
+          "net_relevant_slots": 42,
+          "order_only_changed_users": 507,
+          "ordered_lists_changed_users": 997,
+          "overlap_histogram": {
+            "2": 1,
+            "3": 34,
+            "4": 455,
+            "5": 770
+          },
+          "relevant_added": 248,
+          "relevant_removed": 206,
+          "removed_slot_precision": 0.3916349809885932,
+          "removed_slots": 526,
+          "to": "B",
+          "users_ap_improved": 288,
+          "users_ap_unchanged": 779,
+          "users_ap_worsened": 193
+        },
+        {
+          "added_slot_precision": 0.4043478260869565,
+          "added_slots": 230,
+          "average_top5_overlap_items": 4.817460317460317,
+          "candidate_sets_changed_users": 227,
+          "from": "B",
+          "map_delta": 0.0009653880070546737,
+          "map_gain_from_changed_sets": 0.0004334215167548501,
+          "map_gain_from_unchanged_sets_ordering": 0.0005319664902998236,
+          "net_relevant_slots": 3,
+          "order_only_changed_users": 379,
+          "ordered_lists_changed_users": 606,
+          "overlap_histogram": {
+            "3": 3,
+            "4": 224,
+            "5": 1033
+          },
+          "relevant_added": 93,
+          "relevant_removed": 90,
+          "removed_slot_precision": 0.391304347826087,
+          "removed_slots": 230,
+          "to": "C",
+          "users_ap_improved": 124,
+          "users_ap_unchanged": 1030,
+          "users_ap_worsened": 106
+        },
+        {
+          "added_slot_precision": 0.3629242819843342,
+          "added_slots": 766,
+          "average_top5_overlap_items": 4.3920634920634924,
+          "candidate_sets_changed_users": 664,
+          "from": "C",
+          "map_delta": 0.00392989417989418,
+          "map_gain_from_changed_sets": 0.004924603174603175,
+          "map_gain_from_unchanged_sets_ordering": -0.0009947089947089955,
+          "net_relevant_slots": 18,
+          "order_only_changed_users": 350,
+          "ordered_lists_changed_users": 1014,
+          "overlap_histogram": {
+            "2": 5,
+            "3": 92,
+            "4": 567,
+            "5": 596
+          },
+          "relevant_added": 278,
+          "relevant_removed": 260,
+          "removed_slot_precision": 0.3394255874673629,
+          "removed_slots": 766,
+          "to": "D",
+          "users_ap_improved": 245,
+          "users_ap_unchanged": 778,
+          "users_ap_worsened": 237
+        }
+      ],
+      "interpretation_limits": [
+        "Cumulative group deltas are contextual ablations, not individual feature importance or causal attribution.",
+        "Balanced predict_proba outputs are ranking scores, not calibrated probabilities.",
+        "Main holdout was reused across stages; confidence interval after selecting among four groups is descriptive, not independent-test evidence.",
+        "Recommended-item catalogue coverage decreases from 228 to 121 items. Popularity Top5 share rises for A/B/C, but selected D is slightly below V3 (56.984% vs 57.238%); do not describe D gain as a higher global-Top5 share.",
+        "Candidate-generation recall/oracle metrics use the full GT denominator; measured Top5 gains apply only to the fixed evaluation cohort.",
+        "Only 3 of 6225 warm D slots lie outside native V3 Top100, all irrelevant; observed gain is primarily candidate reranking within native PPR/V3 coverage, not successful outside-Top100 expansion."
+      ],
+      "methods": {
+        "A": {
+          "catalogue_coverage_fraction": 0.01801378446115288,
+          "map_at_5_manual": 0.5352815255731923,
+          "popular_top5_slot_fraction": 0.5903174603174604,
+          "popular_top5_slots": 3719,
+          "relevant_top5_slot_precision": 0.5836507936507936,
+          "relevant_top5_slots": 3677,
+          "unique_recommended_items": 115,
+          "users_with_any_top5_hit": 1155,
+          "users_with_any_top5_hit_fraction": 0.9166666666666666
+        },
+        "B": {
+          "catalogue_coverage_fraction": 0.018483709273182956,
+          "map_at_5_manual": 0.5474287918871252,
+          "popular_top5_slot_fraction": 0.5939682539682539,
+          "popular_top5_slots": 3742,
+          "relevant_top5_slot_precision": 0.5903174603174604,
+          "relevant_top5_slots": 3719,
+          "unique_recommended_items": 118,
+          "users_with_any_top5_hit": 1155,
+          "users_with_any_top5_hit_fraction": 0.9166666666666666
+        },
+        "C": {
+          "catalogue_coverage_fraction": 0.019736842105263157,
+          "map_at_5_manual": 0.5483941798941799,
+          "popular_top5_slot_fraction": 0.5946031746031746,
+          "popular_top5_slots": 3746,
+          "relevant_top5_slot_precision": 0.5907936507936508,
+          "relevant_top5_slots": 3722,
+          "unique_recommended_items": 126,
+          "users_with_any_top5_hit": 1155,
+          "users_with_any_top5_hit_fraction": 0.9166666666666666
+        },
+        "D": {
+          "catalogue_coverage_fraction": 0.01895363408521303,
+          "map_at_5_manual": 0.552324074074074,
+          "popular_top5_slot_fraction": 0.5698412698412698,
+          "popular_top5_slots": 3590,
+          "relevant_top5_slot_precision": 0.5936507936507937,
+          "relevant_top5_slots": 3740,
+          "unique_recommended_items": 121,
+          "users_with_any_top5_hit": 1149,
+          "users_with_any_top5_hit_fraction": 0.9119047619047619
+        },
+        "v3_control": {
+          "catalogue_coverage_fraction": 0.03571428571428571,
+          "map_at_5_manual": 0.524651455026455,
+          "popular_top5_slot_fraction": 0.5723809523809524,
+          "popular_top5_slots": 3606,
+          "relevant_top5_slot_precision": 0.5642857142857143,
+          "relevant_top5_slots": 3555,
+          "unique_recommended_items": 228,
+          "users_with_any_top5_hit": 1132,
+          "users_with_any_top5_hit_fraction": 0.8984126984126984
+        }
+      },
+      "scope": "saved offline predictions and feature snapshots only; no training/refit/inference/raw CSV scan",
+      "sources": {
+        "data/processed/hgb/main.npz": {
+          "bytes": 47495718,
+          "sha256": "9c7b286855f9a86c2a5ee234bb4e2cfa202195d304762eccbf96a092b129fbf3"
+        },
+        "data/processed/session_validation_80.csv": {
+          "bytes": 7410246,
+          "sha256": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e"
+        },
+        "results/hgb_experiments.json": {
+          "bytes": 77497,
+          "sha256": "f365cb2e34d6dc8a4e920548e3bddca658c996846625b780031a09f9dab07d5f"
+        },
+        "results/hgb_recommendations.csv": {
+          "bytes": 405811,
+          "sha256": "425263dcfea5dbf261cfcfa45d4f559b960f289fa89a07ef20a56616d7326368"
+        }
+      },
+      "strict50_profile_activity_counts": {
+        "cold_0": 15,
+        "light_1_50": 976,
+        "medium_51_200": 269
+      }
+    },
+    "feature_semantics_limitations": [
+      "Main holdout repeatedly used before this experiment; bootstrap is descriptive after four-group selection.",
+      "Single meta-training target horizon 35 days differs from main70 and test84; balanced outputs are ranking scores, not calibrated probabilities.",
+      "Cold users keep the common popularity fallback; negative labels mean no observed strict positive, not dislike."
+    ],
+    "final_candidates": 6649,
+    "final_snapshot_summary": {
+      "bounds": [
+        "2020-03-09 00:00:00",
+        "2020-07-27 00:00:00",
+        "2020-10-19 00:00:00"
+      ],
+      "feature_cutoff": "2020-07-27 00:00:00",
+      "features": 33,
+      "pairs": 252000,
+      "path": "data/processed/hgb/final.npz",
+      "runtime_seconds": 33.792273250059225,
+      "target_interval": [
+        "2020-07-27 00:00:00",
+        "2020-10-19 00:00:00"
+      ],
+      "users": 1260
+    },
+    "final_submission": {
+      "OOF_features_reused_at_original_cutoffs": true,
+      "OOF_targets": [
+        [
+          "2020-04-13 00:00:00",
+          "2020-05-18 00:00:00"
+        ],
+        [
+          "2020-05-18 00:00:00",
+          "2020-07-27 00:00:00"
+        ]
+      ],
+      "fallback_users": 4,
+      "fit_seconds": 22.397358124959283,
+      "kaggle_submitted": false,
+      "meta_positive_labels": 81117,
+      "meta_training_rows": 1892200,
+      "parameters": {
+        "categorical_features": null,
+        "class_weight": "balanced",
+        "early_stopping": false,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.08,
+        "max_bins": 128,
+        "max_depth": 4,
+        "max_iter": 100,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "random_state": 42
+      },
+      "previous_submissions_unchanged": true,
+      "runtime_seconds": 57.01161766599398,
+      "selected": "D",
+      "submission": {
+        "bytes": 76545,
+        "columns": [
+          "user_id",
+          "tv_show_id"
+        ],
+        "five_distinct_positive_candidates_per_row": true,
+        "path": "submission_v4.csv",
+        "rows": 1260,
+        "sha256": "fba4b3459e194b8bacd1915e59ffacf145f4d368ac81b25ff60dac214e51e3c0",
+        "string_user_ids_preserved": true,
+        "users_and_order_match_template": true
+      },
+      "unique_items": 139
+    },
+    "groups": {
+      "A": {
+        "cohorts": {
+          "cold_0": {
+            "map_at_5": 0.17083333333333334,
+            "users": 10,
+            "users_without_validation_truth": 2
+          },
+          "heavy_201_plus": {
+            "map_at_5": 0.6186220817974373,
+            "users": 633,
+            "users_without_validation_truth": 3
+          },
+          "light_1_50": {
+            "map_at_5": 0.2621584699453552,
+            "users": 61,
+            "users_without_validation_truth": 12
+          },
+          "medium_51_200": {
+            "map_at_5": 0.47691896482813745,
+            "users": 556,
+            "users_without_validation_truth": 9
+          }
+        },
+        "delta_vs_v3": 0.010630070546737213,
+        "features": 15,
+        "map_at_5": 0.5352815255731923,
+        "popular_top5_fraction": 0.5903174603174604,
+        "timing": {
+          "fit_seconds": 4.045160291949287,
+          "recommend_seconds": 0.3200599580304697
+        },
+        "unique_recommended_programmes": 115
+      },
+      "B": {
+        "cohorts": {
+          "cold_0": {
+            "map_at_5": 0.17083333333333334,
+            "users": 10,
+            "users_without_validation_truth": 2
+          },
+          "heavy_201_plus": {
+            "map_at_5": 0.6331806213796736,
+            "users": 633,
+            "users_without_validation_truth": 3
+          },
+          "light_1_50": {
+            "map_at_5": 0.2578825136612022,
+            "users": 61,
+            "users_without_validation_truth": 12
+          },
+          "medium_51_200": {
+            "map_at_5": 0.4883413269384492,
+            "users": 556,
+            "users_without_validation_truth": 9
+          }
+        },
+        "delta_vs_v3": 0.022777336860670194,
+        "features": 22,
+        "map_at_5": 0.5474287918871252,
+        "popular_top5_fraction": 0.5939682539682539,
+        "timing": {
+          "fit_seconds": 7.327807417022996,
+          "recommend_seconds": 0.3134800000116229
+        },
+        "unique_recommended_programmes": 118
+      },
+      "C": {
+        "cohorts": {
+          "cold_0": {
+            "map_at_5": 0.17083333333333334,
+            "users": 10,
+            "users_without_validation_truth": 2
+          },
+          "heavy_201_plus": {
+            "map_at_5": 0.6346998420221169,
+            "users": 633,
+            "users_without_validation_truth": 3
+          },
+          "light_1_50": {
+            "map_at_5": 0.256643897996357,
+            "users": 61,
+            "users_without_validation_truth": 12
+          },
+          "medium_51_200": {
+            "map_at_5": 0.4889353517186251,
+            "users": 556,
+            "users_without_validation_truth": 9
+          }
+        },
+        "delta_vs_v3": 0.023742724867724867,
+        "features": 28,
+        "map_at_5": 0.5483941798941799,
+        "popular_top5_fraction": 0.5946031746031746,
+        "timing": {
+          "fit_seconds": 9.311398999998346,
+          "recommend_seconds": 0.33656445890665054
+        },
+        "unique_recommended_programmes": 126
+      },
+      "D": {
+        "cohorts": {
+          "cold_0": {
+            "map_at_5": 0.17083333333333334,
+            "users": 10,
+            "users_without_validation_truth": 2
+          },
+          "heavy_201_plus": {
+            "map_at_5": 0.6373139371599087,
+            "users": 633,
+            "users_without_validation_truth": 3
+          },
+          "light_1_50": {
+            "map_at_5": 0.2646493624772313,
+            "users": 61,
+            "users_without_validation_truth": 12
+          },
+          "medium_51_200": {
+            "map_at_5": 0.4939868105515588,
+            "users": 556,
+            "users_without_validation_truth": 9
+          }
+        },
+        "delta_vs_v3": 0.027672619047619047,
+        "features": 33,
+        "map_at_5": 0.552324074074074,
+        "popular_top5_fraction": 0.5698412698412698,
+        "timing": {
+          "fit_seconds": 11.51642775000073,
+          "recommend_seconds": 0.34660904097836465
+        },
+        "unique_recommended_programmes": 121
+      }
+    },
+    "selected": "D",
+    "training_scheme": {
+      "HGB_targets": [
+        "2020-04-13 00:00:00",
+        "2020-05-18 00:00:00"
+      ],
+      "HGB_train_features_cutoff": "2020-04-13 00:00:00",
+      "main_features_cutoff": "2020-05-18 00:00:00",
+      "main_targets": [
+        "2020-05-18 00:00:00",
+        "2020-07-27 00:00:00"
+      ],
+      "negatives": "all unobserved candidate pairs, not explicit dislikes",
+      "no_main_rows_used_in_HGB_fit": true,
+      "no_target_overlap": true
+    }
+  },
+  "kaggle_user_reported": {
+    "history_path": "results/kaggle_submission_history.json",
+    "local_artifact_kaggle_submission_flag": false,
+    "note": "scores were reported by the user after manual submissions; this fact extraction did not query Kaggle or verify a screenshot",
+    "v1": {
+      "private": 0.27809,
+      "public": 0.28234,
+      "source": "user-reported after first submission; never used for tuning"
+    },
+    "v2": {
+      "private": 0.38282,
+      "public": 0.40902,
+      "source": "user-reported; not used in selection"
+    },
+    "v3": {
+      "private": 0.39105,
+      "public": null,
+      "source": "user-reported, never used for parameter selection"
+    },
+    "v4": {
+      "independently_verified_via_kaggle": false,
+      "private": 0.42216,
+      "public": null,
+      "screenshot_provided": false,
+      "source": "user-reported after manual V4 submission; no screenshot supplied; not independently checked via Kaggle"
+    }
+  },
+  "limitations": [
+    "The two example users were selected previously using train activity, not selected now for favourable model results.",
+    "Popularity beats PPR and V3 for the chosen heavy user; all personalised methods fall back for the chosen light user.",
+    "A watched-overlap proxy is not evidence of enjoyment; programme IDs may combine episode-specific titles.",
+    "Participant-reported >80% rule is not independently verified evaluator source code.",
+    "Holdout and early-window results were reused for selection; bootstrap intervals are descriptive and not adjusted for that selection.",
+    "Earlier-window data occur in main training; early evaluation is temporal robustness rather than untouched confirmation.",
+    "Future schedules supply only availability/channel/time for modelling; displayed validation titles/categories are descriptive annotations.",
+    "Cold-start counts depend on the interaction definition: the old 60-second activity cohorts are frozen and differ from strict-50 model cold-start.",
+    "The selected HGB improves aggregate offline MAP but does not improve AP for either fixed example user; Popularity still beats HGB for the heavy example.",
+    "HGB cumulative feature-group differences are contextual ablations, not individual feature importances or causal effects.",
+    "Class-balanced HGB predict_proba values are ranking scores and are not calibrated probabilities.",
+    "HGB meta-training uses one 35-day historical target window, whereas main validation is 70 days and test is 84 days.",
+    "Selected HGB D narrows the offline Top5 catalogue from 228 to 121 programmes. Its popular-Top5 share is slightly lower than V3, 56.984% versus 57.238%.",
+    "Reported Kaggle scores come from user statements after manual submissions. Screenshots and direct Kaggle/API verification were not supplied for this report update."
+  ],
+  "methods": {
+    "ALS": {
+      "artifact_method": "als50_2",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.355511233982798,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.2351183970856102,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.33167216227018387,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "config": {
+          "confidence_alpha": 10,
+          "factors": 16,
+          "iterations": 20,
+          "regularization": 0.1,
+          "weighting": "log_count"
+        },
+        "family": "als"
+      },
+      "fallback_users": 15,
+      "map_at_5": 0.3376975308641975,
+      "map_nonempty_gt": 0.34481271384837026,
+      "recommendations_source": "results/ppr_complement_recommendations.csv",
+      "timing": {
+        "fit_seconds": 0.23363379098009318,
+        "recommend_seconds": 0.006244209012947977
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 134
+    },
+    "CBF": {
+      "artifact_method": "content50",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.2572428471125153,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.14112021857923496,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.22685851318944844,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "config": {
+          "feature_set": "extended",
+          "history_weighting": "log1p"
+        },
+        "family": "content"
+      },
+      "fallback_users": 15,
+      "map_at_5": 0.23752755731922398,
+      "map_nonempty_gt": 0.24253218980731137,
+      "recommendations_source": "results/ppr_complement_recommendations.csv",
+      "timing": {
+        "fit_seconds": 0.049885916989296675,
+        "recommend_seconds": 0.04657320794649422
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 256
+    },
+    "HGB": {
+      "artifact_method": "D",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.6373139371599087,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.2646493624772313,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.4939868105515588,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "categorical_features": null,
+        "class_weight": "balanced",
+        "early_stopping": false,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.08,
+        "max_bins": 128,
+        "max_depth": 4,
+        "max_iter": 100,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "random_state": 42
+      },
+      "cumulative_feature_counts": {
+        "A": 15,
+        "B": 22,
+        "C": 28,
+        "D": 33
+      },
+      "fallback_users": 15,
+      "feature_count": 33,
+      "feature_group_sizes": {
+        "A": 15,
+        "B_additions": 7,
+        "C_additions": 6,
+        "D_additions": 5
+      },
+      "features": [
+        "ppr_score",
+        "ppr_rank",
+        "ppr_relative_score",
+        "v3_rank",
+        "als_score",
+        "als_rank",
+        "content_score",
+        "content_rank",
+        "log_repeat_count",
+        "popularity_share",
+        "popularity_rank",
+        "log_future_airings",
+        "airings_per_forecast_day",
+        "forecast_day_coverage",
+        "availability",
+        "history_nitems",
+        "log_total_watches",
+        "watches_per_train_day",
+        "item_distinct_days",
+        "item_last_age_days",
+        "item_day_count_regularity",
+        "item_watch_rate",
+        "hour_alignment",
+        "weekday_alignment",
+        "weekday_hour_alignment",
+        "hour_concentration",
+        "weekday_concentration",
+        "weekday_hour_concentration",
+        "channel_alignment",
+        "channel_hour_alignment",
+        "joint_alignment",
+        "channel_concentration",
+        "history_nchannels"
+      ],
+      "map_at_5": 0.552324074074074,
+      "map_nonempty_gt": 0.5639613722312263,
+      "recommendations_source": "results/hgb_recommendations.csv",
+      "role": "designated final method V4",
+      "score_semantics": "Balanced predict_proba is an uncalibrated ranking score, not an estimated watch probability.",
+      "timing": {
+        "fit_seconds": 11.51642775000073,
+        "recommend_seconds": 0.34660904097836465
+      },
+      "training_source": "data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18)",
+      "unique_recommended_programmes": 121,
+      "versus_v3": {
+        "bootstrap_samples": 1000,
+        "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+        "mean_map_delta": 0.027672619047619047,
+        "paired_bootstrap_95_interval": [
+          0.020713045634920633,
+          0.03459876543209876
+        ],
+        "relevant_recommendations_added": 589,
+        "relevant_recommendations_removed": 404,
+        "seed": 42,
+        "users_improved": 421,
+        "users_worsened": 236
+      }
+    },
+    "PPR": {
+      "artifact_method": "ppr_2",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.6045730208881868,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.2369854280510018,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.45521532773780976,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "normalisation": "user_cosine",
+        "restart": 0.3,
+        "weighting": "log_count"
+      },
+      "fallback_users": 15,
+      "map_at_5": 0.5174276895943563,
+      "map_nonempty_gt": 0.5283297316765712,
+      "recommendations_source": "results/strict_recommendations.csv",
+      "timing": {
+        "recorded_train_seconds_is_cached_graph_lookup": true,
+        "score_seconds": 1.7445998329203576,
+        "standalone_graph_build_seconds": 0.15087733301334083,
+        "train_seconds": 8.749775588512421e-07
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 246
+    },
+    "Popularity": {
+      "artifact_method": "saved_popularity",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.5182069510268562,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.18617486338797812,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.36574440447641887,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "variant": "unique_users"
+      },
+      "fallback_users": null,
+      "map_at_5": 0.43209832451499114,
+      "map_nonempty_gt": 0.44120250315144965,
+      "recommendations_source": "results/strict_recommendations.csv",
+      "timing": {
+        "independent_audit_seconds": 0.02032379200682044,
+        "recommend_seconds": 0.008337293053045869,
+        "train_seconds": 0.0015752909239381552
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 5
+    },
+    "Repeat": {
+      "artifact_method": "repeat_1",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.5898143759873617,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.2201639344262295,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.43891936450839325,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "half_life_days": null,
+        "threshold_percent": 50
+      },
+      "fallback_users": 40,
+      "map_at_5": 0.5020079365079365,
+      "map_nonempty_gt": 0.5125850891410049,
+      "recommendations_source": "results/strict_recommendations.csv",
+      "timing": {
+        "score_seconds": 0.007755541009828448,
+        "train_seconds": 0.0
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 278
+    },
+    "V3": {
+      "artifact_method": "v3_control",
+      "cohorts": {
+        "cold_0": {
+          "map_at_5": 0.17083333333333334,
+          "users": 10,
+          "users_without_validation_truth": 2
+        },
+        "heavy_201_plus": {
+          "map_at_5": 0.6147059856064595,
+          "users": 633,
+          "users_without_validation_truth": 3
+        },
+        "light_1_50": {
+          "map_at_5": 0.23904371584699455,
+          "users": 61,
+          "users_without_validation_truth": 12
+        },
+        "medium_51_200": {
+          "map_at_5": 0.4598236410871303,
+          "users": 556,
+          "users_without_validation_truth": 9
+        }
+      },
+      "config": {
+        "family": "ppr",
+        "neighbors": 50,
+        "restart": 0.3
+      },
+      "fallback_users": 15,
+      "map_at_5": 0.524651455026455,
+      "map_nonempty_gt": 0.535705699621826,
+      "recommendations_source": "results/ppr_complement_recommendations.csv",
+      "role": "historical base and HGB control; final V3 submission is preserved",
+      "timing": {
+        "fit_seconds": 0.14589275000616908,
+        "graph_reused": false,
+        "recommend_seconds": 1.8524735840037465
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 228
+    }
+  },
+  "protocol": {
+    "absolute_timezone_known": false,
+    "ap_definition": "sum of precision@rank for first occurrences of relevant items in Top5, divided by min(5, full relevant-set size)",
+    "empty_gt_ap": 0,
+    "ground_truth": {
+      "airing_deduplication": "one qualifying user/channel/airing irrespective of qualifying source-row count",
+      "channel_ambiguity": "remove simultaneous different-channel time; each remaining continuous piece is independent",
+      "comparison": "strictly greater, integer cross multiplication",
+      "denominator": "full canonical airing duration; period clipping never shortens denominator",
+      "id": "single-session-unambiguous-v1",
+      "schedule_policy": "existing half-open channel/time index, zero IDs and conflicting airings excluded",
+      "sitting": "one original log row after exact deduplication; no merging across original rows",
+      "source_status": "participant description, not confirmed Kaggle judge code; devices and actual switches unobservable",
+      "thresholds_percent": [
+        50,
+        80
+      ]
+    },
+    "hgb_evaluation": "HGB also uses the same strict >80% validation GT, frozen 1260-user cohort and 6384-item candidate pool; meta-training labels are from the earlier nonoverlapping 35-day target window.",
+    "personalised_train_threshold_percent": 50,
+    "popularity_training_exception": "frozen reference and shared fallback use old >=60 unique seconds train interactions; all seven methods evaluated on identical strict >80% GT/cohort/candidate pool",
+    "primary_gt_threshold_percent": 80,
+    "primary_users": 1260,
+    "repeats_allowed": true,
+    "strict_primary_user_programme_pairs": 30172,
+    "strict_validation_empty_primary_users": 26,
+    "strict_validation_nonempty_primary_users": 1234,
+    "test": [
+      "2020-07-27 00:00:00",
+      "2020-10-19 00:00:00"
+    ],
+    "test_candidates": 6649,
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-05-18 00:00:00"
+    ],
+    "validation": [
+      "2020-05-18 00:00:00",
+      "2020-07-27 00:00:00"
+    ],
+    "validation_candidates": 6384
+  },
+  "provenance": {
+    "hgb_metadata_source": "reuse exact title/category pairs already verified under the existing validation-overlap display-mode policy; no new EPG scan or model feature extraction",
+    "metadata_display_policy": "mode of raw (title, category) pairs over validation-overlapping airings from first two schedule files; lexical pair tie-break; display only, never model features",
+    "metric_policy": "copied from saved artifacts; example AP recomputed independently with exact fractions",
+    "model_execution_performed_for_report": false,
+    "previous_60_rows_report_examples_sha256": "e86db3ac819bf8e26d2dc6f68f7db6c05a2f25ba112d59d725ebb8c49b3938c6",
+    "report_examples_sha256": "21ef3757350d72c6cc57c90108d08010e230070deb792b15e2c0a7cf63c26c53",
+    "source_sha256": {
+      "data/export_arh_11-20-final.csv": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c",
+      "data/export_arh_21-30-final.csv": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4",
+      "data/processed/session_train_50.csv": "99183b7b8062e9d4439430efe43d299054bbcb96a0b46cf1258d62dc72cb1754",
+      "data/processed/session_validation_80.csv": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e",
+      "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+      "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+      "results/hgb_diagnostics.json": "ceede7c6a248b9d411ea9278c934d217368173621bee6dd30382ae17a9f38ebd",
+      "results/hgb_experiments.json": "f365cb2e34d6dc8a4e920548e3bddca658c996846625b780031a09f9dab07d5f",
+      "results/hgb_recommendations.csv": "425263dcfea5dbf261cfcfa45d4f559b960f289fa89a07ef20a56616d7326368",
+      "results/kaggle_submission_history.json": "9e2e6ed68d3eea66ed912cda163b93170109de32a411f0562049213eee5424a9",
+      "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+      "results/ppr_complement.json": "1306bab0f04aa988e0e7b34315413a2e4f5e6391bc55ad812e97795c00b94bc6",
+      "results/ppr_complement_recommendations.csv": "802c88761aa48b25a93406fdab3986d0e4d316e69c41983515aff9c91724b520",
+      "results/ppr_refinement.json": "a4af8b5b5d7871d0861591436aaba8b8c4584c0a6328d502a1bf884ed454fcab",
+      "results/session_final_preparation.json": "b93360f148e85d87fb194ca3c1eeb079136766661df872cb6a981296c64ef140",
+      "results/session_preparation.json": "ed2c1f08afb20024f4b9713a2ffbd4a4360275ecc6097d782009a844c6c64e9a",
+      "results/strict_experiments.json": "aa9c3a916b4380349282b8711be43e050586ffe4f3c8e9789731fd58e622db16",
+      "results/strict_recommendations.csv": "e5aa1c44da584369909d38536a304c7319b74276994559365bc7961dc3923c94",
+      "results/submission_v3.json": "2f203cd1ad4299de67f02bac8ab4995ca2f1e8e4859edcfa2e26bf4e730615fa",
+      "results/submission_v4_hgb.json": "3d8a8300aef35094706b5f51436d175fc775e69bcffc6697139401f9131e88ca"
+    }
+  },
+  "runtime_artifacts": {
+    "data_preparation": {
+      "additional_dependencies": [],
+      "bucket_processing": {
+        "elapsed_seconds": 36.935,
+        "exact_duplicate_view_rows": 17,
+        "normalised_user_channel_sessions": 5441773
+      },
+      "cpu_seconds": 99.059,
+      "cumulative_peak_rss_mib_by_stage": {
+        "history_index": 476.7,
+        "interaction_aggregation": 547.83,
+        "output_validation": 547.86,
+        "schedule_1": 235.25,
+        "schedule_2": 316.81,
+        "schedule_3": 408.8,
+        "view_log_and_spool": 484.88
+      },
+      "logical_cpus": 14,
+      "peak_rss_bytes": 574472192,
+      "peak_rss_method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; macOS bytes, Linux KiB converted to bytes",
+      "peak_rss_mib": 547.86,
+      "platform": "macOS-15.1-arm64-arm-64bit",
+      "python": "3.12.14",
+      "schedule_index_seconds": 2.102,
+      "temporary_binary_spool_bytes": 186303584,
+      "wall_seconds": 99.217
+    },
+    "hgb_experiments": {
+      "peak_rss_mib": 3134.328125,
+      "wall_seconds": 100.90142845804803
+    },
+    "hgb_final_fit_seconds": 22.397358124959283,
+    "hgb_final_seconds": 57.01161766599398,
+    "ppr_complement": {
+      "peak_rss_mib": 914.65625,
+      "wall_seconds": 31.333577416022308
+    },
+    "ppr_refinement": {
+      "peak_rss_mib": 841.3125,
+      "wall_seconds": 37.82286795892287
+    },
+    "session_preparation": {
+      "peak_rss_mib": 337.234375,
+      "wall_seconds": 63.66326062497683
+    },
+    "strict_experiments": {
+      "peak_rss_mib": 595.109375,
+      "wall_seconds": 31.46557345893234
+    },
+    "v3_final_seconds": 86.27662841707934
+  },
+  "schema_version": 2,
+  "v3_gain": {
+    "decision": {
+      "early_min_delta": 0.0025,
+      "early_selection": "one main winner frozen before early evaluation; no runner-up search on early",
+      "main_min_delta": 0.005,
+      "positive_bootstrap_lower_bound_in_both_windows": true,
+      "scope": "descriptive post-selection intervals; earlier window is temporal robustness, not untouched confirmation"
+    },
+    "early": {
+      "bootstrap_samples": 1000,
+      "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+      "mean_map_delta": 0.006025352733686067,
+      "paired_bootstrap_95_interval": [
+        0.003218904320987654,
+        0.008918176807760138
+      ],
+      "relevant_recommendations_added": 95,
+      "relevant_recommendations_removed": 65,
+      "seed": 42,
+      "users_improved": 150,
+      "users_worsened": 89
+    },
+    "main": {
+      "bootstrap_samples": 1000,
+      "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+      "mean_map_delta": 0.007223765432098765,
+      "paired_bootstrap_95_interval": [
+        0.004497200176366843,
+        0.01013794642857143
+      ],
+      "relevant_recommendations_added": 119,
+      "relevant_recommendations_removed": 71,
+      "seed": 42,
+      "users_improved": 175,
+      "users_worsened": 101
+    }
+  },
+  "v4_complementarity": {
+    "convincing_for_v4": false,
+    "diagnostics": {
+      "als50_2": {
+        "boundary": {
+          "aux_concordance_mean_per_user": 0.5600709219858157,
+          "flagged_hits": 3579,
+          "flagged_relevance_precision": 0.28011270251232684,
+          "flagged_slots": 12777,
+          "near_cutoff_pair_users": 470,
+          "near_cutoff_pairs": 775,
+          "pair_policy": "ranks4-5 versus6-20, opposite GT, score ratio<=1.10, both native scores finite; users equally weighted",
+          "ranks": [
+            4,
+            20
+          ],
+          "scoreable_fraction": 1.0,
+          "unflagged_hits": 1235,
+          "unflagged_relevance_precision": 0.1472341440152599,
+          "unflagged_slots": 8388,
+          "v3_concordance_same_pairs": 0.5352836879432624
+        },
+        "by_activity": {
+          "cold_0": {
+            "actionable_hits_top20": 0,
+            "new_hits_top20": 0,
+            "users": 10
+          },
+          "heavy_201_plus": {
+            "actionable_hits_top20": 2107,
+            "new_hits_top20": 2155,
+            "users": 633
+          },
+          "light_1_50": {
+            "actionable_hits_top20": 83,
+            "new_hits_top20": 83,
+            "users": 61
+          },
+          "medium_51_200": {
+            "actionable_hits_top20": 1358,
+            "new_hits_top20": 1377,
+            "users": 556
+          }
+        },
+        "top_lists": {
+          "20": {
+            "actionable_marginal_precision": 0.19380564811274376,
+            "actionable_new_hits": 3548,
+            "actionable_new_slots": 18307,
+            "aux_hits": 6980,
+            "common_pool_aux_hits": 7067,
+            "common_pool_v3_hits": 7295,
+            "marginal_precision": 0.18852672750977836,
+            "mean_jaccard": 0.4963946269029114,
+            "new_hits": 3615,
+            "new_slots": 19175,
+            "users_with_actionable_hit": 1014,
+            "v3_hits_same_list_length": 7295
+          },
+          "50": {
+            "actionable_marginal_precision": 0.1355195658625514,
+            "actionable_new_hits": 6393,
+            "actionable_new_slots": 47174,
+            "aux_hits": 10344,
+            "common_pool_aux_hits": 10429,
+            "common_pool_v3_hits": 10122,
+            "marginal_precision": 0.12124828556669813,
+            "mean_jaccard": 0.5084393833903614,
+            "new_hits": 6807,
+            "new_slots": 56141,
+            "users_with_actionable_hit": 1110,
+            "v3_hits_same_list_length": 10122
+          }
+        },
+        "unknown_user_rows": 15,
+        "useful_for_small_boost": true
+      },
+      "content50": {
+        "boundary": {
+          "aux_concordance_mean_per_user": 0.525354609929078,
+          "flagged_hits": 1791,
+          "flagged_relevance_precision": 0.3235187861271676,
+          "flagged_slots": 5536,
+          "near_cutoff_pair_users": 470,
+          "near_cutoff_pairs": 775,
+          "pair_policy": "ranks4-5 versus6-20, opposite GT, score ratio<=1.10, both native scores finite; users equally weighted",
+          "ranks": [
+            4,
+            20
+          ],
+          "scoreable_fraction": 1.0,
+          "unflagged_hits": 3023,
+          "unflagged_relevance_precision": 0.1934224838441359,
+          "unflagged_slots": 15629,
+          "v3_concordance_same_pairs": 0.5352836879432624
+        },
+        "by_activity": {
+          "cold_0": {
+            "actionable_hits_top20": 0,
+            "new_hits_top20": 0,
+            "users": 10
+          },
+          "heavy_201_plus": {
+            "actionable_hits_top20": 935,
+            "new_hits_top20": 992,
+            "users": 633
+          },
+          "light_1_50": {
+            "actionable_hits_top20": 21,
+            "new_hits_top20": 21,
+            "users": 61
+          },
+          "medium_51_200": {
+            "actionable_hits_top20": 628,
+            "new_hits_top20": 654,
+            "users": 556
+          }
+        },
+        "top_lists": {
+          "20": {
+            "actionable_marginal_precision": 0.14047534586732885,
+            "actionable_new_hits": 1584,
+            "actionable_new_slots": 11276,
+            "aux_hits": 4559,
+            "common_pool_aux_hits": 5815,
+            "common_pool_v3_hits": 7295,
+            "marginal_precision": 0.0824553593510412,
+            "mean_jaccard": 0.2139193910263564,
+            "new_hits": 1667,
+            "new_slots": 20217,
+            "users_with_actionable_hit": 761,
+            "v3_hits_same_list_length": 7295
+          },
+          "50": {
+            "actionable_marginal_precision": 0.1249032711924024,
+            "actionable_new_hits": 3551,
+            "actionable_new_slots": 28430,
+            "aux_hits": 7150,
+            "common_pool_aux_hits": 9535,
+            "common_pool_v3_hits": 10122,
+            "marginal_precision": 0.0668153813469301,
+            "mean_jaccard": 0.2703363869363909,
+            "new_hits": 3774,
+            "new_slots": 56484,
+            "users_with_actionable_hit": 986,
+            "v3_hits_same_list_length": 10122
+          }
+        },
+        "unknown_user_rows": 15,
+        "useful_for_small_boost": true
+      },
+      "content_novel_hits_beyond_als": 479,
+      "joint_gate_v3_pool": "Top50, conservative subset of allowed native Top100"
+    },
+    "early": {
+      "bootstrap_samples": 1000,
+      "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+      "mean_map_delta": -0.0026413139329806,
+      "paired_bootstrap_95_interval": [
+        -0.006309330908289243,
+        0.0008225088183421502
+      ],
+      "relevant_recommendations_added": 145,
+      "relevant_recommendations_removed": 163,
+      "seed": 42,
+      "users_improved": 155,
+      "users_worsened": 180
+    },
+    "methods": {
+      "als50_1": {
+        "map_at_5": 0.2834885361552028,
+        "unique_recommended_programmes": 183,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.2411629188712522,
+          "paired_bootstrap_95_interval": [
+            -0.25930709876543206,
+            -0.22390808531746031
+          ],
+          "relevant_recommendations_added": 891,
+          "relevant_recommendations_removed": 1966,
+          "seed": 42,
+          "users_improved": 195,
+          "users_worsened": 869
+        }
+      },
+      "als50_2": {
+        "map_at_5": 0.3376975308641975,
+        "unique_recommended_programmes": 134,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.18695392416225748,
+          "paired_bootstrap_95_interval": [
+            -0.20313570877425044,
+            -0.17115873567019402
+          ],
+          "relevant_recommendations_added": 854,
+          "relevant_recommendations_removed": 1708,
+          "seed": 42,
+          "users_improved": 246,
+          "users_worsened": 780
+        }
+      },
+      "boost_als50_2_0.05": {
+        "map_at_5": 0.5252621252204586,
+        "unique_recommended_programmes": 223,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0006106701940035276,
+          "paired_bootstrap_95_interval": [
+            -0.000774834656084656,
+            0.0019020833333333327
+          ],
+          "relevant_recommendations_added": 28,
+          "relevant_recommendations_removed": 25,
+          "seed": 42,
+          "users_improved": 30,
+          "users_worsened": 24
+        }
+      },
+      "boost_als50_2_0.10": {
+        "map_at_5": 0.5256933421516755,
+        "unique_recommended_programmes": 218,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0010418871252204588,
+          "paired_bootstrap_95_interval": [
+            -0.0008771825396825394,
+            0.003028119488536155
+          ],
+          "relevant_recommendations_added": 55,
+          "relevant_recommendations_removed": 49,
+          "seed": 42,
+          "users_improved": 46,
+          "users_worsened": 40
+        }
+      },
+      "boost_both_0.05": {
+        "map_at_5": 0.5244667107583775,
+        "unique_recommended_programmes": 224,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.00018474426807760117,
+          "paired_bootstrap_95_interval": [
+            -0.0017692019400352731,
+            0.0012834325396825393
+          ],
+          "relevant_recommendations_added": 41,
+          "relevant_recommendations_removed": 44,
+          "seed": 42,
+          "users_improved": 45,
+          "users_worsened": 46
+        }
+      },
+      "boost_content50_0.05": {
+        "map_at_5": 0.5238421516754851,
+        "unique_recommended_programmes": 227,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.0008093033509700173,
+          "paired_bootstrap_95_interval": [
+            -0.003028163580246913,
+            0.0014089781746031746
+          ],
+          "relevant_recommendations_added": 69,
+          "relevant_recommendations_removed": 75,
+          "seed": 42,
+          "users_improved": 75,
+          "users_worsened": 75
+        }
+      },
+      "content50": {
+        "map_at_5": 0.23752755731922398,
+        "unique_recommended_programmes": 256,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.28712389770723107,
+          "paired_bootstrap_95_interval": [
+            -0.30166911375661376,
+            -0.2722565145502645
+          ],
+          "relevant_recommendations_added": 402,
+          "relevant_recommendations_removed": 1857,
+          "seed": 42,
+          "users_improved": 80,
+          "users_worsened": 984
+        }
+      },
+      "ppr_k100": {
+        "map_at_5": 0.5275282186948853,
+        "unique_recommended_programmes": 235,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.002876763668430334,
+          "paired_bootstrap_95_interval": [
+            -0.001327265211640212,
+            0.00710092041446208
+          ],
+          "relevant_recommendations_added": 251,
+          "relevant_recommendations_removed": 223,
+          "seed": 42,
+          "users_improved": 198,
+          "users_worsened": 200
+        }
+      },
+      "v3_control": {
+        "map_at_5": 0.524651455026455,
+        "unique_recommended_programmes": 228,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0,
+          "paired_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "relevant_recommendations_added": 0,
+          "relevant_recommendations_removed": 0,
+          "seed": 42,
+          "users_improved": 0,
+          "users_worsened": 0
+        }
+      }
+    },
+    "new_configurations": 8,
+    "selected": "ppr_k100"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "implementation_sha256": "e0b52c203afbea3749b488a2d382884a7a3624713da37dcebe938c2b698f1754",
+  "inputs_sha256": {
+    "data/dataset11-30.csv": "8c9e5f058157041e5c33f13e64dc1625a5177cc6d5e434ba18cd8a69afafb53b",
+    "data/export_arh_11-20-final.csv": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c",
+    "data/export_arh_21-30-final.csv": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4",
+    "data/export_arh_31-42-final.csv": "5cc01f4619bd94886d83744f00bbc15cc5fa23384d297244a7dc2207450c4088",
+    "data/submission.csv": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02"
+  },
+  "outputs": {
+    "train_50": {
+      "bytes": 9740727,
+      "path": "data/processed/session_train_50.csv",
+      "programmes": 2649,
+      "sha256": "99183b7b8062e9d4439430efe43d299054bbcb96a0b46cf1258d62dc72cb1754",
+      "total_watch_seconds": 987287503,
+      "user_programme_pairs": 154718,
+      "users": 4781,
+      "watch_count": 400446
+    },
+    "train_80": {
+      "bytes": 5308877,
+      "path": "data/processed/session_train_80.csv",
+      "programmes": 2354,
+      "sha256": "e7e4f5eec9bc9bd7030a22e226e8548da324d74263e19b0594eb106962442301",
+      "total_watch_seconds": 542358084,
+      "user_programme_pairs": 84473,
+      "users": 4725,
+      "watch_count": 234384
+    },
+    "validation_80": {
+      "bytes": 7410246,
+      "path": "data/processed/session_validation_80.csv",
+      "programmes": 2769,
+      "sha256": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e",
+      "total_watch_seconds": 750268148,
+      "user_programme_pairs": 108877,
+      "users": 4620,
+      "watch_count": 226386
+    },
+    "validation_80_row_only": {
+      "bytes": 9042458,
+      "path": "data/processed/session_validation_80_row_only.csv",
+      "programmes": 2826,
+      "sha256": "fdc5ec29143b34c3279b4213169a2f8e46bb38a3ad7e0f8169dbf4175c508b5c",
+      "total_watch_seconds": 969570043,
+      "user_programme_pairs": 132754,
+      "users": 4623,
+      "watch_count": 280116
+    }
+  },
+  "periods": {
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-05-18 00:00:00"
+    ],
+    "validation": [
+      "2020-05-18 00:00:00",
+      "2020-07-27 00:00:00"
+    ]
+  },
+  "policy": {
+    "airing_deduplication": "one qualifying user/channel/airing irrespective of qualifying source-row count",
+    "channel_ambiguity": "remove simultaneous different-channel time; each remaining continuous piece is independent",
+    "comparison": "strictly greater, integer cross multiplication",
+    "denominator": "full canonical airing duration; period clipping never shortens denominator",
+    "id": "single-session-unambiguous-v1",
+    "schedule_policy": "existing half-open channel/time index, zero IDs and conflicting airings excluded",
+    "sitting": "one original log row after exact deduplication; no merging across original rows",
+    "source_status": "participant description, not confirmed Kaggle judge code; devices and actual switches unobservable",
+    "thresholds_percent": [
+      50,
+      80
+    ]
+  },
+  "protected_sha256": {
+    "data/processed/final_interactions.csv": "2b3115d8a904f1fc50d24094da958af297a07569208140f821db7cb92ebd2f69",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/final_submission.json": "9abce440e52334d82f235f7f3d9c5672edcd708e46d9c3c70a042d6e6ed83fb9",
+    "results/model_comparison.json": "26d5a8060d7efc62c60042de27b88358673529bf426679e1260e621022ecd07a",
+    "results/model_recommendations.csv": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "submission.csv": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854"
+  },
+  "runtime": {
+    "peak_rss_mib": 337.234375,
+    "wall_seconds": 63.66326062497683
+  },
+  "schedule_audit": {
+    "ambiguous_seconds": 1800,
+    "ambiguous_segments": 1,
+    "ambiguous_with_zero_seconds": 1800,
+    "canonical_airings": 2148624,
+    "invalid_intervals": 1,
+    "labelled_seconds": 793067880,
+    "merged_overlapping_same_item_rows": 4,
+    "segments": 2148624,
+    "source_rows": 2148629,
+    "unlabelled_seconds": 4031954280
+  },
+  "session_diagnostics": {
+    "train": {
+      "absent_channel_piece_seconds": 57744151,
+      "absent_channel_session_rows": 74160,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 3762992,
+      "cross_channel_ambiguous_user_channel_seconds": 624399365,
+      "cross_channel_ambiguous_user_seconds": 276506462,
+      "cross_channel_mask_evaluated_users": 4876,
+      "deduplicated_session_rows": 3945162,
+      "deduplicated_session_seconds": 4924696061,
+      "exact_duplicate_session_rows": 11,
+      "fully_ambiguous_session_rows": 351593,
+      "matched_labelled_pieces": 2225174,
+      "outside_schedule_piece_seconds": 336626464,
+      "qualified_user_airings_50": 400472,
+      "qualified_user_airings_80": 234385,
+      "qualifying_pieces_50": 403977,
+      "qualifying_pieces_80": 236117,
+      "row_weighted_cross_channel_ambiguous_seconds": 669511408,
+      "sessions_split_by_cross_channel_overlap": 84395,
+      "sessions_with_cross_channel_overlap": 557710,
+      "source_session_rows": 3945173,
+      "source_session_seconds": 4924703833,
+      "total_unique_seconds_50": 987287503,
+      "total_unique_seconds_80": 542358084,
+      "unique_user_channel_covered_seconds": 4847742424,
+      "unlabelled_overlap_seconds": 1754632115,
+      "user_programme_pairs_50": 154718,
+      "user_programme_pairs_80": 84473,
+      "watch_count_50": 400446,
+      "watch_count_80": 234384
+    },
+    "validation": {
+      "absent_channel_piece_seconds": 43155635,
+      "absent_channel_session_rows": 39429,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 1816792,
+      "cross_channel_ambiguous_user_channel_seconds": 530724680,
+      "cross_channel_ambiguous_user_seconds": 247807812,
+      "cross_channel_mask_evaluated_users": 4820,
+      "deduplicated_session_rows": 1877815,
+      "deduplicated_session_seconds": 3694510153,
+      "exact_duplicate_session_rows": 6,
+      "fully_ambiguous_session_rows": 139238,
+      "matched_labelled_pieces": 1368313,
+      "outside_schedule_piece_seconds": 8395085,
+      "qualified_user_airings_50": 335975,
+      "qualified_user_airings_80": 226388,
+      "qualifying_pieces_50": 338894,
+      "qualifying_pieces_80": 228074,
+      "row_weighted_cross_channel_ambiguous_seconds": 545553705,
+      "sessions_split_by_cross_channel_overlap": 33547,
+      "sessions_with_cross_channel_overlap": 235975,
+      "source_session_rows": 1877821,
+      "source_session_seconds": 3694511391,
+      "total_unique_seconds_50": 1101179531,
+      "total_unique_seconds_80": 750268148,
+      "unique_user_channel_covered_seconds": 3655247497,
+      "unlabelled_overlap_seconds": 1289681077,
+      "user_programme_pairs_50": 169329,
+      "user_programme_pairs_80": 108877,
+      "watch_count_50": 335955,
+      "watch_count_80": 226386
+    }
+  },
+  "source_view_rows": 5821987
+}

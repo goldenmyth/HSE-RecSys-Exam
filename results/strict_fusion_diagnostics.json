@@ -1,0 +1,491 @@
+{
+  "comparisons": {
+    "ppr_2": {
+      "ppr_1": {
+        "added_items": 1060,
+        "added_relevant_items": 332,
+        "mean_ap_delta": -0.01573148148148148,
+        "removed_items": 1060,
+        "removed_relevant_items": 426,
+        "users_with_higher_ap": 263,
+        "users_with_lower_ap": 346
+      },
+      "ppr_2": {
+        "added_items": 0,
+        "added_relevant_items": 0,
+        "mean_ap_delta": 0.0,
+        "removed_items": 0,
+        "removed_relevant_items": 0,
+        "users_with_higher_ap": 0,
+        "users_with_lower_ap": 0
+      },
+      "ppr_3": {
+        "added_items": 1125,
+        "added_relevant_items": 360,
+        "mean_ap_delta": -0.014677910052910052,
+        "removed_items": 1125,
+        "removed_relevant_items": 445,
+        "users_with_higher_ap": 279,
+        "users_with_lower_ap": 344
+      },
+      "ppr_4": {
+        "added_items": 1831,
+        "added_relevant_items": 507,
+        "mean_ap_delta": -0.06983179012345678,
+        "removed_items": 1831,
+        "removed_relevant_items": 913,
+        "users_with_higher_ap": 273,
+        "users_with_lower_ap": 620
+      },
+      "repeat_1": {
+        "added_items": 1432,
+        "added_relevant_items": 551,
+        "mean_ap_delta": -0.015419753086419756,
+        "removed_items": 1432,
+        "removed_relevant_items": 604,
+        "users_with_higher_ap": 275,
+        "users_with_lower_ap": 404
+      },
+      "repeat_2": {
+        "added_items": 1883,
+        "added_relevant_items": 617,
+        "mean_ap_delta": -0.03473831569664903,
+        "removed_items": 1883,
+        "removed_relevant_items": 776,
+        "users_with_higher_ap": 285,
+        "users_with_lower_ap": 513
+      },
+      "repeat_3": {
+        "added_items": 1741,
+        "added_relevant_items": 607,
+        "mean_ap_delta": -0.016173059964726635,
+        "removed_items": 1741,
+        "removed_relevant_items": 686,
+        "users_with_higher_ap": 305,
+        "users_with_lower_ap": 420
+      },
+      "saved_als_1": {
+        "added_items": 5185,
+        "added_relevant_items": 503,
+        "mean_ap_delta": -0.3883101851851852,
+        "removed_items": 5185,
+        "removed_relevant_items": 2869,
+        "users_with_higher_ap": 96,
+        "users_with_lower_ap": 999
+      },
+      "saved_als_2": {
+        "added_items": 5111,
+        "added_relevant_items": 520,
+        "mean_ap_delta": -0.3863101851851852,
+        "removed_items": 5111,
+        "removed_relevant_items": 2830,
+        "users_with_higher_ap": 101,
+        "users_with_lower_ap": 1007
+      },
+      "saved_als_3": {
+        "added_items": 5845,
+        "added_relevant_items": 186,
+        "mean_ap_delta": -0.47978924162257497,
+        "removed_items": 5845,
+        "removed_relevant_items": 3303,
+        "users_with_higher_ap": 28,
+        "users_with_lower_ap": 1089
+      },
+      "saved_als_4": {
+        "added_items": 5494,
+        "added_relevant_items": 364,
+        "mean_ap_delta": -0.4361404320987654,
+        "removed_items": 5494,
+        "removed_relevant_items": 3086,
+        "users_with_higher_ap": 65,
+        "users_with_lower_ap": 1038
+      },
+      "saved_als_5": {
+        "added_items": 5983,
+        "added_relevant_items": 129,
+        "mean_ap_delta": -0.4906730599647266,
+        "removed_items": 5983,
+        "removed_relevant_items": 3366,
+        "users_with_higher_ap": 21,
+        "users_with_lower_ap": 1099
+      },
+      "saved_als_6": {
+        "added_items": 5972,
+        "added_relevant_items": 123,
+        "mean_ap_delta": -0.4896148589065256,
+        "removed_items": 5972,
+        "removed_relevant_items": 3358,
+        "users_with_higher_ap": 26,
+        "users_with_lower_ap": 1100
+      },
+      "saved_content_1": {
+        "added_items": 6230,
+        "added_relevant_items": 55,
+        "mean_ap_delta": -0.5123258377425044,
+        "removed_items": 6230,
+        "removed_relevant_items": 3493,
+        "users_with_higher_ap": 3,
+        "users_with_lower_ap": 1124
+      },
+      "saved_content_2": {
+        "added_items": 6029,
+        "added_relevant_items": 256,
+        "mean_ap_delta": -0.49293430335097,
+        "removed_items": 6029,
+        "removed_relevant_items": 3443,
+        "users_with_higher_ap": 11,
+        "users_with_lower_ap": 1117
+      },
+      "saved_content_3": {
+        "added_items": 5663,
+        "added_relevant_items": 360,
+        "mean_ap_delta": -0.46455445326278666,
+        "removed_items": 5663,
+        "removed_relevant_items": 3206,
+        "users_with_higher_ap": 16,
+        "users_with_lower_ap": 1107
+      },
+      "saved_popularity": {
+        "added_items": 2745,
+        "added_relevant_items": 694,
+        "mean_ap_delta": -0.08532936507936507,
+        "removed_items": 2745,
+        "removed_relevant_items": 1176,
+        "users_with_higher_ap": 288,
+        "users_with_lower_ap": 685
+      },
+      "saved_rrf_0.2": {
+        "added_items": 2760,
+        "added_relevant_items": 699,
+        "mean_ap_delta": -0.08587830687830687,
+        "removed_items": 2760,
+        "removed_relevant_items": 1187,
+        "users_with_higher_ap": 289,
+        "users_with_lower_ap": 686
+      },
+      "saved_rrf_0.5": {
+        "added_items": 3158,
+        "added_relevant_items": 636,
+        "mean_ap_delta": -0.14061287477954143,
+        "removed_items": 3158,
+        "removed_relevant_items": 1401,
+        "users_with_higher_ap": 244,
+        "users_with_lower_ap": 790
+      },
+      "wrrf_1": {
+        "added_items": 1060,
+        "added_relevant_items": 293,
+        "mean_ap_delta": -0.026242283950617284,
+        "removed_items": 1060,
+        "removed_relevant_items": 430,
+        "users_with_higher_ap": 224,
+        "users_with_lower_ap": 391
+      },
+      "wrrf_2": {
+        "added_items": 1585,
+        "added_relevant_items": 444,
+        "mean_ap_delta": -0.04020789241622575,
+        "removed_items": 1585,
+        "removed_relevant_items": 682,
+        "users_with_higher_ap": 283,
+        "users_with_lower_ap": 479
+      },
+      "wrrf_3": {
+        "added_items": 2191,
+        "added_relevant_items": 597,
+        "mean_ap_delta": -0.04963425925925926,
+        "removed_items": 2191,
+        "removed_relevant_items": 918,
+        "users_with_higher_ap": 321,
+        "users_with_lower_ap": 545
+      },
+      "wrrf_4": {
+        "added_items": 2341,
+        "added_relevant_items": 606,
+        "mean_ap_delta": -0.13543298059964726,
+        "removed_items": 2341,
+        "removed_relevant_items": 1160,
+        "users_with_higher_ap": 213,
+        "users_with_lower_ap": 747
+      },
+      "wrrf_5": {
+        "added_items": 2183,
+        "added_relevant_items": 617,
+        "mean_ap_delta": -0.05419246031746032,
+        "removed_items": 2183,
+        "removed_relevant_items": 902,
+        "users_with_higher_ap": 328,
+        "users_with_lower_ap": 544
+      },
+      "wrrf_6": {
+        "added_items": 1021,
+        "added_relevant_items": 287,
+        "mean_ap_delta": -0.024990079365079364,
+        "removed_items": 1021,
+        "removed_relevant_items": 422,
+        "users_with_higher_ap": 225,
+        "users_with_lower_ap": 365
+      },
+      "wrrf_7": {
+        "added_items": 1482,
+        "added_relevant_items": 430,
+        "mean_ap_delta": -0.032298721340388005,
+        "removed_items": 1482,
+        "removed_relevant_items": 624,
+        "users_with_higher_ap": 300,
+        "users_with_lower_ap": 441
+      }
+    },
+    "saved_popularity": {
+      "ppr_1": {
+        "added_items": 1949,
+        "added_relevant_items": 811,
+        "mean_ap_delta": 0.0695978835978836,
+        "removed_items": 1949,
+        "removed_relevant_items": 423,
+        "users_with_higher_ap": 687,
+        "users_with_lower_ap": 254
+      },
+      "ppr_2": {
+        "added_items": 2745,
+        "added_relevant_items": 1176,
+        "mean_ap_delta": 0.08532936507936507,
+        "removed_items": 2745,
+        "removed_relevant_items": 694,
+        "users_with_higher_ap": 685,
+        "users_with_lower_ap": 288
+      },
+      "ppr_3": {
+        "added_items": 1891,
+        "added_relevant_items": 808,
+        "mean_ap_delta": 0.07065145502645503,
+        "removed_items": 1891,
+        "removed_relevant_items": 411,
+        "users_with_higher_ap": 684,
+        "users_with_lower_ap": 247
+      },
+      "ppr_4": {
+        "added_items": 1643,
+        "added_relevant_items": 404,
+        "mean_ap_delta": 0.015497574955908294,
+        "removed_items": 1643,
+        "removed_relevant_items": 328,
+        "users_with_higher_ap": 514,
+        "users_with_lower_ap": 316
+      },
+      "repeat_1": {
+        "added_items": 3686,
+        "added_relevant_items": 1591,
+        "mean_ap_delta": 0.06990961199294532,
+        "removed_items": 3686,
+        "removed_relevant_items": 1162,
+        "users_with_higher_ap": 637,
+        "users_with_lower_ap": 393
+      },
+      "repeat_2": {
+        "added_items": 3744,
+        "added_relevant_items": 1568,
+        "mean_ap_delta": 0.05059104938271605,
+        "removed_items": 3744,
+        "removed_relevant_items": 1245,
+        "users_with_higher_ap": 614,
+        "users_with_lower_ap": 429
+      },
+      "repeat_3": {
+        "added_items": 3762,
+        "added_relevant_items": 1598,
+        "mean_ap_delta": 0.06915630511463845,
+        "removed_items": 3762,
+        "removed_relevant_items": 1195,
+        "users_with_higher_ap": 630,
+        "users_with_lower_ap": 388
+      },
+      "saved_als_1": {
+        "added_items": 4972,
+        "added_relevant_items": 539,
+        "mean_ap_delta": -0.3029808201058201,
+        "removed_items": 4972,
+        "removed_relevant_items": 2423,
+        "users_with_higher_ap": 127,
+        "users_with_lower_ap": 904
+      },
+      "saved_als_2": {
+        "added_items": 4976,
+        "added_relevant_items": 600,
+        "mean_ap_delta": -0.3009808201058201,
+        "removed_items": 4976,
+        "removed_relevant_items": 2428,
+        "users_with_higher_ap": 147,
+        "users_with_lower_ap": 903
+      },
+      "saved_als_3": {
+        "added_items": 5732,
+        "added_relevant_items": 170,
+        "mean_ap_delta": -0.39445987654320985,
+        "removed_items": 5732,
+        "removed_relevant_items": 2805,
+        "users_with_higher_ap": 41,
+        "users_with_lower_ap": 1025
+      },
+      "saved_als_4": {
+        "added_items": 5458,
+        "added_relevant_items": 423,
+        "mean_ap_delta": -0.35081106701940035,
+        "removed_items": 5458,
+        "removed_relevant_items": 2663,
+        "users_with_higher_ap": 93,
+        "users_with_lower_ap": 978
+      },
+      "saved_als_5": {
+        "added_items": 5918,
+        "added_relevant_items": 124,
+        "mean_ap_delta": -0.40534369488536154,
+        "removed_items": 5918,
+        "removed_relevant_items": 2879,
+        "users_with_higher_ap": 26,
+        "users_with_lower_ap": 1051
+      },
+      "saved_als_6": {
+        "added_items": 5913,
+        "added_relevant_items": 121,
+        "mean_ap_delta": -0.4042854938271605,
+        "removed_items": 5913,
+        "removed_relevant_items": 2874,
+        "users_with_higher_ap": 27,
+        "users_with_lower_ap": 1049
+      },
+      "saved_content_1": {
+        "added_items": 6237,
+        "added_relevant_items": 56,
+        "mean_ap_delta": -0.42699647266313934,
+        "removed_items": 6237,
+        "removed_relevant_items": 3012,
+        "users_with_higher_ap": 5,
+        "users_with_lower_ap": 1073
+      },
+      "saved_content_2": {
+        "added_items": 6195,
+        "added_relevant_items": 290,
+        "mean_ap_delta": -0.40760493827160493,
+        "removed_items": 6195,
+        "removed_relevant_items": 2995,
+        "users_with_higher_ap": 18,
+        "users_with_lower_ap": 1066
+      },
+      "saved_content_3": {
+        "added_items": 5945,
+        "added_relevant_items": 491,
+        "mean_ap_delta": -0.37922508818342154,
+        "removed_items": 5945,
+        "removed_relevant_items": 2855,
+        "users_with_higher_ap": 47,
+        "users_with_lower_ap": 1059
+      },
+      "saved_popularity": {
+        "added_items": 0,
+        "added_relevant_items": 0,
+        "mean_ap_delta": 0.0,
+        "removed_items": 0,
+        "removed_relevant_items": 0,
+        "users_with_higher_ap": 0,
+        "users_with_lower_ap": 0
+      },
+      "saved_rrf_0.2": {
+        "added_items": 26,
+        "added_relevant_items": 6,
+        "mean_ap_delta": -0.0005489417989417987,
+        "removed_items": 26,
+        "removed_relevant_items": 12,
+        "users_with_higher_ap": 11,
+        "users_with_lower_ap": 14
+      },
+      "saved_rrf_0.5": {
+        "added_items": 1300,
+        "added_relevant_items": 189,
+        "mean_ap_delta": -0.05528350970017636,
+        "removed_items": 1300,
+        "removed_relevant_items": 472,
+        "users_with_higher_ap": 187,
+        "users_with_lower_ap": 472
+      },
+      "wrrf_1": {
+        "added_items": 2868,
+        "added_relevant_items": 1123,
+        "mean_ap_delta": 0.0590870811287478,
+        "removed_items": 2868,
+        "removed_relevant_items": 778,
+        "users_with_higher_ap": 650,
+        "users_with_lower_ap": 319
+      },
+      "wrrf_2": {
+        "added_items": 2084,
+        "added_relevant_items": 726,
+        "mean_ap_delta": 0.04512147266313933,
+        "removed_items": 2084,
+        "removed_relevant_items": 482,
+        "users_with_higher_ap": 614,
+        "users_with_lower_ap": 262
+      },
+      "wrrf_3": {
+        "added_items": 791,
+        "added_relevant_items": 313,
+        "mean_ap_delta": 0.03569510582010582,
+        "removed_items": 791,
+        "removed_relevant_items": 152,
+        "users_with_higher_ap": 526,
+        "users_with_lower_ap": 181
+      },
+      "wrrf_4": {
+        "added_items": 3379,
+        "added_relevant_items": 1191,
+        "mean_ap_delta": -0.05010361552028219,
+        "removed_items": 3379,
+        "removed_relevant_items": 1263,
+        "users_with_higher_ap": 467,
+        "users_with_lower_ap": 561
+      },
+      "wrrf_5": {
+        "added_items": 1527,
+        "added_relevant_items": 550,
+        "mean_ap_delta": 0.031136904761904765,
+        "removed_items": 1527,
+        "removed_relevant_items": 353,
+        "users_with_higher_ap": 536,
+        "users_with_lower_ap": 290
+      },
+      "wrrf_6": {
+        "added_items": 2640,
+        "added_relevant_items": 1017,
+        "mean_ap_delta": 0.06033928571428572,
+        "removed_items": 2640,
+        "removed_relevant_items": 670,
+        "users_with_higher_ap": 657,
+        "users_with_lower_ap": 290
+      },
+      "wrrf_7": {
+        "added_items": 2071,
+        "added_relevant_items": 750,
+        "mean_ap_delta": 0.05303064373897707,
+        "removed_items": 2071,
+        "removed_relevant_items": 462,
+        "users_with_higher_ap": 632,
+        "users_with_lower_ap": 255
+      }
+    }
+  },
+  "ppr_vs_repeat": {
+    "bootstrap_samples": 1000,
+    "convincing_for_v2": true,
+    "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+    "mean_map_delta": 0.015419753086419756,
+    "paired_bootstrap_95_interval": [
+      0.007712196869488539,
+      0.02216327711640212
+    ],
+    "seed": 42,
+    "users_improved": 404,
+    "users_worsened": 275,
+    "v2_criterion": "mean improvement >= 0.005 and paired-bootstrap lower bound > 0"
+  },
+  "protocol_id": "single-session-unambiguous-v1"
+}

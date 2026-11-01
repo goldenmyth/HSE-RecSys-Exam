@@ -1,0 +1,2764 @@
+{
+  "activity_cohorts": "frozen 60-second train unique-item bands, not changed using validation",
+  "all_validation_truth": {
+    "old_60s_pairs": 650292,
+    "old_nonempty_users": 4806,
+    "strict_80_pairs": 108877,
+    "strict_nonempty_users": 4620
+  },
+  "best_components": {
+    "als": "saved_als_2",
+    "content": "saved_content_3",
+    "ppr": "ppr_2",
+    "repeat": "repeat_1"
+  },
+  "candidate_pool": {
+    "count": 6384,
+    "source_protocol_sha256": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59"
+  },
+  "checks": {
+    "all_recommendations_valid": true,
+    "old_artifacts_unchanged": true,
+    "same_candidate_pool_and_population": true,
+    "train_only_graph_profiles_and_history": true,
+    "unit_test_output": "test_batch_boundary_and_invalid_configuration (test_content_based.ContentBasedTests.test_batch_boundary_and_invalid_configuration) ... ok\ntest_binary_and_log_profiles_match_manual_cosines_and_unknown_users (test_content_based.ContentBasedTests.test_binary_and_log_profiles_match_manual_cosines_and_unknown_users) ... ok\ntest_calendar_train_filter_excludes_future_metadata_and_boundary_touch (test_content_based.ContentBasedTests.test_calendar_train_filter_excludes_future_metadata_and_boundary_touch) ... ok\ntest_extended_feature_set_and_missing_observed_metadata (test_content_based.ContentBasedTests.test_extended_feature_set_and_missing_observed_metadata) ... ok\ntest_metadata_union_handles_genre_order_names_and_initial_year (test_content_based.ContentBasedTests.test_metadata_union_handles_genre_order_names_and_initial_year) ... ok\ntest_tfidf_uses_train_item_documents_and_scores_unobserved_known_item (test_content_based.ContentBasedTests.test_tfidf_uses_train_item_documents_and_scores_unobserved_known_item) ... ok\ntest_duplicate_population_user_is_rejected (test_evaluation.MetricTests.test_duplicate_population_user_is_rejected) ... ok\ntest_duplicate_prediction_occupies_rank_without_extra_hit (test_evaluation.MetricTests.test_duplicate_prediction_occupies_rank_without_extra_hit) ... ok\ntest_duplicate_truth_does_not_inflate_denominator (test_evaluation.MetricTests.test_duplicate_truth_does_not_inflate_denominator) ... ok\ntest_empty_population_is_zero (test_evaluation.MetricTests.test_empty_population_is_zero) ... ok\ntest_empty_truth_or_predictions (test_evaluation.MetricTests.test_empty_truth_or_predictions) ... ok\ntest_explicit_population_includes_missing_truth_and_predictions (test_evaluation.MetricTests.test_explicit_population_includes_missing_truth_and_predictions) ... ok\ntest_iterable_inputs (test_evaluation.MetricTests.test_iterable_inputs) ... ok\ntest_nonpositive_k_raises_even_for_empty_inputs (test_evaluation.MetricTests.test_nonpositive_k_raises_even_for_empty_inputs) ... ok\ntest_one_relevant_item_at_third_rank (test_evaluation.MetricTests.test_one_relevant_item_at_third_rank) ... ok\ntest_only_first_k_ranks_are_evaluated (test_evaluation.MetricTests.test_only_first_k_ranks_are_evaluated) ... ok\ntest_perfect_lists_use_minimum_of_k_and_truth_size (test_evaluation.MetricTests.test_perfect_lists_use_minimum_of_k_and_truth_size) ... ok\ntest_two_hits_at_first_and_third_rank (test_evaluation.MetricTests.test_two_hits_at_first_and_third_rank) ... ok\ntest_unavailable_relevant_item_remains_in_denominator (test_evaluation.MetricTests.test_unavailable_relevant_item_remains_in_denominator) ... ok\ntest_fit_all_variants_and_preserve_long_user_ids (test_evaluation.PopularityTests.test_fit_all_variants_and_preserve_long_user_ids) ... ok\ntest_fit_rejects_repeated_pair_across_user_groups (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_across_user_groups) ... ok\ntest_fit_rejects_repeated_pair_within_user_group (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_within_user_group) ... ok\ntest_fit_rejects_validation_rows (test_evaluation.PopularityTests.test_fit_rejects_validation_rows) ... ok\ntest_nonpositive_candidate_id_is_rejected (test_evaluation.PopularityTests.test_nonpositive_candidate_id_is_rejected) ... ok\ntest_too_few_distinct_candidates_is_rejected (test_evaluation.PopularityTests.test_too_few_distinct_candidates_is_rejected) ... ok\ntest_top_five_uses_allowed_candidates_and_numeric_ties (test_evaluation.PopularityTests.test_top_five_uses_allowed_candidates_and_numeric_ties) ... ok\ntest_zero_score_fallback_still_has_five_distinct_candidates (test_evaluation.PopularityTests.test_zero_score_fallback_still_has_five_distinct_candidates) ... ok\ntest_accepted_split_parts_are_one_airing_in_final_window (test_final_submission.FinalTrainingWindowTests.test_accepted_split_parts_are_one_airing_in_final_window) ... ok\ntest_distinct_airings_cannot_combine_seconds_to_reach_threshold (test_final_submission.FinalTrainingWindowTests.test_distinct_airings_cannot_combine_seconds_to_reach_threshold) ... ok\ntest_final_end_clips_crossing_views_and_excludes_test_only_item (test_final_submission.FinalTrainingWindowTests.test_final_end_clips_crossing_views_and_excludes_test_only_item) ... ok\ntest_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds (test_final_submission.FinalTrainingWindowTests.test_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds) ... ok\ntest_short_parts_of_one_airing_qualify_only_in_full_window (test_final_submission.FinalTrainingWindowTests.test_short_parts_of_one_airing_qualify_only_in_full_window) ... ok\ntest_calendar_candidates_include_overnight_airing_from_previous_file (test_final_submission.SubmissionFileTests.test_calendar_candidates_include_overnight_airing_from_previous_file) ... ok\ntest_invalid_top_five_and_template_row_count_are_rejected (test_final_submission.SubmissionFileTests.test_invalid_top_five_and_template_row_count_are_rejected) ... ok\ntest_popularity_default_rejects_final_and_validation_cannot_be_fit (test_final_submission.SubmissionFileTests.test_popularity_default_rejects_final_and_validation_cannot_be_fit) ... ok\ntest_popularity_explicit_final_period_counts_unique_users (test_final_submission.SubmissionFileTests.test_popularity_explicit_final_period_counts_unique_users) ... ok\ntest_submission_cannot_overwrite_original_template (test_final_submission.SubmissionFileTests.test_submission_cannot_overwrite_original_template) ... ok\ntest_submission_preserves_long_user_ids_order_schema_and_rank (test_final_submission.SubmissionFileTests.test_submission_preserves_long_user_ids_order_schema_and_rank) ... ok\ntest_binary_confidence_preserves_sparse_unseen_and_input (test_matrix_factorization.MatrixFactorizationTests.test_binary_confidence_preserves_sparse_unseen_and_input) ... ok\ntest_invalid_stored_counts_are_rejected (test_matrix_factorization.MatrixFactorizationTests.test_invalid_stored_counts_are_rejected) ... ok\ntest_log_count_confidence_uses_log1p_only_for_observed_entries (test_matrix_factorization.MatrixFactorizationTests.test_log_count_confidence_uses_log1p_only_for_observed_entries) ... ok\ntest_manual_factor_products_and_unknown_nan (test_matrix_factorization.MatrixFactorizationTests.test_manual_factor_products_and_unknown_nan) ... ok\ntest_real_tiny_fit_has_user_item_orientation_and_cpu_settings (test_matrix_factorization.MatrixFactorizationTests.test_real_tiny_fit_has_user_item_orientation_and_cpu_settings) ... ok\ntest_two_seeded_fits_have_equal_scores_and_ranking (test_matrix_factorization.MatrixFactorizationTests.test_two_seeded_fits_have_equal_scores_and_ranking) ... ok\ntest_empty_personal_history_uses_same_fallback_once (test_personal_repeat_fusion.FusionTests.test_empty_personal_history_uses_same_fallback_once) ... ok\ntest_invalid_component_inputs_are_rejected (test_personal_repeat_fusion.FusionTests.test_invalid_component_inputs_are_rejected) ... ok\ntest_item_below_fifth_rank_can_win_rrf (test_personal_repeat_fusion.FusionTests.test_item_below_fifth_rank_can_win_rrf) ... ok\ntest_popularity_component_and_zero_weight_are_not_double_counted (test_personal_repeat_fusion.FusionTests.test_popularity_component_and_zero_weight_are_not_double_counted) ... ok\ntest_ranked_lists_filters_unknowns_without_fallback_padding (test_personal_repeat_fusion.FusionTests.test_ranked_lists_filters_unknowns_without_fallback_padding) ... ok\ntest_raw_score_scaling_cannot_change_rank_fusion (test_personal_repeat_fusion.FusionTests.test_raw_score_scaling_cannot_change_rank_fusion) ... ok\ntest_frequency_scores_keep_counts_and_numeric_ties (test_personal_repeat_fusion.PersonalRepeatTests.test_frequency_scores_keep_counts_and_numeric_ties) ... ok\ntest_future_last_watch_is_rejected_even_without_recency (test_personal_repeat_fusion.PersonalRepeatTests.test_future_last_watch_is_rejected_even_without_recency) ... ok\ntest_invalid_counts_patterns_and_half_life_are_rejected (test_personal_repeat_fusion.PersonalRepeatTests.test_invalid_counts_patterns_and_half_life_are_rejected) ... ok\ntest_recency_halves_score_after_one_half_life (test_personal_repeat_fusion.PersonalRepeatTests.test_recency_halves_score_after_one_half_life) ... ok\ntest_unknown_users_items_and_unseen_pairs_are_nan (test_personal_repeat_fusion.PersonalRepeatTests.test_unknown_users_items_and_unseen_pairs_are_nan) ... ok\ntest_isolates_return_mass_to_own_seed_and_unknowns_stay_nan (test_personalized_pagerank.PersonalizedPageRankTests.test_isolates_return_mass_to_own_seed_and_unknowns_stay_nan) ... ok\ntest_log_seed_and_batching_match_manual_solution (test_personalized_pagerank.PersonalizedPageRankTests.test_log_seed_and_batching_match_manual_solution) ... ok\ntest_nonconvergence_and_invalid_parameters_raise (test_personalized_pagerank.PersonalizedPageRankTests.test_nonconvergence_and_invalid_parameters_raise) ... ok\ntest_topk_has_no_loops_and_breaks_ties_by_numeric_item_id (test_personalized_pagerank.PersonalizedPageRankTests.test_topk_has_no_loops_and_breaks_ties_by_numeric_item_id) ... ok\ntest_two_node_closed_form_and_distinct_personalisation (test_personalized_pagerank.PersonalizedPageRankTests.test_two_node_closed_form_and_distinct_personalisation) ... ok\ntest_user_normalisation_downweights_long_histories (test_personalized_pagerank.PersonalizedPageRankTests.test_user_normalisation_downweights_long_histories) ... ok\ntest_ambiguous_seconds_do_not_help_reach_threshold (test_prepare_interactions.IntervalPreparationTests.test_ambiguous_seconds_do_not_help_reach_threshold) ... ok\ntest_back_to_back_airings_of_same_item_count_separately (test_prepare_interactions.IntervalPreparationTests.test_back_to_back_airings_of_same_item_count_separately) ... ok\ntest_clock_gap_timestamp_roundtrip_preserves_calendar_labels (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_timestamp_roundtrip_preserves_calendar_labels) ... ok\ntest_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap) ... ok\ntest_cross_period_seconds_cannot_combine_to_pass_threshold (test_prepare_interactions.IntervalPreparationTests.test_cross_period_seconds_cannot_combine_to_pass_threshold) ... ok\ntest_duplicate_and_nested_same_item_airings_do_not_repeat_seconds (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_nested_same_item_airings_do_not_repeat_seconds) ... ok\ntest_duplicate_and_overlapping_views_are_unioned_before_counting (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_overlapping_views_are_unioned_before_counting) ... ok\ntest_fragmented_view_reaches_threshold_within_one_airing (test_prepare_interactions.IntervalPreparationTests.test_fragmented_view_reaches_threshold_within_one_airing) ... ok\ntest_long_view_finds_every_intersection_across_gaps (test_prepare_interactions.IntervalPreparationTests.test_long_view_finds_every_intersection_across_gaps) ... ok\ntest_merge_unsorted_overlapping_and_touching_views (test_prepare_interactions.IntervalPreparationTests.test_merge_unsorted_overlapping_and_touching_views) ... ok\ntest_missing_calendar_hour_is_rejected (test_prepare_interactions.IntervalPreparationTests.test_missing_calendar_hour_is_rejected) ... ok\ntest_nested_conflicting_airings_are_ambiguous_only_in_overlap (test_prepare_interactions.IntervalPreparationTests.test_nested_conflicting_airings_are_ambiguous_only_in_overlap) ... ok\ntest_one_view_can_intersect_multiple_airings (test_prepare_interactions.IntervalPreparationTests.test_one_view_can_intersect_multiple_airings) ... ok\ntest_period_slices_clip_and_exclude_right_boundary (test_prepare_interactions.IntervalPreparationTests.test_period_slices_clip_and_exclude_right_boundary) ... ok\ntest_same_item_on_two_channels_does_not_double_count_time_or_airings (test_prepare_interactions.IntervalPreparationTests.test_same_item_on_two_channels_does_not_double_count_time_or_airings) ... ok\ntest_strict_merge_preserves_adjacent_airings (test_prepare_interactions.IntervalPreparationTests.test_strict_merge_preserves_adjacent_airings) ... ok\ntest_threshold_is_inclusive (test_prepare_interactions.IntervalPreparationTests.test_threshold_is_inclusive) ... ok\ntest_touching_intervals_have_no_overlap (test_prepare_interactions.IntervalPreparationTests.test_touching_intervals_have_no_overlap) ... ok\ntest_zero_and_labelled_overlap_is_not_silently_assigned (test_prepare_interactions.IntervalPreparationTests.test_zero_and_labelled_overlap_is_not_silently_assigned) ... ok\ntest_fusion_uses_ranks_not_raw_score_scale (test_ranking.RankingTests.test_fusion_uses_ranks_not_raw_score_scale) ... ok\ntest_invalid_fallback_rejected (test_ranking.RankingTests.test_invalid_fallback_rejected) ... ok\ntest_numeric_tie_and_fallback_without_repeats (test_ranking.RankingTests.test_numeric_tie_and_fallback_without_repeats) ... ok\ntest_seen_items_are_not_filtered (test_ranking.RankingTests.test_seen_items_are_not_filtered) ... ok\ntest_unknown_user_fusion_is_same_popularity (test_ranking.RankingTests.test_unknown_user_fusion_is_same_popularity) ... ok\ntest_50_percent_is_strict (test_session_interactions.SessionInteractionTests.test_50_percent_is_strict) ... ok\ntest_80_percent_is_strict_and_81_percent_qualifies (test_session_interactions.SessionInteractionTests.test_80_percent_is_strict_and_81_percent_qualifies) ... ok\ntest_adjacent_airings_of_same_item_remain_two_watches (test_session_interactions.SessionInteractionTests.test_adjacent_airings_of_same_item_remain_two_watches) ... ok\ntest_cross_channel_same_item_union_and_clock_gap_use_existing_coordinates (test_session_interactions.SessionInteractionTests.test_cross_channel_same_item_union_and_clock_gap_use_existing_coordinates) ... ok\ntest_duplicate_and_overlapping_qualifying_rows_count_airing_once (test_session_interactions.SessionInteractionTests.test_duplicate_and_overlapping_qualifying_rows_count_airing_once) ... ok\ntest_period_clipping_keeps_full_airing_denominator (test_session_interactions.SessionInteractionTests.test_period_clipping_keeps_full_airing_denominator) ... ok\ntest_schedule_ambiguity_is_not_bridged_and_zero_is_not_an_item (test_session_interactions.SessionInteractionTests.test_schedule_ambiguity_is_not_bridged_and_zero_is_not_an_item) ... ok\ntest_separate_and_touching_original_rows_are_not_accumulated (test_session_interactions.SessionInteractionTests.test_separate_and_touching_original_rows_are_not_accumulated) ... ok\ntest_short_programmes_can_qualify_below_60_seconds (test_session_interactions.SessionInteractionTests.test_short_programmes_can_qualify_below_60_seconds) ... ok\ntest_touching_positive_segments_same_airing_join_only_inside_one_row (test_session_interactions.SessionInteractionTests.test_touching_positive_segments_same_airing_join_only_inside_one_row) ... ok\ntest_trimmed_continuous_piece_can_still_qualify (test_session_interactions.SessionInteractionTests.test_trimmed_continuous_piece_can_still_qualify) ... ok\ntest_unknown_other_channel_splits_original_row_without_summing (test_session_interactions.SessionInteractionTests.test_unknown_other_channel_splits_original_row_without_summing) ... ok\n\n----------------------------------------------------------------------\nRan 97 tests in 0.053s\n\nOK",
+    "unit_tests_passed": true
+  },
+  "component_rules": {
+    "fusion": "sum weight/(60+rank); shared fallback only after fusion",
+    "shared_fallback": "unchanged unique-user popularity from 60-second train",
+    "wide_lists": "Top-100 finite native scores, no per-component padding"
+  },
+  "ground_truth_comparison": {
+    "old_60s": {
+      "candidate_coverage_fraction": 1.0,
+      "nonempty_users": 1246,
+      "programmes_per_user": {
+        "count": 1260,
+        "mean": 182.46507936507936,
+        "p0": 0,
+        "p1": 0.0,
+        "p10": 52.900000000000006,
+        "p100": 820,
+        "p25": 88.0,
+        "p50": 159.5,
+        "p75": 245.25,
+        "p90": 348.0,
+        "p95": 416.04999999999995,
+        "p99": 607.0
+      },
+      "user_programme_pairs": 229906,
+      "users": 1260
+    },
+    "overlap_pairs": 30172,
+    "pairs_added": 0,
+    "pairs_removed": 199734,
+    "strict_session_80": {
+      "candidate_coverage_fraction": 1.0,
+      "nonempty_users": 1234,
+      "programmes_per_user": {
+        "count": 1260,
+        "mean": 23.946031746031746,
+        "p0": 0,
+        "p1": 0.0,
+        "p10": 4.0,
+        "p100": 155,
+        "p25": 9.0,
+        "p50": 16.0,
+        "p75": 29.0,
+        "p90": 54.100000000000136,
+        "p95": 74.0,
+        "p99": 116.0
+      },
+      "user_programme_pairs": 30172,
+      "users": 1260
+    }
+  },
+  "limitations": [
+    "Participant's label description is not independently verified Kaggle evaluator code.",
+    "No device ID: concurrency masking is a conservative assumption; row-only sensitivity is reported.",
+    "Test spans twelve weeks and public/private partition differs from this ten-week hold-out.",
+    "All hyperparameter/fusion selection uses this one validation window; no Kaggle score tuning."
+  ],
+  "methods": {
+    "ppr_1": {
+      "actual_training_unknown_users": 15,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.85,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 3.006716249976307,
+          "iterations_per_batch": [
+            64,
+            63,
+            64,
+            64,
+            63,
+            65,
+            65,
+            65,
+            65,
+            63,
+            63,
+            63,
+            64,
+            64,
+            63,
+            64,
+            65,
+            64,
+            63,
+            65,
+            64,
+            65,
+            65,
+            64,
+            63,
+            62,
+            64,
+            65,
+            65,
+            63,
+            64,
+            63,
+            64,
+            63,
+            65,
+            63,
+            63,
+            64,
+            63,
+            66
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 66,
+          "max_l1_residual": 9.986957726446715e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.15,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.15087733301334083,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        },
+        "zero_mass_ranking_policy": "unreachable candidates omitted"
+      },
+      "config": {
+        "normalisation": "user_cosine",
+        "restart": 0.15,
+        "weighting": "log_count"
+      },
+      "fallback_users": 15,
+      "family": "ppr",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5880011409513779,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.21570127504553735,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.44076688649080736,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5016962081128749
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5908011463844798,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.26852607709750564,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4480189924842576,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5122667927246534
+        }
+      },
+      "timing": {
+        "score_seconds": 3.008956165984273,
+        "train_seconds": 1.209089532494545e-06
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 154
+    },
+    "ppr_2": {
+      "actual_training_unknown_users": 15,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.7,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 1.7422575410455465,
+          "iterations_per_batch": [
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            37,
+            37,
+            37,
+            36,
+            36,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37,
+            37,
+            37,
+            36,
+            35,
+            37,
+            37,
+            37,
+            36,
+            37,
+            36,
+            36,
+            36,
+            37,
+            36,
+            36,
+            37,
+            36,
+            37
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 37,
+          "max_l1_residual": 9.948726801740869e-09,
+          "max_probability_mass_error": 7.105427357601002e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.3,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.15087733301334083,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        },
+        "zero_mass_ranking_policy": "unreachable candidates omitted"
+      },
+      "config": {
+        "normalisation": "user_cosine",
+        "restart": 0.3,
+        "weighting": "log_count"
+      },
+      "fallback_users": 15,
+      "family": "ppr",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6045730208881868,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.2369854280510018,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.45521532773780976,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5174276895943563
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.6074519400352734,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.29502267573696145,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4627051594556165,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5283297316765712
+        }
+      },
+      "timing": {
+        "score_seconds": 1.7445998329203576,
+        "train_seconds": 8.749775588512421e-07
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 246
+    },
+    "ppr_3": {
+      "actual_training_unknown_users": 15,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.85,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 3.2691042500082403,
+          "iterations_per_batch": [
+            67,
+            67,
+            69,
+            68,
+            67,
+            69,
+            69,
+            68,
+            69,
+            66,
+            67,
+            67,
+            67,
+            68,
+            67,
+            68,
+            68,
+            68,
+            68,
+            69,
+            69,
+            68,
+            69,
+            68,
+            67,
+            66,
+            69,
+            69,
+            69,
+            67,
+            68,
+            67,
+            68,
+            65,
+            69,
+            68,
+            67,
+            68,
+            68,
+            69
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 69,
+          "max_l1_residual": 9.91165337930424e-09,
+          "max_probability_mass_error": 6.8833827526759706e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.15,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "log_count"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.15800362499430776,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "none",
+          "users": 4781
+        },
+        "zero_mass_ranking_policy": "unreachable candidates omitted"
+      },
+      "config": {
+        "normalisation": "cosine",
+        "restart": 0.15,
+        "weighting": "log_count"
+      },
+      "fallback_users": 15,
+      "family": "ppr",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5935514305774969,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.20960837887067396,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.43750399680255797,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5027497795414462
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5963778659611993,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.26094104308390026,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.44470241722526915,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5133425625787863
+        }
+      },
+      "timing": {
+        "score_seconds": 3.2714099580189213,
+        "train_seconds": 0.15935774997342378
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 132
+    },
+    "ppr_4": {
+      "actual_training_unknown_users": 15,
+      "audit": {
+        "convergence": {
+          "all_seeded_rows_converged": true,
+          "batch_size": 32,
+          "continuation_probability": 0.85,
+          "dangling_items": 0,
+          "dangling_policy": "redistribute dangling mass to the same user's seed",
+          "elapsed_seconds": 3.1082094580633566,
+          "iterations_per_batch": [
+            64,
+            64,
+            64,
+            65,
+            64,
+            65,
+            65,
+            65,
+            65,
+            63,
+            64,
+            64,
+            64,
+            64,
+            64,
+            65,
+            65,
+            65,
+            64,
+            65,
+            65,
+            65,
+            65,
+            65,
+            64,
+            63,
+            65,
+            65,
+            65,
+            64,
+            64,
+            64,
+            64,
+            63,
+            65,
+            64,
+            63,
+            64,
+            64,
+            66
+          ],
+          "known_candidate_columns": 1977,
+          "max_iter": 200,
+          "max_iterations_used": 66,
+          "max_l1_residual": 9.978682722999237e-09,
+          "max_probability_mass_error": 7.993605777301127e-15,
+          "query_rows": 1260,
+          "repeat_policy": "seed items remain eligible; no already-watched filter",
+          "restart_probability": 0.15,
+          "seed_normalisation": "own train binary/log1p counts divided by row sum",
+          "seeded_user_rows": 1245,
+          "tol_l1_per_user": 1e-08,
+          "unknown_candidate_columns": 4407,
+          "unknown_user_rows": 15,
+          "unseeded_known_user_rows": 0,
+          "weighting": "binary"
+        },
+        "graph": {
+          "block_size": 64,
+          "dangling_items": 0,
+          "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+          "edge_tie_break": "similarity descending, numeric item ID ascending",
+          "edges": 130067,
+          "elapsed_seconds": 0.15087733301334083,
+          "full_dense_item_matrix_created": false,
+          "history_signal": "binary train interactions; raw counts do not weight graph edges",
+          "items": 2649,
+          "max_nonempty_row_sum_error": 4.440892098500626e-16,
+          "max_out_degree": 50,
+          "max_similarity_block_nnz": 112013,
+          "max_similarity_block_shape": [
+            64,
+            2649
+          ],
+          "neighbors": 50,
+          "normalisation": "user_cosine",
+          "train_user_item_pairs": 154718,
+          "user_normalisation": "divide each binary user row by sqrt(user degree)",
+          "users": 4781
+        },
+        "zero_mass_ranking_policy": "unreachable candidates omitted"
+      },
+      "config": {
+        "normalisation": "user_cosine",
+        "restart": 0.15,
+        "weighting": "binary"
+      },
+      "fallback_users": 15,
+      "family": "ppr",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5329370721432333,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.1912568306010929,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.383537170263789,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.44759589947089945
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5354748677248677,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.23809523809523808,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.3898476538695917,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.4570266072393301
+        }
+      },
+      "timing": {
+        "score_seconds": 3.1105493750656024,
+        "train_seconds": 6.249174475669861e-07
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 155
+    },
+    "repeat_1": {
+      "actual_training_unknown_users": 15,
+      "audit": {},
+      "config": {
+        "half_life_days": null,
+        "threshold_percent": 50
+      },
+      "fallback_users": 40,
+      "family": "repeat",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5898143759873617,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.2201639344262295,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.43891936450839325,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5020079365079365
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5926230158730159,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.27408163265306124,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.44614107251675805,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5125850891410049
+        }
+      },
+      "timing": {
+        "score_seconds": 0.007755541009828448,
+        "train_seconds": 0.0
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 278
+    },
+    "repeat_2": {
+      "actual_training_unknown_users": 20,
+      "audit": {},
+      "config": {
+        "half_life_days": null,
+        "threshold_percent": 80
+      },
+      "fallback_users": 84,
+      "family": "repeat",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5674078462348605,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.21185792349726776,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4215607513988809,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.4826893738977072
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5701097883597884,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2637414965986395,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4284968515133049,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.49285949036556814
+        }
+      },
+      "timing": {
+        "score_seconds": 0.007437749998643994,
+        "train_seconds": 0.0
+      },
+      "training_source": "data/processed/session_train_80.csv",
+      "unique_recommended_programmes": 304
+    },
+    "repeat_3": {
+      "actual_training_unknown_users": 15,
+      "audit": {},
+      "config": {
+        "half_life_days": 30,
+        "threshold_percent": 50
+      },
+      "fallback_users": 40,
+      "family": "repeat",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.593561084781464,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.1944262295081967,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.43577038369304555,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.5012546296296296
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5963875661375662,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2420408163265306,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.44294028031687993,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5118159103187466
+        }
+      },
+      "timing": {
+        "score_seconds": 0.008229583036154509,
+        "train_seconds": 0.0
+      },
+      "training_source": "data/processed/session_train_50.csv",
+      "unique_recommended_programmes": 496
+    },
+    "saved_als_1": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "binary"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.32102380952380954,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.060163243812532914,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.18145719489981785,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.20112859712230216,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.12911750440917108
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.060449735449735455,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.22589569160997733,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.20443784277879343,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.13183797046641454
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.1135542910778895,
+        "train_seconds": 1.4398688749643043
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 744
+    },
+    "saved_als_2": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.3409206349206349,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.05499210110584519,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.1943943533697632,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.210128896882494,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.13111750440917108
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.05525396825396826,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.24200113378684807,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.21358622790981108,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.13388010985053123
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.11311841697897762,
+        "train_seconds": 1.4591011661104858
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 640
+    },
+    "saved_als_3": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.12187830687830688,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.006334913112164296,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.15062841530054644,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.05848521183053557,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.03763844797178131
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.006365079365079364,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.18751700680272107,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.059447491367052616,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.038431478480100846
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.11398387502413243,
+        "train_seconds": 1.4428007090464234
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 1104
+    },
+    "saved_als_4": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.23617195767195767,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.018246445497630333,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.21134790528233152,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.1371787569944045,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.08128725749559083
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.018333333333333333,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.26310657596371884,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.13943581149705464,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.08299995497929048
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.11526749993208796,
+        "train_seconds": 2.5323466659756377
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 744
+    },
+    "saved_als_5": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.09612433862433863,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.0069562927856766715,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.13474043715846995,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.034856115107913664,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.026754629629629628
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.00698941798941799,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.16773809523809524,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.03542961608775137,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.027318341437061047
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.11788908299058676,
+        "train_seconds": 2.518156416947022
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 1098
+    },
+    "saved_als_6": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 1.0,
+        "weighting": "log_count"
+      },
+      "fallback_users": null,
+      "family": "als",
+      "old_60s_protocol_map_at_5": 0.09877248677248678,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.006695629278567667,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.14949453551912567,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.035932254196642685,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.02781283068783069
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.006727513227513227,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.18610544217687075,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.03652346130408287,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.028398838465694222
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.11453675001394004,
+        "train_seconds": 2.5930136250099167
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 1134
+    },
+    "saved_content_1": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "feature_set": "basic",
+        "history_weighting": "binary"
+      },
+      "fallback_users": null,
+      "family": "content",
+      "old_60s_protocol_map_at_5": 0.03975396825396826,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.0022590837282780414,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.012295081967213115,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.004568345323741008,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.005101851851851852
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.0022698412698412703,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.015306122448979591,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.004643510054844607,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.005209346299297677
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.16740862501319498,
+        "train_seconds": 0.03684154199436307
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 237
+    },
+    "saved_content_2": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "feature_set": "extended",
+        "history_weighting": "binary"
+      },
+      "fallback_users": null,
+      "family": "content",
+      "old_60s_protocol_map_at_5": 0.1592010582010582,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.022006319115323855,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.029795081967213113,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.02411121103117506,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.024493386243386244
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.02211111111111111,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.03709183673469388,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.024507921998781233,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.02500945434900054
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.28308079205453396,
+        "train_seconds": 0.15395925007760525
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 242
+    },
+    "saved_content_3": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "feature_set": "extended",
+        "history_weighting": "log1p"
+      },
+      "fallback_users": null,
+      "family": "content",
+      "old_60s_protocol_map_at_5": 0.25125925925925924,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.047756714060031596,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.07114754098360655,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.054571842525979214,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.05287323633156966
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.04798412698412698,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.08857142857142856,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.05546973390209222,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.05398725913920403
+        }
+      },
+      "timing": {
+        "recommend_seconds": 0.26843066699802876,
+        "train_seconds": 0.14922212495002896
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 212
+    },
+    "saved_popularity": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "variant": "unique_users"
+      },
+      "fallback_users": null,
+      "family": "popularity",
+      "old_60s_protocol_map_at_5": 0.7947830687830687,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5182069510268562,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.18617486338797812,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.36574440447641887,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.43209832451499114
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5206746031746031,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.23176870748299316,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.3717621369083892,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.44120250315144965
+        }
+      },
+      "timing": {
+        "independent_audit_seconds": 0.02032379200682044,
+        "recommend_seconds": 0.008337293053045869,
+        "train_seconds": 0.0015752909239381552
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 5
+    },
+    "saved_rrf_0.2": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "personal_method": "als_2",
+        "personal_weight": 0.2,
+        "popularity_weight": 0.8,
+        "rank_offset": 10
+      },
+      "fallback_users": null,
+      "family": "rank_fusion",
+      "old_60s_protocol_map_at_5": 0.7943809523809523,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5173038441284886,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.18617486338797812,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.36552857713828935,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.4315493827160494
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5197671957671958,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.23176870748299316,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.37154275848060125,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.44064199531784626
+        }
+      },
+      "timing": {
+        "additional_train_seconds": 0.0,
+        "includes_personal_inference": true,
+        "recommend_seconds": 0.292240250040777,
+        "train_seconds": 1.4591011661104858
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 6
+    },
+    "saved_rrf_0.5": {
+      "actual_training_unknown_users": null,
+      "config": {
+        "personal_method": "als_2",
+        "personal_weight": 0.5,
+        "popularity_weight": 0.5,
+        "rank_offset": 10
+      },
+      "fallback_users": null,
+      "family": "rank_fusion",
+      "old_60s_protocol_map_at_5": 0.7003465608465609,
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.41801957170440585,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.18316939890710382,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.35485361710631497,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.3768148148148148
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.4200101410934744,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.22802721088435374,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.3606921592524883,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.38475418692598595
+        }
+      },
+      "timing": {
+        "additional_train_seconds": 0.0,
+        "includes_personal_inference": true,
+        "recommend_seconds": 0.30437129200436175,
+        "train_seconds": 1.4591011661104858
+      },
+      "training_source": "data/processed/train_interactions.csv (60 seconds)",
+      "unique_recommended_programmes": 383
+    },
+    "wrrf_1": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "pop": "saved_popularity",
+        "repeat": "repeat_1"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "pop": 0.2,
+          "repeat": 0.8
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5798428997718097,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.1980327868852459,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.42817396083133497,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.49118540564373897
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5826040564373898,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.24653061224489797,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.43521887060735326,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.5015345308842067
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.04314683296252042
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 196
+    },
+    "wrrf_2": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "pop": "saved_popularity",
+        "repeat": "repeat_1"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "pop": 0.5,
+          "repeat": 0.5
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5662502194137264,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.20619307832422587,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4111051159072742,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.4772197971781305
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5689466490299824,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2566893424036281,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.41786918545602275,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.48727467134882047
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.04266145802102983
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 123
+    },
+    "wrrf_3": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "pop": "saved_popularity",
+        "ppr": "ppr_2"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "pop": 0.5,
+          "ppr": 0.5
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5548130595050026,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.19050546448087433,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.40448541167066343,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.46779343033509707
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5574550264550264,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.23715986394557823,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4111405646963234,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.4776496938591753
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.05970854207407683
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 23
+    },
+    "wrrf_4": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "als": "saved_als_2",
+        "content": "saved_content_3",
+        "ppr": "ppr_2"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "als": 0.25,
+          "content": 0.25,
+          "ppr": 0.5
+        }
+      },
+      "fallback_users": 10,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.4084044233807267,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.192367941712204,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.37652977617905675,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.381994708994709
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.4103492063492063,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2394784580498866,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.3827249644525696,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.3900432198811453
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.0937557079596445
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 219
+    },
+    "wrrf_5": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "als": "saved_als_2",
+        "content": "saved_content_3",
+        "pop": "saved_popularity",
+        "ppr": "ppr_2"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "als": 0.15,
+          "content": 0.15,
+          "pop": 0.4,
+          "ppr": 0.3
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5379941197121293,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.211183970856102,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.41103517186251,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.463235229276896
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5405559964726632,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2629024943310658,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.41779809059516554,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.4729954529083379
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.11046225007157773
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 45
+    },
+    "wrrf_6": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "als": "saved_als_2",
+        "content": "saved_content_3",
+        "pop": "saved_popularity",
+        "ppr": "ppr_2",
+        "repeat": "repeat_1"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "als": 0.05,
+          "content": 0.05,
+          "pop": 0.2,
+          "ppr": 0.2,
+          "repeat": 0.5
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5793176233105143,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.20406193078324228,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4309482414068745,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.4924376102292769
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.582076278659612,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.25403628117913835,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.43803879748121066,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.502813119034756
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.11733866692520678
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 195
+    },
+    "wrrf_7": {
+      "actual_training_unknown_users": null,
+      "component_sources": {
+        "als": "saved_als_2",
+        "content": "saved_content_3",
+        "pop": "saved_popularity",
+        "ppr": "ppr_2",
+        "repeat": "repeat_1"
+      },
+      "config": {
+        "list_limit": 100,
+        "offset": 60,
+        "weights": {
+          "als": 0.05,
+          "content": 0.05,
+          "pop": 0.4,
+          "ppr": 0.2,
+          "repeat": 0.3
+        }
+      },
+      "fallback_users": 0,
+      "family": "weighted_rrf",
+      "strict_protocol": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.17083333333333334,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5731161137440759,
+              "users": 633,
+              "users_without_validation_truth": 3
+            },
+            "light_1_50": {
+              "map_at_5": 0.20874316939890708,
+              "users": 61,
+              "users_without_validation_truth": 12
+            },
+            "medium_51_200": {
+              "map_at_5": 0.42093225419664265,
+              "users": 556,
+              "users_without_validation_truth": 9
+            }
+          },
+          "map_at_5": 0.4851289682539683
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.21354166666666669,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.5758452380952381,
+              "users": 630,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.2598639455782313,
+              "users": 49,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.42785801340645946,
+              "users": 547,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.4953504862236629
+        }
+      },
+      "timing": {
+        "component_inference_excluded": true,
+        "fusion_seconds": 0.11613229208160192
+      },
+      "training_source": "separate train-only components; see component_sources",
+      "unique_recommended_programmes": 93
+    }
+  },
+  "paired_improvement": {
+    "bootstrap_samples": 1000,
+    "convincing_for_v2": true,
+    "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+    "mean_map_delta": 0.08532936507936507,
+    "paired_bootstrap_95_interval": [
+      0.07406983575837743,
+      0.09597700617283951
+    ],
+    "seed": 42,
+    "users_improved": 685,
+    "users_worsened": 288,
+    "v2_criterion": "mean improvement >= 0.005 and paired-bootstrap lower bound > 0"
+  },
+  "policy": {
+    "airing_deduplication": "one qualifying user/channel/airing irrespective of qualifying source-row count",
+    "channel_ambiguity": "remove simultaneous different-channel time; each remaining continuous piece is independent",
+    "comparison": "strictly greater, integer cross multiplication",
+    "denominator": "full canonical airing duration; period clipping never shortens denominator",
+    "id": "single-session-unambiguous-v1",
+    "schedule_policy": "existing half-open channel/time index, zero IDs and conflicting airings excluded",
+    "sitting": "one original log row after exact deduplication; no merging across original rows",
+    "source_status": "participant description, not confirmed Kaggle judge code; devices and actual switches unobservable",
+    "thresholds_percent": [
+      50,
+      80
+    ]
+  },
+  "ppr_probe": {
+    "convergence": {
+      "all_seeded_rows_converged": true,
+      "batch_size": 32,
+      "continuation_probability": 0.85,
+      "dangling_items": 0,
+      "dangling_policy": "redistribute dangling mass to the same user's seed",
+      "elapsed_seconds": 0.07448870898224413,
+      "iterations_per_batch": [
+        64
+      ],
+      "known_candidate_columns": 1977,
+      "max_iter": 200,
+      "max_iterations_used": 64,
+      "max_l1_residual": 7.83488032222579e-09,
+      "max_probability_mass_error": 5.995204332975845e-15,
+      "query_rows": 32,
+      "repeat_policy": "seed items remain eligible; no already-watched filter",
+      "restart_probability": 0.15,
+      "seed_normalisation": "own train binary/log1p counts divided by row sum",
+      "seeded_user_rows": 32,
+      "tol_l1_per_user": 1e-08,
+      "unknown_candidate_columns": 4407,
+      "unknown_user_rows": 0,
+      "unseeded_known_user_rows": 0,
+      "weighting": "log_count"
+    },
+    "timing": {
+      "score_seconds": 0.07466716598719358,
+      "train_seconds": 0.15184916695579886
+    },
+    "users": 32,
+    "wall_seconds": 0.2273542919429019
+  },
+  "primary_population": "same frozen 1260 submission users, empty GT AP=0",
+  "protected_sha256": {
+    "data/processed/final_interactions.csv": "2b3115d8a904f1fc50d24094da958af297a07569208140f821db7cb92ebd2f69",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/final_submission.json": "9abce440e52334d82f235f7f3d9c5672edcd708e46d9c3c70a042d6e6ed83fb9",
+    "results/model_comparison.json": "26d5a8060d7efc62c60042de27b88358673529bf426679e1260e621022ecd07a",
+    "results/model_recommendations.csv": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "submission.csv": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854"
+  },
+  "protocol_id": "single-session-unambiguous-v1",
+  "recommendations": {
+    "path": "results/strict_recommendations.csv",
+    "rows": 32760,
+    "sha256": "e5aa1c44da584369909d38536a304c7319b74276994559365bc7961dc3923c94"
+  },
+  "reported_kaggle_v1": {
+    "private": 0.27809,
+    "public": 0.28234,
+    "source": "user-reported after first submission; never used for tuning"
+  },
+  "row_only_sensitivity": {
+    "ground_truth": {
+      "candidate_coverage_fraction": 1.0,
+      "nonempty_users": 1236,
+      "programmes_per_user": {
+        "count": 1260,
+        "mean": 31.546825396825398,
+        "p0": 0,
+        "p1": 0.0,
+        "p10": 4.0,
+        "p100": 284,
+        "p25": 10.0,
+        "p50": 18.0,
+        "p75": 36.0,
+        "p90": 78.10000000000014,
+        "p95": 121.04999999999995,
+        "p99": 170.23000000000025
+      },
+      "user_programme_pairs": 39749,
+      "users": 1260
+    },
+    "popularity_map_at_5": 0.45928350970017634,
+    "scope": "diagnostic only; not used to select the primary label policy"
+  },
+  "runtime": {
+    "peak_rss_mib": 595.109375,
+    "wall_seconds": 31.46557345893234
+  },
+  "selected_strategy": "ppr_2",
+  "user_examples": [
+    {
+      "methods": {
+        "ppr_2": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+            "tv_show_id": 20088
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "Реальная мистика.",
+            "tv_show_id": 5800509
+          }
+        ],
+        "repeat_1": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+            "tv_show_id": 20088
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "Реальная мистика.",
+            "tv_show_id": 5800509
+          }
+        ],
+        "saved_als_2": [
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Такси'.",
+            "tv_show_id": 90060765
+          },
+          {
+            "category": "Сериалы",
+            "strict_validation_relevant": false,
+            "title": "Т/с 'Отдел 44', 19 с.",
+            "tv_show_id": 10003014
+          },
+          {
+            "category": "Сериалы",
+            "strict_validation_relevant": true,
+            "title": "Т/с 'Опер по вызову', 2 сезон, 12 с.",
+            "tv_show_id": 10003102
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Облом.UA'.",
+            "tv_show_id": 200403
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "'Месть природы'.",
+            "tv_show_id": 2500415
+          }
+        ],
+        "saved_content_3": [
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Завтрак. Выходной'.",
+            "tv_show_id": 200477
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Право на власть'.",
+            "tv_show_id": 500346
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "Ток-шоу '60 минут' с Ольгой Скабеевой и Евгением Поповым.",
+            "tv_show_id": 500368
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "Утро с Интером.",
+            "tv_show_id": 200337
+          },
+          {
+            "category": "Развлечения",
+            "strict_validation_relevant": false,
+            "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+            "tv_show_id": 20088
+          }
+        ],
+        "saved_popularity": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Познавательное",
+            "strict_validation_relevant": false,
+            "title": "'Мир наизнанку'.",
+            "tv_show_id": 6500479
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "'Викна-Новости'.",
+            "tv_show_id": 2400467
+          }
+        ]
+      },
+      "selection": "train activity near p90",
+      "strict_gt_size": 13,
+      "user_id": "11595812149006555679"
+    },
+    {
+      "methods": {
+        "ppr_2": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Познавательное",
+            "strict_validation_relevant": false,
+            "title": "'Мир наизнанку'.",
+            "tv_show_id": 6500479
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "'Викна-Новости'.",
+            "tv_show_id": 2400467
+          }
+        ],
+        "repeat_1": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Познавательное",
+            "strict_validation_relevant": false,
+            "title": "'Мир наизнанку'.",
+            "tv_show_id": 6500479
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "'Викна-Новости'.",
+            "tv_show_id": 2400467
+          }
+        ],
+        "saved_als_2": [
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Мужество в бою'.",
+            "tv_show_id": 90053098
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Черный дождь'.",
+            "tv_show_id": 90051380
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Экипаж'.",
+            "tv_show_id": 90075859
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'В поисках Галактики', 1 ч.",
+            "tv_show_id": 90053352
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Интимный словарь', 1 ч.",
+            "tv_show_id": 90055201
+          }
+        ],
+        "saved_content_3": [
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Мужество в бою'.",
+            "tv_show_id": 90053098
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Осада'.",
+            "tv_show_id": 90026021
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Доблесть'.",
+            "tv_show_id": 90041855
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Большое дело'.",
+            "tv_show_id": 90052034
+          },
+          {
+            "category": "Фильмы",
+            "strict_validation_relevant": false,
+            "title": "Х/ф 'Город ангелов'.",
+            "tv_show_id": 90042923
+          }
+        ],
+        "saved_popularity": [
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "ТСН.",
+            "tv_show_id": 2400480
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": true,
+            "title": "Факты.",
+            "tv_show_id": 240081
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "Сегодня.",
+            "tv_show_id": 2400508
+          },
+          {
+            "category": "Познавательное",
+            "strict_validation_relevant": false,
+            "title": "'Мир наизнанку'.",
+            "tv_show_id": 6500479
+          },
+          {
+            "category": "Инфо",
+            "strict_validation_relevant": false,
+            "title": "'Викна-Новости'.",
+            "tv_show_id": 2400467
+          }
+        ]
+      },
+      "selection": "minimum positive train history",
+      "strict_gt_size": 1,
+      "user_id": "8150816946177670084"
+    }
+  ],
+  "user_examples_file": {
+    "path": "results/strict_user_examples.csv",
+    "sha256": "6319ca37631304c06b435b0f53c67a997006e5b6c717839da7401568b2e9ac80"
+  }
+}

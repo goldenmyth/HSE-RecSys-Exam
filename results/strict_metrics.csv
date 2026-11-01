@@ -1,0 +1,27 @@
+protocol_id,method,family,map_at_5,map_at_5_nonempty_gt,unique_items,fallback_users,score_seconds,graph_build_seconds,fusion_seconds,training_source
+single-session-unambiguous-v1,ppr_1,ppr,0.5016962081128749,0.5122667927246534,154,15,3.008956165984273,0.15087733301334083,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,ppr_2,ppr,0.5174276895943563,0.5283297316765712,246,15,1.7445998329203576,0.15087733301334083,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,ppr_3,ppr,0.5027497795414462,0.5133425625787863,132,15,3.2714099580189213,0.15800362499430776,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,ppr_4,ppr,0.44759589947089945,0.4570266072393301,155,15,3.1105493750656024,0.15087733301334083,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,repeat_1,repeat,0.5020079365079365,0.5125850891410049,278,40,0.007755541009828448,,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,repeat_2,repeat,0.4826893738977072,0.49285949036556814,304,84,0.007437749998643994,,,data/processed/session_train_80.csv
+single-session-unambiguous-v1,repeat_3,repeat,0.5012546296296296,0.5118159103187466,496,40,0.008229583036154509,,,data/processed/session_train_50.csv
+single-session-unambiguous-v1,saved_als_1,als,0.12911750440917108,0.13183797046641454,744,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_als_2,als,0.13111750440917108,0.13388010985053123,640,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_als_3,als,0.03763844797178131,0.038431478480100846,1104,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_als_4,als,0.08128725749559083,0.08299995497929048,744,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_als_5,als,0.026754629629629628,0.027318341437061047,1098,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_als_6,als,0.02781283068783069,0.028398838465694222,1134,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_content_1,content,0.005101851851851852,0.005209346299297677,237,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_content_2,content,0.024493386243386244,0.02500945434900054,242,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_content_3,content,0.05287323633156966,0.05398725913920403,212,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_popularity,popularity,0.43209832451499114,0.44120250315144965,5,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_rrf_0.2,rank_fusion,0.4315493827160494,0.44064199531784626,6,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,saved_rrf_0.5,rank_fusion,0.3768148148148148,0.38475418692598595,383,,,,,data/processed/train_interactions.csv (60 seconds)
+single-session-unambiguous-v1,wrrf_1,weighted_rrf,0.49118540564373897,0.5015345308842067,196,0,,,0.04314683296252042,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_2,weighted_rrf,0.4772197971781305,0.48727467134882047,123,0,,,0.04266145802102983,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_3,weighted_rrf,0.46779343033509707,0.4776496938591753,23,0,,,0.05970854207407683,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_4,weighted_rrf,0.381994708994709,0.3900432198811453,219,10,,,0.0937557079596445,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_5,weighted_rrf,0.463235229276896,0.4729954529083379,45,0,,,0.11046225007157773,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_6,weighted_rrf,0.4924376102292769,0.502813119034756,195,0,,,0.11733866692520678,separate train-only components; see component_sources
+single-session-unambiguous-v1,wrrf_7,weighted_rrf,0.4851289682539683,0.4953504862236629,93,0,,,0.11613229208160192,separate train-only components; see component_sources

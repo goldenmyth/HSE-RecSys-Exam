@@ -1,0 +1,153 @@
+{
+  "earlier_window_limitation": "earlier temporal robustness check, not an untouched confirmatory test",
+  "event_policy": "one >50% qualified user/channel/canonical-airing event; full airing bounds and first/last qualified watch endpoints",
+  "generated_outputs": [
+    "train_airings",
+    "train_50",
+    "train_60",
+    "validation_80"
+  ],
+  "history_index": {
+    "ambiguous_seconds": 1800,
+    "ambiguous_segments": 1,
+    "ambiguous_with_zero_seconds": 1800,
+    "canonical_airings": 2148624,
+    "invalid_intervals": 1,
+    "labelled_seconds": 793067880,
+    "merged_overlapping_same_item_rows": 4,
+    "segments": 2148624,
+    "source_rows": 2148629,
+    "unlabelled_seconds": 4031954280
+  },
+  "implementation_sha256": {
+    "scripts/prepare_history_context.py": "910e7c16f0654374682e2bb485446c40ca47f4a7f8150dc306470d3a8820aab9",
+    "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+    "scripts/prepare_sessions.py": "fc8b7eb26323d13bd396e194a76ca8d274d346f0aa4ac83e83b75804bdc9faf7",
+    "src/session_interactions.py": "4091f4318c0ac7cfaf587761a4d13ea3f717a84ebbb09e21b8264c525159b6f1"
+  },
+  "mode": "early",
+  "outputs": {
+    "train_50": {
+      "bytes": 5091747,
+      "path": "data/processed/early_train_50.csv",
+      "sha256": "d69e71e264b624ae61d9d5cdaed196c45024e59dcba319c03cb127c7103389b3",
+      "total_watch_seconds": 452756179,
+      "user_programme_pairs": 81177,
+      "watch_count": 200925
+    },
+    "train_60": {
+      "bytes": 27365419,
+      "path": "data/processed/early_train_60.csv",
+      "sha256": "fca702bc6edfe202cdf048924a5574b91a6daa167c05fb87992268a0c44f104f",
+      "total_watch_seconds": 1142325596,
+      "user_programme_pairs": 438615,
+      "watch_count": 896755
+    },
+    "train_airings": {
+      "bytes": 23779543,
+      "path": "data/processed/history_early_airings.csv",
+      "rows": 200934,
+      "sha256": "de7f5677b8505c4e253e4877116154ccd38d5e146c91ea6c1b53fc8f77220718"
+    },
+    "validation_80": {
+      "bytes": 3715114,
+      "path": "data/processed/early_validation_80.csv",
+      "sha256": "574a780bf4be03f9f0c7ad7d5fd2112cd8a5c4990e7185e63bfa9700979108d0",
+      "total_watch_seconds": 304839173,
+      "user_programme_pairs": 54778,
+      "watch_count": 118943
+    }
+  },
+  "periods": {
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-04-13 00:00:00"
+    ],
+    "validation": [
+      "2020-04-13 00:00:00",
+      "2020-05-18 00:00:00"
+    ]
+  },
+  "runtime_seconds_shared_pass": 73.44682508404367,
+  "session_diagnostics": {
+    "train": {
+      "absent_channel_piece_seconds": 32968617,
+      "absent_channel_session_rows": 42784,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 2061512,
+      "cross_channel_ambiguous_user_channel_seconds": 292523316,
+      "cross_channel_ambiguous_user_seconds": 127211883,
+      "cross_channel_mask_evaluated_users": 4841,
+      "deduplicated_session_rows": 2166635,
+      "deduplicated_session_seconds": 2519451392,
+      "exact_duplicate_session_rows": 8,
+      "fully_ambiguous_session_rows": 198911,
+      "matched_labelled_pieces": 1141975,
+      "outside_schedule_piece_seconds": 243315045,
+      "qualified_user_airings_50": 200934,
+      "qualified_user_airings_80": 115409,
+      "qualifying_pieces_50": 202567,
+      "qualifying_pieces_80": 116137,
+      "row_weighted_cross_channel_ambiguous_seconds": 319321436,
+      "sessions_split_by_cross_channel_overlap": 47426,
+      "sessions_with_cross_channel_overlap": 310325,
+      "source_session_rows": 2166643,
+      "source_session_seconds": 2519458773,
+      "total_unique_seconds_50": 452756179,
+      "total_unique_seconds_80": 237322075,
+      "unique_user_channel_covered_seconds": 2477211039,
+      "unlabelled_overlap_seconds": 906549708,
+      "user_programme_pairs_50": 81177,
+      "user_programme_pairs_80": 44500,
+      "watch_count_50": 200925,
+      "watch_count_80": 115409
+    },
+    "validation": {
+      "absent_channel_piece_seconds": 24775534,
+      "absent_channel_session_rows": 31396,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 1702119,
+      "cross_channel_ambiguous_user_channel_seconds": 331876049,
+      "cross_channel_ambiguous_user_seconds": 149294579,
+      "cross_channel_mask_evaluated_users": 4803,
+      "deduplicated_session_rows": 1779222,
+      "deduplicated_session_seconds": 2405244669,
+      "exact_duplicate_session_rows": 3,
+      "fully_ambiguous_session_rows": 152726,
+      "matched_labelled_pieces": 1083557,
+      "outside_schedule_piece_seconds": 93311419,
+      "qualified_user_airings_50": 199470,
+      "qualified_user_airings_80": 118944,
+      "qualifying_pieces_50": 201342,
+      "qualifying_pieces_80": 119948,
+      "row_weighted_cross_channel_ambiguous_seconds": 350189972,
+      "sessions_split_by_cross_channel_overlap": 36966,
+      "sessions_with_cross_channel_overlap": 247443,
+      "source_session_rows": 1779225,
+      "source_session_seconds": 2405245060,
+      "total_unique_seconds_50": 534132721,
+      "total_unique_seconds_80": 304839173,
+      "unique_user_channel_covered_seconds": 2370531385,
+      "unlabelled_overlap_seconds": 848082407,
+      "user_programme_pairs_50": 97630,
+      "user_programme_pairs_80": 54778,
+      "watch_count_50": 199453,
+      "watch_count_80": 118943
+    }
+  },
+  "source_signature": {
+    "data/dataset11-30.csv": {
+      "bytes": 396216555,
+      "mtime_ns": 1793528357893727343
+    },
+    "data/export_arh_11-20-final.csv": {
+      "bytes": 153322643,
+      "mtime_ns": 1793528357973890593
+    },
+    "data/export_arh_21-30-final.csv": {
+      "bytes": 154366907,
+      "mtime_ns": 1793528358056672306
+    }
+  },
+  "source_view_rows": 5821987
+}

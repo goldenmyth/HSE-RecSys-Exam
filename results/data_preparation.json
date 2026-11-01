@@ -1,0 +1,2487 @@
+{
+  "candidate_programmes_by_calendar_period": {
+    "test": 6649,
+    "train": 5842,
+    "validation": 6384
+  },
+  "checks": {
+    "clock_gap_evidence_verified": true,
+    "input_hashes_unchanged": true,
+    "no_test_viewing_used": true,
+    "output_validation": {
+      "train": {
+        "aggregate_totals_reconciled": true,
+        "bytes": 52688236,
+        "known_string_user_ids": true,
+        "last_watch_within_period": true,
+        "positive_candidate_ids_only": true,
+        "positive_counts_and_seconds": true,
+        "rows": 842247,
+        "sha256": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+        "unique_user_programme_pairs": true
+      },
+      "validation": {
+        "aggregate_totals_reconciled": true,
+        "bytes": 44004377,
+        "known_string_user_ids": true,
+        "last_watch_within_period": true,
+        "positive_candidate_ids_only": true,
+        "positive_counts_and_seconds": true,
+        "rows": 650292,
+        "sha256": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+        "unique_user_programme_pairs": true
+      }
+    },
+    "unique_view_seconds_fully_partitioned_without_double_counting": true,
+    "unit_tests": {
+      "command": ".venv/bin/python -B -m unittest discover -s tests -v",
+      "output": "test_ambiguous_seconds_do_not_help_reach_threshold (test_prepare_interactions.IntervalPreparationTests.test_ambiguous_seconds_do_not_help_reach_threshold) ... ok\ntest_back_to_back_airings_of_same_item_count_separately (test_prepare_interactions.IntervalPreparationTests.test_back_to_back_airings_of_same_item_count_separately) ... ok\ntest_clock_gap_timestamp_roundtrip_preserves_calendar_labels (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_timestamp_roundtrip_preserves_calendar_labels) ... ok\ntest_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap) ... ok\ntest_cross_period_seconds_cannot_combine_to_pass_threshold (test_prepare_interactions.IntervalPreparationTests.test_cross_period_seconds_cannot_combine_to_pass_threshold) ... ok\ntest_duplicate_and_nested_same_item_airings_do_not_repeat_seconds (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_nested_same_item_airings_do_not_repeat_seconds) ... ok\ntest_duplicate_and_overlapping_views_are_unioned_before_counting (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_overlapping_views_are_unioned_before_counting) ... ok\ntest_fragmented_view_reaches_threshold_within_one_airing (test_prepare_interactions.IntervalPreparationTests.test_fragmented_view_reaches_threshold_within_one_airing) ... ok\ntest_long_view_finds_every_intersection_across_gaps (test_prepare_interactions.IntervalPreparationTests.test_long_view_finds_every_intersection_across_gaps) ... ok\ntest_merge_unsorted_overlapping_and_touching_views (test_prepare_interactions.IntervalPreparationTests.test_merge_unsorted_overlapping_and_touching_views) ... ok\ntest_missing_calendar_hour_is_rejected (test_prepare_interactions.IntervalPreparationTests.test_missing_calendar_hour_is_rejected) ... ok\ntest_nested_conflicting_airings_are_ambiguous_only_in_overlap (test_prepare_interactions.IntervalPreparationTests.test_nested_conflicting_airings_are_ambiguous_only_in_overlap) ... ok\ntest_one_view_can_intersect_multiple_airings (test_prepare_interactions.IntervalPreparationTests.test_one_view_can_intersect_multiple_airings) ... ok\ntest_period_slices_clip_and_exclude_right_boundary (test_prepare_interactions.IntervalPreparationTests.test_period_slices_clip_and_exclude_right_boundary) ... ok\ntest_same_item_on_two_channels_does_not_double_count_time_or_airings (test_prepare_interactions.IntervalPreparationTests.test_same_item_on_two_channels_does_not_double_count_time_or_airings) ... ok\ntest_strict_merge_preserves_adjacent_airings (test_prepare_interactions.IntervalPreparationTests.test_strict_merge_preserves_adjacent_airings) ... ok\ntest_threshold_is_inclusive (test_prepare_interactions.IntervalPreparationTests.test_threshold_is_inclusive) ... ok\ntest_touching_intervals_have_no_overlap (test_prepare_interactions.IntervalPreparationTests.test_touching_intervals_have_no_overlap) ... ok\ntest_zero_and_labelled_overlap_is_not_silently_assigned (test_prepare_interactions.IntervalPreparationTests.test_zero_and_labelled_overlap_is_not_silently_assigned) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.003s\n\nOK",
+      "passed": true
+    }
+  },
+  "cold_start": {
+    "submission_users_total": 1260,
+    "submission_without_history_in_either_saved_period": 2,
+    "submission_without_train_history": 10,
+    "validation_source_users_without_train_history": 56,
+    "validation_truth_programmes_absent_from_train_interactions": 1390,
+    "validation_truth_users_without_train_history": 54
+  },
+  "eda": {
+    "candidate_intersections_by_calendar_period": {
+      "all_three": 3269,
+      "test_not_in_history": 1436,
+      "train_and_test": 4072,
+      "train_and_validation": 3993,
+      "validation_and_test": 4410,
+      "validation_not_in_train": 2391
+    },
+    "channel_correspondence": {
+      "absent_view_channels": [
+        149,
+        1174,
+        1508,
+        1509,
+        1510
+      ],
+      "common_channels": 197,
+      "history_schedule_channels": 404,
+      "join_rule": "int(vsetv_id) == int(channel_id); no remapping",
+      "view_log_channels": 202,
+      "view_rows_on_absent_channels": 113579,
+      "view_rows_on_absent_channels_fraction": 0.01950863167506214,
+      "view_rows_on_present_channels": 5708408
+    },
+    "comparison_with_exam": {
+      "duraton_not_always_equal_to_timestamp_difference": 117,
+      "expected_rows": {
+        "dataset11-30.csv": 5821987,
+        "export_arh_11-20-final.csv": 1074235,
+        "export_arh_21-30-final.csv": 1074394,
+        "export_arh_31-42-final.csv": 1295378
+      },
+      "observed_rows": {
+        "dataset11-30.csv": 5821987,
+        "export_arh_11-20-final.csv": 1074235,
+        "export_arh_21-30-final.csv": 1074394,
+        "export_arh_31-42-final.csv": 1295378
+      },
+      "programme_counts_in_exam_include_zero": true,
+      "row_counts_match": true
+    },
+    "global_metadata_consistency": {
+      "actors": {
+        "examples": [
+          {
+            "tv_show_id": 90054,
+            "values": [
+              "Дэвид Боу, Винсент Картайзер, Уилфорд Бримли",
+              "Дэвид Боу, Уилфорд Бримли, Мэри Бет МакДона"
+            ]
+          },
+          {
+            "tv_show_id": 9005347,
+            "values": [
+              "Роджер Мур, Лоис Чайлз, Майкл Лонсдаль",
+              "Роджер Мур, Лоис Чайлз, Майкл Лонсдэйл"
+            ]
+          },
+          {
+            "tv_show_id": 9007349,
+            "values": [
+              "Джонатан Брэндис, Чак Норрис, Бо Бриджес",
+              "Джонатан Брэндис, Чак Норрис, Мако"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 174
+      },
+      "director": {
+        "examples": [
+          {
+            "tv_show_id": 90014551,
+            "values": [
+              "Айвен Райтман",
+              "Айвен Райтмэн"
+            ]
+          },
+          {
+            "tv_show_id": 90015803,
+            "values": [
+              "Джон Бэдхэм",
+              "Джон Бэдэм"
+            ]
+          },
+          {
+            "tv_show_id": 90021962,
+            "values": [
+              "Стив Одекерк",
+              "Стив Одекёрк"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 48
+      },
+      "same_title_multiple_ids": {
+        "examples": [
+          {
+            "ids": [
+              12003091,
+              120082456
+            ],
+            "title": "М/с 'Приключения Ам Няма'. 'Руки мой, чихай в платок, дома будь, играй со мной'."
+          },
+          {
+            "ids": [
+              120063912,
+              120081929
+            ],
+            "title": "М/ф 'Большое путешествие'."
+          },
+          {
+            "ids": [
+              120079057,
+              120082471
+            ],
+            "title": "М/ф 'Король Лев'."
+          },
+          {
+            "ids": [
+              120069194,
+              120078468
+            ],
+            "title": "М/ф 'Кунг-фу панда 2'."
+          },
+          {
+            "ids": [
+              120060890,
+              120078308
+            ],
+            "title": "М/ф 'Роботы'."
+          }
+        ],
+        "titles": 284
+      },
+      "tv_show_category": {
+        "examples": [],
+        "ids_with_multiple_nonempty_values": 0
+      },
+      "tv_show_genre_1": {
+        "examples": [
+          {
+            "tv_show_id": 900802,
+            "values": [
+              "драма",
+              "триллер"
+            ]
+          },
+          {
+            "tv_show_id": 9002056,
+            "values": [
+              "драма",
+              "мелодрама"
+            ]
+          },
+          {
+            "tv_show_id": 90010745,
+            "values": [
+              "боевик",
+              "вестерн"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 80
+      },
+      "tv_show_genre_2": {
+        "examples": [
+          {
+            "tv_show_id": 900802,
+            "values": [
+              "драма",
+              "мелодрама"
+            ]
+          },
+          {
+            "tv_show_id": 2000444,
+            "values": [
+              "лыжные гонки",
+              "хоккей"
+            ]
+          },
+          {
+            "tv_show_id": 9003834,
+            "values": [
+              "комедия",
+              "триллер"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 80
+      },
+      "tv_show_genre_3": {
+        "examples": [
+          {
+            "tv_show_id": 900802,
+            "values": [
+              "мелодрама",
+              "триллер"
+            ]
+          },
+          {
+            "tv_show_id": 9003834,
+            "values": [
+              "мистика",
+              "фантазия"
+            ]
+          },
+          {
+            "tv_show_id": 90025819,
+            "values": [
+              "криминал",
+              "триллер"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 16
+      },
+      "tv_show_title": {
+        "examples": [
+          {
+            "tv_show_id": 20088,
+            "values": [
+              "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+              "'Завтрак с 1+1'. Информационно-развлекательная программа. Спецвыпуск."
+            ]
+          },
+          {
+            "tv_show_id": 30066,
+            "values": [
+              "'Наша Russia'. Дайджест, 1 эп.",
+              "'Наша Russia'. Дайджест, 10 эп.",
+              "'Наша Russia'. Дайджест, 11 эп.",
+              "'Наша Russia'. Дайджест, 12 эп.",
+              "'Наша Russia'. Дайджест, 13 эп."
+            ]
+          },
+          {
+            "tv_show_id": 30085,
+            "values": [
+              "'6 кадров'",
+              "'6 кадров'.",
+              "'6 кадров'. Скетч-шоу",
+              "'6 кадров'. Скетч-шоу."
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 4351
+      },
+      "year_of_production": {
+        "examples": [
+          {
+            "tv_show_id": 90026704,
+            "values": [
+              "1999",
+              "2000"
+            ]
+          },
+          {
+            "tv_show_id": 90026922,
+            "values": [
+              "1978",
+              "1979"
+            ]
+          },
+          {
+            "tv_show_id": 90035554,
+            "values": [
+              "1962",
+              "1963"
+            ]
+          }
+        ],
+        "ids_with_multiple_nonempty_values": 11
+      }
+    },
+    "history_schedule_index": {
+      "ambiguous_seconds": 1800,
+      "ambiguous_segments": 1,
+      "ambiguous_with_zero_seconds": 1800,
+      "canonical_airings": 2148624,
+      "invalid_intervals": 1,
+      "labelled_seconds": 793067880,
+      "merged_overlapping_same_item_rows": 4,
+      "segments": 2148624,
+      "source_rows": 2148629,
+      "unlabelled_seconds": 4031954280
+    },
+    "programme_id_intersections": {
+      "all_files_union": 9671,
+      "all_three_files": 3260,
+      "test_file_not_in_history_files": 1437,
+      "train_file_and_test_file": 4070,
+      "train_file_and_validation_file": 3976,
+      "validation_file_and_test_file": 4389,
+      "validation_file_not_in_train_file": 2387
+    },
+    "schedule_file_boundaries_per_channel": [
+      {
+        "common_channels": 399,
+        "gap_channels": 0,
+        "overlapping_channels": 1,
+        "touching_channels": 398
+      },
+      {
+        "common_channels": 403,
+        "gap_channels": 1,
+        "overlapping_channels": 0,
+        "touching_channels": 402
+      }
+    ],
+    "schedules": {
+      "export_arh_11-20-final.csv": {
+        "categories": {
+          "Детям": 104593,
+          "Другое": 484058,
+          "Инфо": 50585,
+          "Музыка": 29200,
+          "Познавательное": 221981,
+          "Развлечения": 8011,
+          "Сериалы": 72031,
+          "Спорт": 62197,
+          "Фильмы": 41579
+        },
+        "channels": 400,
+        "channels_with_multiple_titles": 3,
+        "clock_gap_crossing_adjacent_airings_naive_delta_seconds": {
+          "3600": 394
+        },
+        "clock_gap_crossing_adjacent_airings_normalised_delta_seconds": {
+          "0": 394
+        },
+        "columns": [
+          "channel_id",
+          "channel_title",
+          "start_time",
+          "duration",
+          "tv_show_title",
+          "tv_show_id",
+          "tv_show_category",
+          "tv_show_genre_1",
+          "tv_show_genre_2",
+          "tv_show_genre_3",
+          "year_of_production",
+          "director",
+          "actors"
+        ],
+        "cross_calendar_day_rows": 16935,
+        "duration_over_24h_rows": 0,
+        "duration_seconds": {
+          "count": 1074235,
+          "mean": 2229.9894901953485,
+          "p0": 0,
+          "p1": 60.0,
+          "p10": 300.0,
+          "p100": 86400,
+          "p25": 600.0,
+          "p50": 1500.0,
+          "p75": 3000.0,
+          "p90": 5400.0,
+          "p95": 6900.0,
+          "p99": 12600.0
+        },
+        "elapsed_seconds": 10.0,
+        "empty_fields": {
+          "actors": 973861,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 974050,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 620089,
+          "tv_show_genre_2": 928009,
+          "tv_show_genre_3": 1054059,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 959500
+        },
+        "empty_fields_labelled_rows": {
+          "actors": 15239,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 15428,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 5375,
+          "tv_show_genre_2": 47084,
+          "tv_show_genre_3": 95437,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 878
+        },
+        "end_max": "2020-05-18 12:00:00",
+        "exact_duplicate_rows": 0,
+        "examples": {
+          "actors": [
+            "Алина Гросу, Артем Алексеев, Ирина Мак",
+            "Том Круз, Донал Глисон, Сара Райт",
+            "Янина Андреева, Никита Вакулюк, Алёна Курта"
+          ],
+          "channel_id": [
+            "3",
+            "4",
+            "5"
+          ],
+          "channel_title": [
+            "1+1",
+            "Интер",
+            "ICTV"
+          ],
+          "director": [
+            "Андрей Комаров",
+            "Даг Лаймэн",
+            "Сергей Уманец"
+          ],
+          "duration": [
+            "6000",
+            "5400",
+            "8400"
+          ],
+          "start_time": [
+            "09.03.2020 06:00:00",
+            "09.03.2020 07:40:00",
+            "09.03.2020 09:10:00"
+          ],
+          "tv_show_category": [
+            "Другое",
+            "Инфо",
+            "Развлечения"
+          ],
+          "tv_show_genre_1": [
+            "общество и политика",
+            "музыка",
+            "мелодрама"
+          ],
+          "tv_show_genre_2": [
+            "биографический",
+            "мелодрама",
+            "быт"
+          ],
+          "tv_show_genre_3": [
+            "комедия",
+            "развлекательные",
+            "финансы и экономика"
+          ],
+          "tv_show_id": [
+            "0",
+            "2400480",
+            "700475"
+          ],
+          "tv_show_title": [
+            "'Жизнь известных людей', 2 сезон.",
+            "'ТСН. Неделя'.",
+            "'Голос страны', 10 сезон, 8 эп. 'Бои'."
+          ],
+          "year_of_production": [
+            "1997",
+            "2010",
+            "2019"
+          ]
+        },
+        "labelled_airing_duration_seconds": {
+          "count": 115613,
+          "mean": 3308.2693122745713,
+          "p0": 60,
+          "p1": 240.0,
+          "p10": 600.0,
+          "p100": 32700,
+          "p25": 1200.0,
+          "p50": 2700.0,
+          "p75": 5400.0,
+          "p90": 7200.0,
+          "p95": 8400.0,
+          "p99": 13800.0
+        },
+        "labelled_airings_shorter_than_60_seconds": 0,
+        "labelled_rows": 115613,
+        "logical_types": {
+          "actors": "str",
+          "channel_id": "int",
+          "channel_title": "str",
+          "director": "str",
+          "duration": "int",
+          "start_time": "naive datetime, DD.MM.YYYY HH:MM:SS",
+          "tv_show_category": "str",
+          "tv_show_genre_1": "str",
+          "tv_show_genre_2": "str",
+          "tv_show_genre_3": "str",
+          "tv_show_id": "int",
+          "tv_show_title": "str",
+          "year_of_production": "str"
+        },
+        "metadata_consistency": {
+          "actors": {
+            "examples": [
+              {
+                "tv_show_id": 90026922,
+                "values": [
+                  "Марчелло Мастроянни, Орнелла Мути, Мишель Пикколи",
+                  "Марчелло Мастроянни, Орнелла Мути, Ренато Подзетто"
+                ]
+              },
+              {
+                "tv_show_id": 90034732,
+                "values": [
+                  "Саммо Хун, Джон Шам, Ричард Нг",
+                  "Саммо Хун, Джон Шам, Ричард Ын"
+                ]
+              },
+              {
+                "tv_show_id": 90036080,
+                "values": [
+                  "Дэниэл Дэй-Льюис, Маделин Стоу, Джоди Мэй",
+                  "Дэниэл Дэй-Льюис, Мэделин Стоу, Расселл Минс"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 35
+          },
+          "director": {
+            "examples": [
+              {
+                "tv_show_id": 90036080,
+                "values": [
+                  "Майкл Манн",
+                  "Майкл Мэнн"
+                ]
+              },
+              {
+                "tv_show_id": 90048003,
+                "values": [
+                  "Джон Тёртелтауб",
+                  "Джон Тёртлтауб"
+                ]
+              },
+              {
+                "tv_show_id": 90049389,
+                "values": [
+                  "Майкл Манн",
+                  "Майкл Мэнн"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 6
+          },
+          "same_title_multiple_ids": {
+            "examples": [
+              {
+                "ids": [
+                  120060890,
+                  120078308
+                ],
+                "title": "М/ф 'Роботы'."
+              },
+              {
+                "ids": [
+                  120074812,
+                  120078338
+                ],
+                "title": "М/ф 'Снежная королева'."
+              },
+              {
+                "ids": [
+                  90048585,
+                  90077625
+                ],
+                "title": "Премьера. Х/ф 'Годзилла'."
+              },
+              {
+                "ids": [
+                  90012384,
+                  90039358
+                ],
+                "title": "Х/ф 'Беглецы'."
+              },
+              {
+                "ids": [
+                  90073384,
+                  90075655
+                ],
+                "title": "Х/ф 'Белоснежка'."
+              }
+            ],
+            "titles": 102
+          },
+          "tv_show_category": {
+            "examples": [],
+            "ids_with_multiple_nonempty_values": 0
+          },
+          "tv_show_genre_1": {
+            "examples": [
+              {
+                "tv_show_id": 90025819,
+                "values": [
+                  "драма",
+                  "триллер"
+                ]
+              },
+              {
+                "tv_show_id": 90026635,
+                "values": [
+                  "комедия",
+                  "мелодрама"
+                ]
+              },
+              {
+                "tv_show_id": 90034732,
+                "values": [
+                  "боевик",
+                  "комедия"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 9
+          },
+          "tv_show_genre_2": {
+            "examples": [
+              {
+                "tv_show_id": 2000444,
+                "values": [
+                  "лыжные гонки",
+                  "хоккей"
+                ]
+              },
+              {
+                "tv_show_id": 90025819,
+                "values": [
+                  "драма",
+                  "криминал"
+                ]
+              },
+              {
+                "tv_show_id": 90026635,
+                "values": [
+                  "комедия",
+                  "мелодрама"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 10
+          },
+          "tv_show_genre_3": {
+            "examples": [
+              {
+                "tv_show_id": 90025819,
+                "values": [
+                  "криминал",
+                  "триллер"
+                ]
+              },
+              {
+                "tv_show_id": 90070788,
+                "values": [
+                  "биографический",
+                  "музыкальный"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 2
+          },
+          "tv_show_title": {
+            "examples": [
+              {
+                "tv_show_id": 30066,
+                "values": [
+                  "'Наша Russia'. Дайджест, 1 эп.",
+                  "'Наша Russia'. Дайджест, 10 эп.",
+                  "'Наша Russia'. Дайджест, 11 эп.",
+                  "'Наша Russia'. Дайджест, 12 эп.",
+                  "'Наша Russia'. Дайджест, 13 эп."
+                ]
+              },
+              {
+                "tv_show_id": 100025,
+                "values": [
+                  "Т/с 'Две судьбы', 1-3 с.",
+                  "Т/с 'Две судьбы', 1-5 с.",
+                  "Т/с 'Две судьбы', 11-13 с.",
+                  "Т/с 'Две судьбы', 11-15 с.",
+                  "Т/с 'Две судьбы', 13-15 с."
+                ]
+              },
+              {
+                "tv_show_id": 100032,
+                "values": [
+                  "Т/с 'Боишься ли ты темноты?', 1 сезон, 1 с.",
+                  "Т/с 'Боишься ли ты темноты?', 1 сезон, 2 с.",
+                  "Т/с 'Боишься ли ты темноты?', 1 сезон, 3 с."
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 1685
+          },
+          "year_of_production": {
+            "examples": [
+              {
+                "tv_show_id": 90026922,
+                "values": [
+                  "1978",
+                  "1979"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 1
+          }
+        },
+        "negative_duration_rows": 0,
+        "overlapping_schedule_row_pairs": 2,
+        "rows": 1074235,
+        "start_max": "2020-05-18 11:45:00",
+        "start_min": "2020-03-08 23:00:00",
+        "unique_ids_including_zero": 5848,
+        "unique_nonzero_programmes": 5847,
+        "whitespace_only_fields": {
+          "actors": 0,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 0,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 0,
+          "tv_show_genre_2": 0,
+          "tv_show_genre_3": 0,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 0
+        },
+        "year_value_formats": {
+          "integer_year": 61119,
+          "missing": 959500,
+          "range_or_text": 53616
+        },
+        "zero_duration_rows": 1,
+        "zero_id_row_fraction": 0.892376435323742,
+        "zero_id_rows": 958622
+      },
+      "export_arh_21-30-final.csv": {
+        "categories": {
+          "Детям": 104913,
+          "Другое": 480431,
+          "Инфо": 51039,
+          "Музыка": 28843,
+          "Познавательное": 225108,
+          "Развлечения": 7792,
+          "Сериалы": 72081,
+          "Спорт": 60163,
+          "Фильмы": 44024
+        },
+        "channels": 403,
+        "channels_with_multiple_titles": 3,
+        "clock_gap_crossing_adjacent_airings_naive_delta_seconds": {},
+        "clock_gap_crossing_adjacent_airings_normalised_delta_seconds": {},
+        "columns": [
+          "channel_id",
+          "channel_title",
+          "start_time",
+          "duration",
+          "tv_show_title",
+          "tv_show_id",
+          "tv_show_category",
+          "tv_show_genre_1",
+          "tv_show_genre_2",
+          "tv_show_genre_3",
+          "year_of_production",
+          "director",
+          "actors"
+        ],
+        "cross_calendar_day_rows": 16921,
+        "duration_over_24h_rows": 0,
+        "duration_seconds": {
+          "count": 1074394,
+          "mean": 2261.3061874880163,
+          "p0": 60,
+          "p1": 120.0,
+          "p10": 300.0,
+          "p100": 86400,
+          "p25": 600.0,
+          "p50": 1500.0,
+          "p75": 3000.0,
+          "p90": 5400.0,
+          "p95": 7200.0,
+          "p99": 13200.0
+        },
+        "elapsed_seconds": 10.02,
+        "empty_fields": {
+          "actors": 968834,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 969487,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 616370,
+          "tv_show_genre_2": 924020,
+          "tv_show_genre_3": 1050668,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 954382
+        },
+        "empty_fields_labelled_rows": {
+          "actors": 15945,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 16598,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 5412,
+          "tv_show_genre_2": 48677,
+          "tv_show_genre_3": 97779,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 1493
+        },
+        "end_max": "2020-07-27 12:00:00",
+        "exact_duplicate_rows": 0,
+        "examples": {
+          "actors": [
+            "Джеймс МакЭвой, Майкл Фассбендер, Роуз Бёрн",
+            "Патрик Стюарт, Хью Джекмэн, Йен МакКеллен",
+            "Дилан О'Брайен, Кая Скоделарио, Томас Броуди-Сангстер"
+          ],
+          "channel_id": [
+            "3",
+            "4",
+            "5"
+          ],
+          "channel_title": [
+            "1+1",
+            "Интер",
+            "ICTV"
+          ],
+          "director": [
+            "Мэттью Вон",
+            "Брайан Сингер",
+            "Уэс Болл"
+          ],
+          "duration": [
+            "1800",
+            "600",
+            "3000"
+          ],
+          "start_time": [
+            "18.05.2020 06:30:00",
+            "18.05.2020 07:00:00",
+            "18.05.2020 07:10:00"
+          ],
+          "tv_show_category": [
+            "Развлечения",
+            "Инфо",
+            "Другое"
+          ],
+          "tv_show_genre_1": [
+            "информация (комплексная)",
+            "общество и политика",
+            "взаимоотношения"
+          ],
+          "tv_show_genre_2": [
+            "быт",
+            "общество и политика",
+            "приключения"
+          ],
+          "tv_show_genre_3": [
+            "финансы и экономика",
+            "фантазия",
+            "приключения"
+          ],
+          "tv_show_id": [
+            "20088",
+            "2400480",
+            "0"
+          ],
+          "tv_show_title": [
+            "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+            "ТСН.",
+            "'Жизнь известных людей', 2 сезон, 11 и 26 эп."
+          ],
+          "year_of_production": [
+            "1996-",
+            "1997",
+            "2015"
+          ]
+        },
+        "labelled_airing_duration_seconds": {
+          "count": 121505,
+          "mean": 3379.2085922390024,
+          "p0": 60,
+          "p1": 240.0,
+          "p10": 600.0,
+          "p100": 30900,
+          "p25": 1200.0,
+          "p50": 2700.0,
+          "p75": 5400.0,
+          "p90": 7200.0,
+          "p95": 8400.0,
+          "p99": 13500.0
+        },
+        "labelled_airings_shorter_than_60_seconds": 0,
+        "labelled_rows": 121505,
+        "logical_types": {
+          "actors": "str",
+          "channel_id": "int",
+          "channel_title": "str",
+          "director": "str",
+          "duration": "int",
+          "start_time": "naive datetime, DD.MM.YYYY HH:MM:SS",
+          "tv_show_category": "str",
+          "tv_show_genre_1": "str",
+          "tv_show_genre_2": "str",
+          "tv_show_genre_3": "str",
+          "tv_show_id": "int",
+          "tv_show_title": "str",
+          "year_of_production": "str"
+        },
+        "metadata_consistency": {
+          "actors": {
+            "examples": [
+              {
+                "tv_show_id": 9005347,
+                "values": [
+                  "Роджер Мур, Лоис Чайлз, Майкл Лонсдаль",
+                  "Роджер Мур, Лоис Чайлз, Майкл Лонсдэйл"
+                ]
+              },
+              {
+                "tv_show_id": 9009317,
+                "values": [
+                  "Джет Ли, Карен Мок, Лау Чинг Ванг",
+                  "Джет Ли, Лау Чин Вань, Карен Мок"
+                ]
+              },
+              {
+                "tv_show_id": 9009964,
+                "values": [
+                  "Брюс Уиллис, Маделин Стоу, Брэд Питт",
+                  "Брюс Уиллис, Мэделин Стоу, Брэд Питт"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 49
+          },
+          "director": {
+            "examples": [
+              {
+                "tv_show_id": 90015803,
+                "values": [
+                  "Джон Бэдхэм",
+                  "Джон Бэдэм"
+                ]
+              },
+              {
+                "tv_show_id": 90040523,
+                "values": [
+                  "Адам Шенкман",
+                  "Адам Шенкмэн"
+                ]
+              },
+              {
+                "tv_show_id": 90049074,
+                "values": [
+                  "Джон Тертелтауб",
+                  "Джон Тёртелтауб"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 8
+          },
+          "same_title_multiple_ids": {
+            "examples": [
+              {
+                "ids": [
+                  12003091,
+                  120082456
+                ],
+                "title": "М/с 'Приключения Ам Няма'. 'Руки мой, чихай в платок, дома будь, играй со мной'."
+              },
+              {
+                "ids": [
+                  120063912,
+                  120081929
+                ],
+                "title": "М/ф 'Большое путешествие'."
+              },
+              {
+                "ids": [
+                  120060544,
+                  120079992
+                ],
+                "title": "М/ф 'Тарзан'."
+              },
+              {
+                "ids": [
+                  90075190,
+                  90082447
+                ],
+                "title": "Х/ф '10 лет спустя'."
+              },
+              {
+                "ids": [
+                  90022445,
+                  90049051
+                ],
+                "title": "Х/ф 'Афёра Томаса Крауна'."
+              }
+            ],
+            "titles": 116
+          },
+          "tv_show_category": {
+            "examples": [],
+            "ids_with_multiple_nonempty_values": 0
+          },
+          "tv_show_genre_1": {
+            "examples": [
+              {
+                "tv_show_id": 90034573,
+                "values": [
+                  "драма",
+                  "мелодрама"
+                ]
+              },
+              {
+                "tv_show_id": 90037353,
+                "values": [
+                  "драма",
+                  "комедия"
+                ]
+              },
+              {
+                "tv_show_id": 90044177,
+                "values": [
+                  "комедия",
+                  "фантазия"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 21
+          },
+          "tv_show_genre_2": {
+            "examples": [
+              {
+                "tv_show_id": 90036762,
+                "values": [
+                  "мелодрама",
+                  "музыкальный"
+                ]
+              },
+              {
+                "tv_show_id": 90037353,
+                "values": [
+                  "драма",
+                  "комедия"
+                ]
+              },
+              {
+                "tv_show_id": 90044177,
+                "values": [
+                  "музыкальный",
+                  "фантазия"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 19
+          },
+          "tv_show_genre_3": {
+            "examples": [
+              {
+                "tv_show_id": 90060960,
+                "values": [
+                  "мелодрама",
+                  "фантазия"
+                ]
+              },
+              {
+                "tv_show_id": 90062121,
+                "values": [
+                  "детектив",
+                  "драма"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 2
+          },
+          "tv_show_title": {
+            "examples": [
+              {
+                "tv_show_id": 30085,
+                "values": [
+                  "'6 кадров'",
+                  "'6 кадров'.",
+                  "'6 кадров'. Скетч-шоу",
+                  "'6 кадров'. Скетч-шоу."
+                ]
+              },
+              {
+                "tv_show_id": 100025,
+                "values": [
+                  "Т/с 'Две судьбы', 1 с.",
+                  "Т/с 'Две судьбы', 10 с.",
+                  "Т/с 'Две судьбы', 11 с.",
+                  "Т/с 'Две судьбы', 12 с.",
+                  "Т/с 'Две судьбы', 13 с."
+                ]
+              },
+              {
+                "tv_show_id": 100026,
+                "values": [
+                  "Т/с 'Главные роли', 1 с.",
+                  "Т/с 'Главные роли', 10 с.",
+                  "Т/с 'Главные роли', 11 с.",
+                  "Т/с 'Главные роли', 12 с.",
+                  "Т/с 'Главные роли', 2 с."
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 2508
+          },
+          "year_of_production": {
+            "examples": [
+              {
+                "tv_show_id": 90037317,
+                "values": [
+                  "1966",
+                  "1967"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 1
+          }
+        },
+        "negative_duration_rows": 0,
+        "noncanonical_integer_identifiers": 1,
+        "overlapping_schedule_row_pairs": 2,
+        "rows": 1074394,
+        "start_max": "2020-07-27 11:55:00",
+        "start_min": "2020-05-18 00:00:00",
+        "unique_ids_including_zero": 6364,
+        "unique_nonzero_programmes": 6363,
+        "whitespace_only_fields": {
+          "actors": 0,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 0,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 0,
+          "tv_show_genre_2": 0,
+          "tv_show_genre_3": 0,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 0
+        },
+        "year_value_formats": {
+          "integer_year": 68077,
+          "missing": 954382,
+          "range_or_text": 51935
+        },
+        "zero_duration_rows": 0,
+        "zero_id_row_fraction": 0.8869083408879797,
+        "zero_id_rows": 952889
+      },
+      "export_arh_31-42-final.csv": {
+        "categories": {
+          "Детям": 130440,
+          "Другое": 572099,
+          "Инфо": 62860,
+          "Музыка": 34441,
+          "Познавательное": 273595,
+          "Развлечения": 9570,
+          "Сериалы": 86663,
+          "Спорт": 72002,
+          "Фильмы": 53708
+        },
+        "channels": 404,
+        "channels_with_multiple_titles": 3,
+        "clock_gap_crossing_adjacent_airings_naive_delta_seconds": {},
+        "clock_gap_crossing_adjacent_airings_normalised_delta_seconds": {},
+        "columns": [
+          "channel_id",
+          "channel_title",
+          "start_time",
+          "duration",
+          "tv_show_title",
+          "tv_show_id",
+          "tv_show_category",
+          "tv_show_genre_1",
+          "tv_show_genre_2",
+          "tv_show_genre_3",
+          "year_of_production",
+          "director",
+          "actors"
+        ],
+        "cross_calendar_day_rows": 20658,
+        "duration_over_24h_rows": 0,
+        "duration_seconds": {
+          "count": 1295378,
+          "mean": 2263.1395469121753,
+          "p0": 60,
+          "p1": 120.0,
+          "p10": 300.0,
+          "p100": 43200,
+          "p25": 600.0,
+          "p50": 1500.0,
+          "p75": 3000.0,
+          "p90": 5400.0,
+          "p95": 7200.0,
+          "p99": 13500.0
+        },
+        "elapsed_seconds": 12.095,
+        "empty_fields": {
+          "actors": 1169519,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 1170189,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 737871,
+          "tv_show_genre_2": 1113598,
+          "tv_show_genre_3": 1266621,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 1151706
+        },
+        "empty_fields_labelled_rows": {
+          "actors": 18915,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 19585,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 5695,
+          "tv_show_genre_2": 56910,
+          "tv_show_genre_3": 116017,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 1102
+        },
+        "end_max": "2020-10-19 12:00:00",
+        "exact_duplicate_rows": 0,
+        "examples": {
+          "actors": [
+            "Станислав Тикунов, Наталья Ноздрина, Татьяна Орлова",
+            "Бенедикт Камбербэтч, Мартин Фримэн, Руперт Грэйвз",
+            "Леонардо ДиКаприо, Том Харди, Донал Глисон"
+          ],
+          "channel_id": [
+            "3",
+            "4",
+            "5"
+          ],
+          "channel_title": [
+            "1+1",
+            "Интер",
+            "ICTV"
+          ],
+          "director": [
+            "Кристина Сиволап",
+            "Пол МакГиган",
+            "Алехандро Гонсалес Иньярриту"
+          ],
+          "duration": [
+            "1800",
+            "600",
+            "3000"
+          ],
+          "start_time": [
+            "27.07.2020 06:30:00",
+            "27.07.2020 07:00:00",
+            "27.07.2020 07:10:00"
+          ],
+          "tv_show_category": [
+            "Развлечения",
+            "Инфо",
+            "Другое"
+          ],
+          "tv_show_genre_1": [
+            "информация (комплексная)",
+            "общество и политика",
+            "юмор"
+          ],
+          "tv_show_genre_2": [
+            "комедия",
+            "драма",
+            "быт"
+          ],
+          "tv_show_genre_3": [
+            "мелодрама",
+            "триллер",
+            "развлекательные"
+          ],
+          "tv_show_id": [
+            "20088",
+            "2400480",
+            "0"
+          ],
+          "tv_show_title": [
+            "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+            "ТСН.",
+            "'Жизнь известных людей', 2 сезон, 59 эп."
+          ],
+          "year_of_production": [
+            "1996-",
+            "1997",
+            "2011-"
+          ]
+        },
+        "labelled_airing_duration_seconds": {
+          "count": 144774,
+          "mean": 3376.032160470803,
+          "p0": 60,
+          "p1": 240.0,
+          "p10": 600.0,
+          "p100": 31200,
+          "p25": 1200.0,
+          "p50": 2700.0,
+          "p75": 5400.0,
+          "p90": 7200.0,
+          "p95": 8400.0,
+          "p99": 13500.0
+        },
+        "labelled_airings_shorter_than_60_seconds": 0,
+        "labelled_rows": 144774,
+        "logical_types": {
+          "actors": "str",
+          "channel_id": "int",
+          "channel_title": "str",
+          "director": "str",
+          "duration": "int",
+          "start_time": "naive datetime, DD.MM.YYYY HH:MM:SS",
+          "tv_show_category": "str",
+          "tv_show_genre_1": "str",
+          "tv_show_genre_2": "str",
+          "tv_show_genre_3": "str",
+          "tv_show_id": "int",
+          "tv_show_title": "str",
+          "year_of_production": "str"
+        },
+        "metadata_consistency": {
+          "actors": {
+            "examples": [
+              {
+                "tv_show_id": 90054,
+                "values": [
+                  "Дэвид Боу, Винсент Картайзер, Уилфорд Бримли",
+                  "Дэвид Боу, Уилфорд Бримли, Мэри Бет МакДона"
+                ]
+              },
+              {
+                "tv_show_id": 9007349,
+                "values": [
+                  "Джонатан Брэндис, Чак Норрис, Бо Бриджес",
+                  "Джонатан Брэндис, Чак Норрис, Мако"
+                ]
+              },
+              {
+                "tv_show_id": 90014082,
+                "values": [
+                  "Луи Де Фюнес, Мишель Галабрю, Морис Риш",
+                  "Луи де Фюнес, Мишель Галабрю, Морис Риш"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 37
+          },
+          "director": {
+            "examples": [
+              {
+                "tv_show_id": 90021962,
+                "values": [
+                  "Стив Одекерк",
+                  "Стив Одекёрк"
+                ]
+              },
+              {
+                "tv_show_id": 90026830,
+                "values": [
+                  "Лучано Сальче",
+                  "Лючано Сальче"
+                ]
+              },
+              {
+                "tv_show_id": 90044218,
+                "values": [
+                  "Нэнси Майерс",
+                  "Нэнси Мейерс"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 16
+          },
+          "same_title_multiple_ids": {
+            "examples": [
+              {
+                "ids": [
+                  120063912,
+                  120081929
+                ],
+                "title": "М/ф 'Большое путешествие'."
+              },
+              {
+                "ids": [
+                  120079057,
+                  120082471
+                ],
+                "title": "М/ф 'Король Лев'."
+              },
+              {
+                "ids": [
+                  120069194,
+                  120078468
+                ],
+                "title": "М/ф 'Кунг-фу панда 2'."
+              },
+              {
+                "ids": [
+                  120060544,
+                  120079992
+                ],
+                "title": "М/ф 'Тарзан'."
+              },
+              {
+                "ids": [
+                  90023407,
+                  90080727
+                ],
+                "title": "Х/ф 'Авария'."
+              }
+            ],
+            "titles": 133
+          },
+          "tv_show_category": {
+            "examples": [],
+            "ids_with_multiple_nonempty_values": 0
+          },
+          "tv_show_genre_1": {
+            "examples": [
+              {
+                "tv_show_id": 90021962,
+                "values": [
+                  "комедия",
+                  "приключения"
+                ]
+              },
+              {
+                "tv_show_id": 90048976,
+                "values": [
+                  "боевик",
+                  "триллер"
+                ]
+              },
+              {
+                "tv_show_id": 90049491,
+                "values": [
+                  "ужастик",
+                  "фантазия"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 19
+          },
+          "tv_show_genre_2": {
+            "examples": [
+              {
+                "tv_show_id": 90014082,
+                "values": [
+                  "приключения",
+                  "фантастика"
+                ]
+              },
+              {
+                "tv_show_id": 90021962,
+                "values": [
+                  "комедия",
+                  "приключения"
+                ]
+              },
+              {
+                "tv_show_id": 90039408,
+                "values": [
+                  "военный",
+                  "мелодрама"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 19
+          },
+          "tv_show_genre_3": {
+            "examples": [
+              {
+                "tv_show_id": 90049924,
+                "values": [
+                  "триллер",
+                  "ужастик"
+                ]
+              },
+              {
+                "tv_show_id": 90054020,
+                "values": [
+                  "боевик",
+                  "исторический"
+                ]
+              },
+              {
+                "tv_show_id": 90071909,
+                "values": [
+                  "приключения",
+                  "фантазия"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 6
+          },
+          "tv_show_title": {
+            "examples": [
+              {
+                "tv_show_id": 20088,
+                "values": [
+                  "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+                  "'Завтрак с 1+1'. Информационно-развлекательная программа. Спецвыпуск."
+                ]
+              },
+              {
+                "tv_show_id": 30085,
+                "values": [
+                  "'6 кадров'.",
+                  "'6 кадров'. Скетч-шоу."
+                ]
+              },
+              {
+                "tv_show_id": 100020,
+                "values": [
+                  "Т/с 'Таксистка', 1 с. 'Квартирный вопрос'.",
+                  "Т/с 'Таксистка', 2 с. 'Грабеж средь бела дня'.",
+                  "Т/с 'Таксистка', 3 с. 'День рожденья'.",
+                  "Т/с 'Таксистка', 4 с. 'Несладкая жизнь'.",
+                  "Т/с 'Таксистка', 5 с. 'Угон'."
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 1679
+          },
+          "year_of_production": {
+            "examples": [
+              {
+                "tv_show_id": 90037566,
+                "values": [
+                  "1982",
+                  "1983"
+                ]
+              },
+              {
+                "tv_show_id": 90053323,
+                "values": [
+                  "2002",
+                  "2003"
+                ]
+              },
+              {
+                "tv_show_id": 90082857,
+                "values": [
+                  "2013",
+                  "2017"
+                ]
+              }
+            ],
+            "ids_with_multiple_nonempty_values": 3
+          }
+        },
+        "negative_duration_rows": 0,
+        "noncanonical_integer_identifiers": 3,
+        "overlapping_schedule_row_pairs": 8,
+        "rows": 1295378,
+        "start_max": "2020-10-19 11:55:00",
+        "start_min": "2020-07-27 00:00:00",
+        "unique_ids_including_zero": 6637,
+        "unique_nonzero_programmes": 6636,
+        "whitespace_only_fields": {
+          "actors": 0,
+          "channel_id": 0,
+          "channel_title": 0,
+          "director": 0,
+          "duration": 0,
+          "start_time": 0,
+          "tv_show_category": 0,
+          "tv_show_genre_1": 0,
+          "tv_show_genre_2": 0,
+          "tv_show_genre_3": 0,
+          "tv_show_id": 0,
+          "tv_show_title": 0,
+          "year_of_production": 0
+        },
+        "year_value_formats": {
+          "integer_year": 79510,
+          "missing": 1151706,
+          "range_or_text": 64162
+        },
+        "zero_duration_rows": 0,
+        "zero_id_row_fraction": 0.8882380278189069,
+        "zero_id_rows": 1150604
+      }
+    },
+    "submission_template": {
+      "columns": [
+        "user_id",
+        "tv_show_id"
+      ],
+      "duplicate_user_rows": 0,
+      "malformed_rows": 0,
+      "programme_ids_per_row": {
+        "5": 1260
+      },
+      "rows": 1260,
+      "unique_users": 1260,
+      "user_id_type": "str, exact CSV value; no numeric conversion",
+      "users_absent_from_view_log": 0,
+      "users_present_in_view_log": 1260,
+      "view_log_users_absent_from_submission": 3654
+    },
+    "timezone_evidence": {
+      "2020_03_29_schedule_starts_by_hour": {
+        "00": 594,
+        "01": 578,
+        "02": 585,
+        "03": 0,
+        "04": 604,
+        "05": 582,
+        "06": 732
+      },
+      "2020_03_29_view_starts_by_hour": {
+        "00": 1740,
+        "01": 938,
+        "02": 424,
+        "03": 0,
+        "04": 290,
+        "05": 334,
+        "06": 627
+      },
+      "absolute_timezone": "unknown; CSV timestamps contain no offsets or zone name",
+      "crossing_schedule_adjacencies": 394,
+      "duration_mismatches_after": 0,
+      "duration_mismatches_before": 117,
+      "empirical_clock_gap_normalisation_applied_to_both_sources": true,
+      "evidence_scope": "matching missing hour, all 117 view duration discrepancies and all 394 crossing adjacent-airing gaps; not proof of a named timezone or content-level clock synchronisation",
+      "naive_schedule_adjacency_gaps_seconds": {
+        "3600": 394
+      },
+      "no_global_shift_applied": true,
+      "normalised_schedule_adjacency_gaps_seconds": {
+        "0": 394
+      }
+    },
+    "view_log": {
+      "channels": 202,
+      "clock_normalised_interval_seconds": {
+        "count": 5821987,
+        "mean": 1480.4593730628392,
+        "p0": 61,
+        "p1": 62.0,
+        "p10": 80.0,
+        "p100": 342145,
+        "p25": 133.0,
+        "p50": 396.0,
+        "p75": 1452.0,
+        "p90": 3911.0,
+        "p95": 6344.0,
+        "p99": 14079.139999999665
+      },
+      "columns": [
+        "user_id",
+        "vsetv_id",
+        "start_time",
+        "stop_time",
+        "duraton"
+      ],
+      "cross_calendar_day_rows": 119789,
+      "duration_mismatch_deltas_seconds": {
+        "-3600": 117
+      },
+      "duration_mismatch_examples": [
+        {
+          "duraton": 119703,
+          "naive_calendar_seconds": 123303,
+          "normalised_elapsed_seconds": 119703,
+          "start": "2020-03-28 22:47:45",
+          "stop": "2020-03-30 09:02:48"
+        },
+        {
+          "duraton": 15296,
+          "naive_calendar_seconds": 18896,
+          "normalised_elapsed_seconds": 15296,
+          "start": "2020-03-28 22:56:59",
+          "stop": "2020-03-29 04:11:55"
+        },
+        {
+          "duraton": 10217,
+          "naive_calendar_seconds": 13817,
+          "normalised_elapsed_seconds": 10217,
+          "start": "2020-03-29 00:15:15",
+          "stop": "2020-03-29 04:05:32"
+        },
+        {
+          "duraton": 9535,
+          "naive_calendar_seconds": 13135,
+          "normalised_elapsed_seconds": 9535,
+          "start": "2020-03-29 00:27:30",
+          "stop": "2020-03-29 04:06:25"
+        },
+        {
+          "duraton": 10174,
+          "naive_calendar_seconds": 13774,
+          "normalised_elapsed_seconds": 10174,
+          "start": "2020-03-29 00:46:06",
+          "stop": "2020-03-29 04:35:40"
+        }
+      ],
+      "duration_mismatches_after_clock_normalisation": 0,
+      "duration_timestamp_mismatches": 117,
+      "elapsed_seconds": 25.143,
+      "empty_fields": {
+        "duraton": 0,
+        "start_time": 0,
+        "stop_time": 0,
+        "user_id": 0,
+        "vsetv_id": 0
+      },
+      "intervals_over_24h": 52,
+      "intervals_over_48h": 6,
+      "logical_types": {
+        "duraton": "int, seconds",
+        "start_time": "naive datetime, YYYY-MM-DD HH:MM:SS",
+        "stop_time": "naive datetime, YYYY-MM-DD HH:MM:SS",
+        "user_id": "str (exact CSV value)",
+        "vsetv_id": "int"
+      },
+      "negative_intervals": 0,
+      "negative_recorded_duration": 0,
+      "nonmonotonic_start_rows": 0,
+      "recorded_duration_seconds": {
+        "count": 5821987,
+        "mean": 1480.4593730628392,
+        "p0": 61,
+        "p1": 62.0,
+        "p10": 80.0,
+        "p100": 342145,
+        "p25": 133.0,
+        "p50": 396.0,
+        "p75": 1452.0,
+        "p90": 3911.0,
+        "p95": 6344.0,
+        "p99": 14079.139999999665
+      },
+      "rows": 5821987,
+      "sessions_crossing_train_validation_cutoff": 1007,
+      "start_max": "2020-07-26 23:58:42",
+      "start_min": "2020-03-09 00:00:02",
+      "stop_max": "2020-07-26 23:59:58",
+      "timestamp_interval_seconds": {
+        "count": 5821987,
+        "mean": 1480.5317194971408,
+        "p0": 61,
+        "p1": 62.0,
+        "p10": 80.0,
+        "p100": 342145,
+        "p25": 133.0,
+        "p50": 396.0,
+        "p75": 1452.0,
+        "p90": 3911.0,
+        "p95": 6345.0,
+        "p99": 14080.139999999665
+      },
+      "user_id_lengths": {
+        "16": 2,
+        "17": 22,
+        "18": 224,
+        "19": 2390,
+        "20": 2276
+      },
+      "users": 4914,
+      "zero_intervals": 0,
+      "zero_recorded_duration": 0
+    }
+  },
+  "inputs": {
+    "dataset11-30.csv": {
+      "bytes": 396216555,
+      "sha256": "8c9e5f058157041e5c33f13e64dc1625a5177cc6d5e434ba18cd8a69afafb53b"
+    },
+    "export_arh_11-20-final.csv": {
+      "bytes": 153322643,
+      "sha256": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c"
+    },
+    "export_arh_21-30-final.csv": {
+      "bytes": 154366907,
+      "sha256": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4"
+    },
+    "export_arh_31-42-final.csv": {
+      "bytes": 185952991,
+      "sha256": "5cc01f4619bd94886d83744f00bbc15cc5fa23384d297244a7dc2207450c4088"
+    },
+    "submission.csv": {
+      "bytes": 38348,
+      "sha256": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02"
+    }
+  },
+  "interactions": {
+    "train": {
+      "absent_channel_seconds": 65776041,
+      "accepted_user_airings": 1773566,
+      "candidate_programmes": 5842,
+      "exact_duplicate_source_rows": 11,
+      "fraction_0.10": 1093497,
+      "fraction_0.25": 781531,
+      "fraction_0.50": 515512,
+      "interacted_candidate_fraction": 0.5087298870249914,
+      "labelled_overlap_seconds": 2400296824,
+      "matched_labelled_user_airings": 1823893,
+      "no_schedule_overlap_diagnostics": {
+        "by_day": {
+          "2020-03-09": 10413,
+          "2020-03-10": 5373,
+          "2020-03-11": 5557,
+          "2020-03-12": 4977,
+          "2020-03-13": 4837,
+          "2020-03-14": 6720,
+          "2020-03-15": 7890,
+          "2020-03-16": 5603,
+          "2020-03-17": 6091,
+          "2020-03-18": 5619,
+          "2020-03-19": 5381,
+          "2020-03-20": 5045,
+          "2020-03-21": 7807,
+          "2020-03-22": 10044,
+          "2020-03-23": 6554,
+          "2020-03-24": 7855,
+          "2020-03-25": 6480,
+          "2020-03-26": 6222,
+          "2020-03-27": 5907,
+          "2020-03-28": 6950,
+          "2020-03-29": 7877,
+          "2020-03-30": 6764,
+          "2020-03-31": 6628,
+          "2020-04-01": 6171,
+          "2020-04-02": 5811,
+          "2020-04-03": 5899,
+          "2020-04-04": 5486,
+          "2020-04-05": 7998,
+          "2020-04-06": 4536,
+          "2020-04-07": 5357,
+          "2020-04-08": 3883,
+          "2020-04-09": 3721,
+          "2020-04-10": 4028,
+          "2020-04-11": 5121,
+          "2020-04-12": 6207,
+          "2020-04-13": 4638,
+          "2020-04-14": 4917,
+          "2020-04-15": 4489,
+          "2020-04-16": 4202,
+          "2020-04-17": 4391,
+          "2020-04-18": 5030,
+          "2020-04-19": 6081,
+          "2020-04-20": 6004,
+          "2020-04-21": 4917,
+          "2020-04-22": 4541,
+          "2020-04-23": 4195,
+          "2020-04-24": 4006,
+          "2020-04-25": 5101,
+          "2020-04-26": 6490,
+          "2020-04-27": 1051,
+          "2020-04-28": 479,
+          "2020-04-29": 444,
+          "2020-04-30": 556,
+          "2020-05-01": 525,
+          "2020-05-02": 554,
+          "2020-05-03": 760,
+          "2020-05-04": 446,
+          "2020-05-05": 448,
+          "2020-05-06": 506,
+          "2020-05-07": 535,
+          "2020-05-08": 335,
+          "2020-05-09": 433,
+          "2020-05-10": 628,
+          "2020-05-11": 408,
+          "2020-05-12": 228,
+          "2020-05-13": 366,
+          "2020-05-14": 233,
+          "2020-05-15": 237,
+          "2020-05-16": 244,
+          "2020-05-17": 326
+        },
+        "reasons": {
+          "after_last_channel_airing": 879,
+          "before_first_channel_airing": 294299,
+          "internal_channel_schedule_gap": 378
+        },
+        "top_channels": [
+          {
+            "channel_id": 1521,
+            "first_airing_start": "2020-04-27 05:30:00",
+            "last_airing_end": "2020-07-27 07:05:00",
+            "source_rows": 108304
+          },
+          {
+            "channel_id": 1519,
+            "first_airing_start": "2020-04-27 06:10:00",
+            "last_airing_end": "2020-07-27 06:15:00",
+            "source_rows": 65752
+          },
+          {
+            "channel_id": 1516,
+            "first_airing_start": "2020-04-06 06:10:00",
+            "last_airing_end": "2020-07-27 06:50:00",
+            "source_rows": 43647
+          },
+          {
+            "channel_id": 1528,
+            "first_airing_start": "2020-06-01 06:00:00",
+            "last_airing_end": "2020-07-27 07:00:00",
+            "source_rows": 37476
+          },
+          {
+            "channel_id": 1520,
+            "first_airing_start": "2020-04-27 06:00:00",
+            "last_airing_end": "2020-07-27 06:40:00",
+            "source_rows": 33845
+          },
+          {
+            "channel_id": 911,
+            "first_airing_start": "2020-05-25 05:55:00",
+            "last_airing_end": "2020-07-27 05:55:00",
+            "source_rows": 1485
+          },
+          {
+            "channel_id": 823,
+            "first_airing_start": "2020-03-09 00:00:00",
+            "last_airing_end": "2020-04-13 00:00:00",
+            "source_rows": 1257
+          },
+          {
+            "channel_id": 763,
+            "first_airing_start": "2020-05-25 07:30:00",
+            "last_airing_end": "2020-07-27 07:30:00",
+            "source_rows": 733
+          },
+          {
+            "channel_id": 3,
+            "first_airing_start": "2020-03-09 06:00:00",
+            "last_airing_end": "2020-07-27 06:30:00",
+            "source_rows": 381
+          },
+          {
+            "channel_id": 108,
+            "first_airing_start": "2020-03-09 05:00:00",
+            "last_airing_end": "2020-07-27 06:30:00",
+            "source_rows": 252
+          },
+          {
+            "channel_id": 5,
+            "first_airing_start": "2020-03-09 04:50:00",
+            "last_airing_end": "2020-07-27 04:30:00",
+            "source_rows": 209
+          },
+          {
+            "channel_id": 6,
+            "first_airing_start": "2020-03-09 03:20:00",
+            "last_airing_end": "2020-07-27 02:20:00",
+            "source_rows": 187
+          },
+          {
+            "channel_id": 4,
+            "first_airing_start": "2020-03-09 05:30:00",
+            "last_airing_end": "2020-07-27 05:25:00",
+            "source_rows": 151
+          },
+          {
+            "channel_id": 7,
+            "first_airing_start": "2020-03-09 03:00:00",
+            "last_airing_end": "2020-07-27 04:25:00",
+            "source_rows": 122
+          },
+          {
+            "channel_id": 921,
+            "first_airing_start": "2020-03-09 05:55:00",
+            "last_airing_end": "2020-07-27 06:00:00",
+            "source_rows": 91
+          }
+        ]
+      },
+      "outside_schedule_seconds": 379979490,
+      "overlap_seconds_sum_before_threshold": 2400296824,
+      "overlapping_view_seconds_removed": 76961409,
+      "programme_count_per_active_user": {
+        "count": 4841,
+        "mean": 173.9820285065069,
+        "p0": 1,
+        "p1": 7.0,
+        "p10": 45.0,
+        "p100": 1275,
+        "p25": 90.0,
+        "p50": 154.0,
+        "p75": 234.0,
+        "p90": 322.0,
+        "p95": 390.0,
+        "p99": 538.6000000000004
+      },
+      "programme_count_per_source_user_including_zero": {
+        "count": 4876,
+        "mean": 172.73318293683346,
+        "p0": 0,
+        "p1": 1.75,
+        "p10": 44.0,
+        "p100": 1275,
+        "p25": 88.0,
+        "p50": 153.0,
+        "p75": 233.0,
+        "p90": 321.0,
+        "p95": 389.25,
+        "p99": 538.25
+      },
+      "raw_view_seconds": 4924703833,
+      "seconds_120": 1531876,
+      "seconds_30": 1798827,
+      "seconds_300": 1224147,
+      "seconds_60": 1773566,
+      "seconds_60_and_fraction_0.10": 1092628,
+      "source_rows": 3945173,
+      "source_rows_absent_channel": 74160,
+      "source_rows_channel_present": 3871013,
+      "source_rows_channel_present_fraction": 0.9812023452456965,
+      "source_rows_only_unlabelled": 1677639,
+      "source_rows_with_labelled_overlap": 1897818,
+      "source_rows_with_labelled_overlap_fraction": 0.48104810612867926,
+      "source_rows_with_schedule_overlap": 3575457,
+      "source_rows_with_schedule_overlap_fraction": 0.9062864923794216,
+      "source_rows_with_unlabelled_overlap": 1940657,
+      "source_rows_without_schedule_overlap": 295556,
+      "source_users": 4876,
+      "submission_users_with_interactions": 1250,
+      "submission_users_without_interactions": 10,
+      "total_watch_seconds": 2398763386,
+      "unique_interacted_programmes": 2972,
+      "unique_user_channel_view_seconds": 4847742424,
+      "unlabelled_overlap_seconds": 2001690069,
+      "user_count_per_interacted_programme": {
+        "count": 2972,
+        "mean": 283.3940107671602,
+        "p0": 1,
+        "p1": 1.0,
+        "p10": 13.0,
+        "p100": 4482,
+        "p25": 52.0,
+        "p50": 144.0,
+        "p75": 346.25,
+        "p90": 671.8000000000002,
+        "p95": 927.7999999999993,
+        "p99": 2505.1699999999973
+      },
+      "user_programme_pairs": 842247,
+      "users_with_interactions": 4841,
+      "users_with_interactions_fraction": 0.9928219852337982,
+      "users_without_interactions": 35,
+      "users_without_interactions_fraction": 0.007178014766201805,
+      "view_log_users_without_period_history": 73,
+      "view_log_users_without_period_history_fraction": 0.014855514855514855,
+      "watch_count": 1772219,
+      "watch_count_per_active_user": {
+        "count": 4841,
+        "mean": 366.08531295186947,
+        "p0": 1,
+        "p1": 8.0,
+        "p10": 70.0,
+        "p100": 4896,
+        "p25": 158.0,
+        "p50": 301.0,
+        "p75": 500.0,
+        "p90": 737.0,
+        "p95": 916.0,
+        "p99": 1338.4000000000015
+      },
+      "watch_count_per_interacted_programme": {
+        "count": 2972,
+        "mean": 596.3051816958277,
+        "p0": 1,
+        "p1": 1.0,
+        "p10": 13.0,
+        "p100": 107379,
+        "p25": 54.0,
+        "p50": 153.0,
+        "p75": 387.0,
+        "p90": 828.8000000000002,
+        "p95": 1216.4499999999998,
+        "p99": 9959.309999999994
+      }
+    },
+    "validation": {
+      "absent_channel_seconds": 50025388,
+      "accepted_user_airings": 1165285,
+      "candidate_programmes": 6384,
+      "exact_duplicate_source_rows": 6,
+      "fraction_0.10": 767831,
+      "fraction_0.25": 585582,
+      "fraction_0.50": 422496,
+      "interacted_candidate_fraction": 0.505795739348371,
+      "labelled_overlap_seconds": 2096960206,
+      "matched_labelled_user_airings": 1191015,
+      "no_schedule_overlap_diagnostics": {
+        "by_day": {
+          "2020-05-18": 239,
+          "2020-05-19": 226,
+          "2020-05-20": 234,
+          "2020-05-21": 138,
+          "2020-05-22": 209,
+          "2020-05-23": 204,
+          "2020-05-24": 291,
+          "2020-05-25": 207,
+          "2020-05-26": 168,
+          "2020-05-27": 219,
+          "2020-05-28": 207,
+          "2020-05-29": 219,
+          "2020-05-30": 310,
+          "2020-05-31": 312,
+          "2020-06-01": 26,
+          "2020-06-02": 31,
+          "2020-06-03": 24,
+          "2020-06-04": 27,
+          "2020-06-05": 25,
+          "2020-06-06": 6,
+          "2020-06-07": 12,
+          "2020-06-08": 10,
+          "2020-06-09": 3,
+          "2020-06-10": 6,
+          "2020-06-11": 3,
+          "2020-06-12": 4,
+          "2020-06-13": 9,
+          "2020-06-14": 10,
+          "2020-06-15": 10,
+          "2020-06-16": 21,
+          "2020-06-17": 26,
+          "2020-06-18": 16,
+          "2020-06-19": 13,
+          "2020-06-20": 10,
+          "2020-06-21": 6,
+          "2020-06-22": 3,
+          "2020-06-23": 6,
+          "2020-06-24": 2,
+          "2020-06-25": 5,
+          "2020-06-26": 5,
+          "2020-06-27": 5,
+          "2020-06-28": 8,
+          "2020-06-29": 3,
+          "2020-06-30": 18,
+          "2020-07-01": 32,
+          "2020-07-02": 10,
+          "2020-07-04": 2,
+          "2020-07-05": 24,
+          "2020-07-06": 21,
+          "2020-07-07": 27,
+          "2020-07-08": 17,
+          "2020-07-09": 13,
+          "2020-07-10": 13,
+          "2020-07-11": 16,
+          "2020-07-12": 25,
+          "2020-07-13": 50,
+          "2020-07-14": 57,
+          "2020-07-15": 46,
+          "2020-07-16": 79,
+          "2020-07-17": 54,
+          "2020-07-18": 17,
+          "2020-07-19": 10,
+          "2020-07-20": 24,
+          "2020-07-21": 43,
+          "2020-07-22": 13,
+          "2020-07-23": 9,
+          "2020-07-24": 21,
+          "2020-07-25": 13,
+          "2020-07-26": 6
+        },
+        "reasons": {
+          "after_last_channel_airing": 1130,
+          "before_first_channel_airing": 3048
+        },
+        "top_channels": [
+          {
+            "channel_id": 1528,
+            "first_airing_start": "2020-06-01 06:00:00",
+            "last_airing_end": "2020-07-27 07:00:00",
+            "source_rows": 2986
+          },
+          {
+            "channel_id": 823,
+            "first_airing_start": "2020-03-09 00:00:00",
+            "last_airing_end": "2020-04-13 00:00:00",
+            "source_rows": 1130
+          },
+          {
+            "channel_id": 911,
+            "first_airing_start": "2020-05-25 05:55:00",
+            "last_airing_end": "2020-07-27 05:55:00",
+            "source_rows": 56
+          },
+          {
+            "channel_id": 763,
+            "first_airing_start": "2020-05-25 07:30:00",
+            "last_airing_end": "2020-07-27 07:30:00",
+            "source_rows": 6
+          }
+        ]
+      },
+      "outside_schedule_seconds": 10699310,
+      "overlap_seconds_sum_before_threshold": 2096960206,
+      "overlapping_view_seconds_removed": 39263894,
+      "programme_count_per_active_user": {
+        "count": 4806,
+        "mean": 135.3083645443196,
+        "p0": 1,
+        "p1": 4.0,
+        "p10": 28.0,
+        "p100": 820,
+        "p25": 59.0,
+        "p50": 110.0,
+        "p75": 184.0,
+        "p90": 274.5,
+        "p95": 343.0,
+        "p99": 489.9499999999998
+      },
+      "programme_count_per_source_user_including_zero": {
+        "count": 4820,
+        "mean": 134.91535269709544,
+        "p0": 0,
+        "p1": 3.0,
+        "p10": 27.0,
+        "p100": 820,
+        "p25": 58.0,
+        "p50": 110.0,
+        "p75": 184.0,
+        "p90": 274.0,
+        "p95": 343.0,
+        "p99": 489.8100000000004
+      },
+      "raw_view_seconds": 3694511391,
+      "seconds_120": 1028093,
+      "seconds_30": 1178118,
+      "seconds_300": 855420,
+      "seconds_60": 1165285,
+      "seconds_60_and_fraction_0.10": 767514,
+      "source_rows": 1877821,
+      "source_rows_absent_channel": 39430,
+      "source_rows_channel_present": 1838391,
+      "source_rows_channel_present_fraction": 0.9790022584687252,
+      "source_rows_only_unlabelled": 766922,
+      "source_rows_with_labelled_overlap": 1067291,
+      "source_rows_with_labelled_overlap_fraction": 0.5683667399608376,
+      "source_rows_with_schedule_overlap": 1834213,
+      "source_rows_with_schedule_overlap_fraction": 0.9767773392671613,
+      "source_rows_with_unlabelled_overlap": 912585,
+      "source_rows_without_schedule_overlap": 4178,
+      "source_users": 4820,
+      "submission_users_with_interactions": 1246,
+      "submission_users_without_interactions": 14,
+      "total_watch_seconds": 2096157464,
+      "unique_interacted_programmes": 3229,
+      "unique_user_channel_view_seconds": 3655247497,
+      "unlabelled_overlap_seconds": 1497562593,
+      "user_count_per_interacted_programme": {
+        "count": 3229,
+        "mean": 201.39114276865902,
+        "p0": 1,
+        "p1": 1.0,
+        "p10": 11.0,
+        "p100": 3989,
+        "p25": 33.0,
+        "p50": 95.0,
+        "p75": 241.0,
+        "p90": 499.8000000000011,
+        "p95": 695.5999999999999,
+        "p99": 1630.0
+      },
+      "user_programme_pairs": 650292,
+      "users_with_interactions": 4806,
+      "users_with_interactions_fraction": 0.9970954356846473,
+      "users_without_interactions": 14,
+      "users_without_interactions_fraction": 0.002904564315352697,
+      "view_log_users_without_period_history": 108,
+      "view_log_users_without_period_history_fraction": 0.02197802197802198,
+      "watch_count": 1164789,
+      "watch_count_per_active_user": {
+        "count": 4806,
+        "mean": 242.3614232209738,
+        "p0": 1,
+        "p1": 4.0,
+        "p10": 38.0,
+        "p100": 2239,
+        "p25": 86.0,
+        "p50": 178.5,
+        "p75": 330.75,
+        "p90": 524.0,
+        "p95": 688.75,
+        "p99": 1032.9499999999998
+      },
+      "watch_count_per_interacted_programme": {
+        "count": 3229,
+        "mean": 360.72746980489313,
+        "p0": 1,
+        "p1": 1.0,
+        "p10": 11.0,
+        "p100": 52502,
+        "p25": 34.0,
+        "p50": 103.0,
+        "p75": 272.0,
+        "p90": 597.0,
+        "p95": 953.0,
+        "p99": 5509.239999999992
+      }
+    }
+  },
+  "limitations": [
+    "Absolute timezone cannot be established from these CSVs; no timezone name or UTC conversion is asserted. The one-hour spring clock jump is normalised using training-data evidence in both sources.",
+    "Most airtime has tv_show_id=0; absence of a labelled interaction is not proof of no watching.",
+    "Different titles/metadata under one programme ID may represent episodes or data inconsistency; IDs are not merged by title.",
+    "A qualifying overlap is a proxy for watching, not evidence of enjoyment.",
+    "Final training on weeks11–30 should recompute airing thresholds over the combined window; simply adding two split aggregates may miss boundary fragments.",
+    "Resource measurements cover this full profiling/preparation process and are not comparable to a bare CSV read benchmark."
+  ],
+  "parameters": {
+    "candidate_policy": "positive-duration nonzero labelled airings intersecting the calendar period across all schedule files",
+    "clock_gap_normalisation": "f(t)=naive_calendar_seconds(t)-3600 for t>=2020-03-29 04:00; identity earlier; timestamps in the missing hour are rejected",
+    "conflicting_schedule_policy": "all conflicting simultaneous item IDs, including zero+labelled, are ambiguous; excluded from item seconds",
+    "cross_channel_same_item_policy": "union watched seconds; merge strictly overlapping accepted airing spans for watch_count",
+    "deterministic": true,
+    "implementation": "Python standard library only; no DuckDB, pandas, numpy or ML dependencies",
+    "index": "per-channel sweep-line canonicalisation; disjoint sorted arrays; bisect then output-sensitive scan",
+    "index_complexity": "O(S log S) preprocessing; O(log S_channel + number_of_intersected_segments) per view",
+    "input_root": "data/",
+    "join": "channel equality and half-open interval overlap",
+    "last_watch_time_semantics": "exclusive end of the last accepted observed interval, not a programme end prediction",
+    "output_root": "data/processed/",
+    "period_boundaries": {
+      "test": {
+        "end_exclusive": "2020-10-19 00:00:00",
+        "start_inclusive": "2020-07-27 00:00:00"
+      },
+      "train": {
+        "end_exclusive": "2020-05-18 00:00:00",
+        "start_inclusive": "2020-03-09 00:00:00"
+      },
+      "validation": {
+        "end_exclusive": "2020-07-27 00:00:00",
+        "start_inclusive": "2020-05-18 00:00:00"
+      }
+    },
+    "randomness": "none",
+    "schedule_duplicates_policy": "union strictly overlapping same-item airings on one channel; adjacent airings remain distinct",
+    "seconds_threshold": 60,
+    "source_of_view_duration": "stop_time - start_time after the empirically verified clock-gap normalisation; original duraton is retained for EDA",
+    "split_policy": "clip views and overlaps at calendar cutoffs; train/validation use union of the first two schedule files",
+    "temporary_record_bytes": 32,
+    "threshold_applies_to": "unique seconds per user and canonical airing, separately in each period",
+    "threshold_rationale": "Train median clipped session is 385 s. The original log has a minimum session duration of 61 s; the 60 s cut removes brief incidental programme overlaps, rather than claiming to remove source sessions below one minute. No labelled training airing is shorter than 60 s. Unlike a fraction-only cut, the rule does not penalise long programmes proportionally. Chosen using train only; no MAP or validation-based tuning.",
+    "time_coordinate": "observed calendar coordinates with the missing 2020-03-29 03:00–04:00 hour removed; both sources use the same transform; no absolute timezone assigned",
+    "user_buckets": 32,
+    "user_id_type": "str",
+    "view_duplicates_policy": "union overlapping/touching sessions per user/channel; do not count seconds twice",
+    "zero_id_policy": "coverage only; never an item"
+  },
+  "runtime": {
+    "additional_dependencies": [],
+    "bucket_processing": {
+      "elapsed_seconds": 36.935,
+      "exact_duplicate_view_rows": 17,
+      "normalised_user_channel_sessions": 5441773
+    },
+    "cpu_seconds": 99.059,
+    "cumulative_peak_rss_mib_by_stage": {
+      "history_index": 476.7,
+      "interaction_aggregation": 547.83,
+      "output_validation": 547.86,
+      "schedule_1": 235.25,
+      "schedule_2": 316.81,
+      "schedule_3": 408.8,
+      "view_log_and_spool": 484.88
+    },
+    "logical_cpus": 14,
+    "peak_rss_bytes": 574472192,
+    "peak_rss_method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; macOS bytes, Linux KiB converted to bytes",
+    "peak_rss_mib": 547.86,
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python": "3.12.14",
+    "schedule_index_seconds": 2.102,
+    "temporary_binary_spool_bytes": 186303584,
+    "wall_seconds": 99.217
+  },
+  "schema_version": 1,
+  "threshold_analysis_train_only": {
+    "accepted_user_airings_by_rule": {
+      "fraction_0.10": 1093497,
+      "fraction_0.25": 781531,
+      "fraction_0.50": 515512,
+      "seconds_120": 1531876,
+      "seconds_30": 1798827,
+      "seconds_300": 1224147,
+      "seconds_60": 1773566,
+      "seconds_60_and_fraction_0.10": 1092628
+    },
+    "matched_user_airing_overlap_seconds": {
+      "count": 1823893,
+      "mean": 1316.029407426861,
+      "p0": 1,
+      "p1": 22.0,
+      "p10": 86.0,
+      "p100": 28387,
+      "p25": 197.0,
+      "p50": 621.0,
+      "p75": 1767.0,
+      "p90": 3599.0,
+      "p95": 5011.0,
+      "p99": 7253.0
+    },
+    "scope": "train only; validation statistics are not used to select the threshold",
+    "source_session_seconds": {
+      "count": 3945173,
+      "mean": 1248.2859010238587,
+      "p0": 3,
+      "p1": 62.0,
+      "p10": 79.0,
+      "p100": 125066,
+      "p25": 131.0,
+      "p50": 385.0,
+      "p75": 1377.0,
+      "p90": 3540.0,
+      "p95": 5431.0,
+      "p99": 9867.0
+    },
+    "unit": "sum of unique observed seconds for one user and one canonical airing within train"
+  }
+}

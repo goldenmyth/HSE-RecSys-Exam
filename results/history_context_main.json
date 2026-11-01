@@ -1,0 +1,141 @@
+{
+  "earlier_window_limitation": null,
+  "event_policy": "one >50% qualified user/channel/canonical-airing event; full airing bounds and first/last qualified watch endpoints",
+  "generated_outputs": [
+    "train_airings"
+  ],
+  "history_index": {
+    "ambiguous_seconds": 1800,
+    "ambiguous_segments": 1,
+    "ambiguous_with_zero_seconds": 1800,
+    "canonical_airings": 2148624,
+    "invalid_intervals": 1,
+    "labelled_seconds": 793067880,
+    "merged_overlapping_same_item_rows": 4,
+    "segments": 2148624,
+    "source_rows": 2148629,
+    "unlabelled_seconds": 4031954280
+  },
+  "implementation_sha256": {
+    "scripts/prepare_history_context.py": "910e7c16f0654374682e2bb485446c40ca47f4a7f8150dc306470d3a8820aab9",
+    "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+    "scripts/prepare_sessions.py": "fc8b7eb26323d13bd396e194a76ca8d274d346f0aa4ac83e83b75804bdc9faf7",
+    "src/session_interactions.py": "4091f4318c0ac7cfaf587761a4d13ea3f717a84ebbb09e21b8264c525159b6f1"
+  },
+  "mode": "main",
+  "outputs": {
+    "train_50": {
+      "bytes": 9740727,
+      "path": "data/processed/session_train_50.csv",
+      "programmes": 2649,
+      "sha256": "99183b7b8062e9d4439430efe43d299054bbcb96a0b46cf1258d62dc72cb1754",
+      "total_watch_seconds": 987287503,
+      "user_programme_pairs": 154718,
+      "users": 4781,
+      "watch_count": 400446
+    },
+    "train_60": {
+      "aggregate_totals_reconciled": true,
+      "bytes": 52688236,
+      "known_string_user_ids": true,
+      "last_watch_within_period": true,
+      "path": "data/processed/train_interactions.csv",
+      "positive_candidate_ids_only": true,
+      "positive_counts_and_seconds": true,
+      "rows": 842247,
+      "sha256": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+      "total_watch_seconds": 2398763386,
+      "unique_user_programme_pairs": true,
+      "user_programme_pairs": 842247,
+      "watch_count": 1772219
+    },
+    "train_airings": {
+      "bytes": 47479559,
+      "path": "data/processed/history_main_airings.csv",
+      "rows": 400472,
+      "sha256": "108ed174d7dcf6268831c6e963a6c34250ec7e208435d838af221b4a580adf41"
+    },
+    "validation_80": {
+      "bytes": 7410246,
+      "path": "data/processed/session_validation_80.csv",
+      "programmes": 2769,
+      "sha256": "5f9cb19a0836670e4715b8a7b6e6f92636a0d76dcbf11fb75eb3b7dd8c8cbf6e",
+      "total_watch_seconds": 750268148,
+      "user_programme_pairs": 108877,
+      "users": 4620,
+      "watch_count": 226386
+    }
+  },
+  "periods": {
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-05-18 00:00:00"
+    ],
+    "validation": [
+      "2020-05-18 00:00:00",
+      "2020-07-27 00:00:00"
+    ]
+  },
+  "runtime_seconds_shared_pass": 73.41576204204466,
+  "session_diagnostics": {
+    "train": {
+      "absent_channel_piece_seconds": 57744151,
+      "absent_channel_session_rows": 74160,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 3762992,
+      "cross_channel_ambiguous_user_channel_seconds": 624399365,
+      "cross_channel_ambiguous_user_seconds": 276506462,
+      "cross_channel_mask_evaluated_users": 4876,
+      "deduplicated_session_rows": 3945162,
+      "deduplicated_session_seconds": 4924696061,
+      "exact_duplicate_session_rows": 11,
+      "fully_ambiguous_session_rows": 351593,
+      "matched_labelled_pieces": 2225174,
+      "outside_schedule_piece_seconds": 336626464,
+      "qualified_user_airings_50": 400472,
+      "qualified_user_airings_80": 234385,
+      "qualifying_pieces_50": 403977,
+      "qualifying_pieces_80": 236117,
+      "row_weighted_cross_channel_ambiguous_seconds": 669511408,
+      "sessions_split_by_cross_channel_overlap": 84395,
+      "sessions_with_cross_channel_overlap": 557710,
+      "source_session_rows": 3945173,
+      "source_session_seconds": 4924703833,
+      "total_unique_seconds_50": 987287503,
+      "total_unique_seconds_80": 542358084,
+      "unique_user_channel_covered_seconds": 4847742424,
+      "unlabelled_overlap_seconds": 1754632115,
+      "user_programme_pairs_50": 154718,
+      "user_programme_pairs_80": 84473,
+      "watch_count_50": 400446,
+      "watch_count_80": 234384
+    }
+  },
+  "source_signature": {
+    "data/dataset11-30.csv": {
+      "bytes": 396216555,
+      "mtime_ns": 1793528357893727343
+    },
+    "data/export_arh_11-20-final.csv": {
+      "bytes": 153322643,
+      "mtime_ns": 1793528357973890593
+    },
+    "data/export_arh_21-30-final.csv": {
+      "bytes": 154366907,
+      "mtime_ns": 1793528358056672306
+    },
+    "data/processed/session_train_50.csv": {
+      "bytes": 9740727,
+      "mtime_ns": 1793535330429613815
+    },
+    "data/processed/session_validation_80.csv": {
+      "bytes": 7410246,
+      "mtime_ns": 1793535330429819101
+    },
+    "data/processed/train_interactions.csv": {
+      "bytes": 52688236,
+      "mtime_ns": 1793530182239073809
+    }
+  },
+  "source_view_rows": 5821987
+}

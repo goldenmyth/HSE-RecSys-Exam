@@ -1,0 +1,1632 @@
+{
+  "convincing_for_v4": false,
+  "decision": {
+    "early_min_delta": 0.0,
+    "early_selection": "only frozen main winner; no runner-up search",
+    "intervals": "descriptive post-selection, not independent confirmation",
+    "main_bootstrap_lower_bound_positive": true,
+    "main_min_delta": 0.005
+  },
+  "early": {
+    "diagnostics": {},
+    "methods": {
+      "ppr_k100": {
+        "actual_training_unknown_users": null,
+        "audit": {
+          "availability_strength": 0.25,
+          "convergence": {
+            "all_seeded_rows_converged": true,
+            "batch_size": 32,
+            "continuation_probability": 0.7,
+            "dangling_items": 0,
+            "dangling_policy": "redistribute dangling mass to the same user's seed",
+            "elapsed_seconds": 1.0237608749885112,
+            "iterations_per_batch": [
+              25,
+              25,
+              25,
+              24,
+              25,
+              25,
+              25,
+              25,
+              25,
+              25,
+              24,
+              25,
+              25,
+              25,
+              25,
+              25,
+              24,
+              25,
+              25,
+              25,
+              25,
+              24,
+              25,
+              24,
+              25,
+              25,
+              25,
+              25,
+              25,
+              24,
+              25,
+              25,
+              25,
+              25,
+              25,
+              25,
+              25,
+              25,
+              25,
+              24
+            ],
+            "known_candidate_columns": 967,
+            "max_iter": 200,
+            "max_iterations_used": 25,
+            "max_l1_residual": 9.997409941447615e-09,
+            "max_probability_mass_error": 5.329070518200751e-15,
+            "query_rows": 1260,
+            "repeat_policy": "seed items remain eligible; no already-watched filter",
+            "restart_probability": 0.3,
+            "seed_normalisation": "own train binary/log1p counts divided by row sum",
+            "seeded_user_rows": 1237,
+            "tol_l1_per_user": 1e-08,
+            "unknown_candidate_columns": 3445,
+            "unknown_user_rows": 23,
+            "unseeded_known_user_rows": 0,
+            "weighting": "log_count"
+          },
+          "graph": {
+            "block_size": 64,
+            "dangling_items": 0,
+            "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+            "edge_tie_break": "similarity descending, numeric item ID ascending",
+            "edges": 126940,
+            "elapsed_seconds": 0.0503586670383811,
+            "full_dense_item_matrix_created": false,
+            "history_signal": "binary train interactions; raw counts do not weight graph edges",
+            "items": 1511,
+            "max_nonempty_row_sum_error": 4.440892098500626e-16,
+            "max_out_degree": 100,
+            "max_similarity_block_nnz": 41441,
+            "max_similarity_block_shape": [
+              64,
+              1511
+            ],
+            "neighbors": 100,
+            "normalisation": "user_cosine",
+            "train_user_item_pairs": 81177,
+            "user_normalisation": "divide each binary user row by sqrt(user degree)",
+            "users": 4665
+          },
+          "native_candidate_limit": 100
+        },
+        "fallback_users": 23,
+        "recipe": {
+          "family": "ppr",
+          "neighbors": 100,
+          "restart": 0.3
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 13,
+                "users_without_validation_truth": 10
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6632773631840796,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.29569368548876745,
+                "users": 183,
+                "users_without_validation_truth": 33
+              },
+              "medium_51_200": {
+                "map_at_5": 0.5269247311827957,
+                "users": 930,
+                "users_without_validation_truth": 8
+              }
+            },
+            "map_at_5": 0.5024056437389771
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 3,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6632773631840796,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.3607462962962963,
+                "users": 150,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.5314967462039045,
+                "users": 922,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5235989339215146
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.051300166989676654,
+          "graph_reused": false,
+          "recommend_seconds": 1.1077902499819174
+        },
+        "training_source": "data/processed/early_train_50.csv",
+        "unique_recommended_programmes": 269,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.0026413139329806,
+          "paired_bootstrap_95_interval": [
+            -0.006309330908289243,
+            0.0008225088183421502
+          ],
+          "relevant_recommendations_added": 145,
+          "relevant_recommendations_removed": 163,
+          "seed": 42,
+          "users_improved": 155,
+          "users_worsened": 180
+        }
+      },
+      "v3_control": {
+        "actual_training_unknown_users": null,
+        "audit": {
+          "availability_strength": 0.25,
+          "convergence": {
+            "all_seeded_rows_converged": true,
+            "batch_size": 32,
+            "continuation_probability": 0.7,
+            "dangling_items": 0,
+            "dangling_policy": "redistribute dangling mass to the same user's seed",
+            "elapsed_seconds": 0.8883845420787111,
+            "iterations_per_batch": [
+              31,
+              32,
+              32,
+              32,
+              32,
+              33,
+              32,
+              33,
+              33,
+              33,
+              31,
+              33,
+              33,
+              33,
+              32,
+              34,
+              33,
+              32,
+              32,
+              34,
+              33,
+              33,
+              34,
+              33,
+              32,
+              32,
+              34,
+              33,
+              32,
+              32,
+              33,
+              33,
+              32,
+              31,
+              33,
+              32,
+              32,
+              32,
+              32,
+              33
+            ],
+            "known_candidate_columns": 967,
+            "max_iter": 200,
+            "max_iterations_used": 34,
+            "max_l1_residual": 9.974178584520964e-09,
+            "max_probability_mass_error": 5.551115123125783e-15,
+            "query_rows": 1260,
+            "repeat_policy": "seed items remain eligible; no already-watched filter",
+            "restart_probability": 0.3,
+            "seed_normalisation": "own train binary/log1p counts divided by row sum",
+            "seeded_user_rows": 1237,
+            "tol_l1_per_user": 1e-08,
+            "unknown_candidate_columns": 3445,
+            "unknown_user_rows": 23,
+            "unseeded_known_user_rows": 0,
+            "weighting": "log_count"
+          },
+          "graph": {
+            "block_size": 64,
+            "dangling_items": 0,
+            "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+            "edge_tie_break": "similarity descending, numeric item ID ascending",
+            "edges": 70011,
+            "elapsed_seconds": 0.04586720804218203,
+            "full_dense_item_matrix_created": false,
+            "history_signal": "binary train interactions; raw counts do not weight graph edges",
+            "items": 1511,
+            "max_nonempty_row_sum_error": 4.440892098500626e-16,
+            "max_out_degree": 50,
+            "max_similarity_block_nnz": 41441,
+            "max_similarity_block_shape": [
+              64,
+              1511
+            ],
+            "neighbors": 50,
+            "normalisation": "user_cosine",
+            "train_user_item_pairs": 81177,
+            "user_normalisation": "divide each binary user row by sqrt(user degree)",
+            "users": 4665
+          },
+          "native_candidate_limit": 100
+        },
+        "fallback_users": 23,
+        "recipe": {
+          "family": "ppr",
+          "neighbors": 50,
+          "restart": 0.3
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 13,
+                "users_without_validation_truth": 10
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6655597014925373,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.29631299332119004,
+                "users": 183,
+                "users_without_validation_truth": 33
+              },
+              "medium_51_200": {
+                "map_at_5": 0.53005256869773,
+                "users": 930,
+                "users_without_validation_truth": 8
+              }
+            },
+            "map_at_5": 0.5050469576719576
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.0,
+                "users": 3,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6655597014925373,
+                "users": 134,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.36150185185185185,
+                "users": 150,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.534651723306821,
+                "users": 922,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5263516680452164
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.04650733293965459,
+          "graph_reused": false,
+          "recommend_seconds": 0.9662943750154227
+        },
+        "training_source": "data/processed/early_train_50.csv",
+        "unique_recommended_programmes": 271,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0,
+          "paired_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "relevant_recommendations_added": 0,
+          "relevant_recommendations_removed": 0,
+          "seed": 42,
+          "users_improved": 0,
+          "users_worsened": 0
+        }
+      }
+    },
+    "runtime_seconds": 8.45451129192952,
+    "schedule_audit": {
+      "calendar_slot": "weekday and three-hour bin of max(airing_start, forecast_start), in original calendar labels",
+      "candidate_count": 4412,
+      "candidate_pool_unchanged": true,
+      "candidates_with_exposure": 4412,
+      "canonical_forecast_airings": 58411,
+      "elapsed_seconds": 5.029684624983929,
+      "end_exclusive": "2020-05-18 00:00:00",
+      "exposure_unit": "one fully unambiguous canonical channel/airing intersecting forecast window",
+      "forecast_source_rows_including_zero": 535726,
+      "preference_normalisation": "train event count / user's maximum event count; mean over canonical forecast airings",
+      "source_attributes_used": [
+        "tv_show_id",
+        "channel_id",
+        "start_time",
+        "duration"
+      ],
+      "source_schedule_rows": 2148629,
+      "start_inclusive": "2020-04-13 00:00:00"
+    }
+  },
+  "implementation": {
+    "scripts/complement_ppr.py": "da9a88a425b5951f047b8d1adff08be10c3c63416d545d515c06021845cc3b73",
+    "src/content_based.py": "65a4bc46abb457e8ccac1bcd2b585f18df55d1bfd8b6570577e1d32720c13070",
+    "src/fusion.py": "0bce36192d41953fa0628dac16a004edce10eae78172aa5633f44672653d1d8c",
+    "src/matrix_factorization.py": "5d21da49f72906fa65dfe7f05a24639bf770bdfe9ed404a16d7a054d0ac5c056",
+    "src/personalized_pagerank.py": "bf6929e3572f514b7c47603bc38ab645c6d015edc34ef4d58b0aab6389fd0276"
+  },
+  "limitations": [
+    "Repeated holdout selection; early temporal check is also previously used and is not independent.",
+    "Top50 novelty is diagnostic, not an oracle; no per-user validation-dependent features.",
+    "Absolute timezone/devices unknown; viewing proxy may differ from Kaggle."
+  ],
+  "main": {
+    "diagnostics": {
+      "als50_2": {
+        "boundary": {
+          "aux_concordance_mean_per_user": 0.5600709219858157,
+          "flagged_hits": 3579,
+          "flagged_relevance_precision": 0.28011270251232684,
+          "flagged_slots": 12777,
+          "near_cutoff_pair_users": 470,
+          "near_cutoff_pairs": 775,
+          "pair_policy": "ranks4-5 versus6-20, opposite GT, score ratio<=1.10, both native scores finite; users equally weighted",
+          "ranks": [
+            4,
+            20
+          ],
+          "scoreable_fraction": 1.0,
+          "unflagged_hits": 1235,
+          "unflagged_relevance_precision": 0.1472341440152599,
+          "unflagged_slots": 8388,
+          "v3_concordance_same_pairs": 0.5352836879432624
+        },
+        "by_activity": {
+          "cold_0": {
+            "actionable_hits_top20": 0,
+            "new_hits_top20": 0,
+            "users": 10
+          },
+          "heavy_201_plus": {
+            "actionable_hits_top20": 2107,
+            "new_hits_top20": 2155,
+            "users": 633
+          },
+          "light_1_50": {
+            "actionable_hits_top20": 83,
+            "new_hits_top20": 83,
+            "users": 61
+          },
+          "medium_51_200": {
+            "actionable_hits_top20": 1358,
+            "new_hits_top20": 1377,
+            "users": 556
+          }
+        },
+        "top_lists": {
+          "20": {
+            "actionable_marginal_precision": 0.19380564811274376,
+            "actionable_new_hits": 3548,
+            "actionable_new_slots": 18307,
+            "aux_hits": 6980,
+            "common_pool_aux_hits": 7067,
+            "common_pool_v3_hits": 7295,
+            "marginal_precision": 0.18852672750977836,
+            "mean_jaccard": 0.4963946269029114,
+            "new_hits": 3615,
+            "new_slots": 19175,
+            "users_with_actionable_hit": 1014,
+            "v3_hits_same_list_length": 7295
+          },
+          "50": {
+            "actionable_marginal_precision": 0.1355195658625514,
+            "actionable_new_hits": 6393,
+            "actionable_new_slots": 47174,
+            "aux_hits": 10344,
+            "common_pool_aux_hits": 10429,
+            "common_pool_v3_hits": 10122,
+            "marginal_precision": 0.12124828556669813,
+            "mean_jaccard": 0.5084393833903614,
+            "new_hits": 6807,
+            "new_slots": 56141,
+            "users_with_actionable_hit": 1110,
+            "v3_hits_same_list_length": 10122
+          }
+        },
+        "unknown_user_rows": 15,
+        "useful_for_small_boost": true
+      },
+      "content50": {
+        "boundary": {
+          "aux_concordance_mean_per_user": 0.525354609929078,
+          "flagged_hits": 1791,
+          "flagged_relevance_precision": 0.3235187861271676,
+          "flagged_slots": 5536,
+          "near_cutoff_pair_users": 470,
+          "near_cutoff_pairs": 775,
+          "pair_policy": "ranks4-5 versus6-20, opposite GT, score ratio<=1.10, both native scores finite; users equally weighted",
+          "ranks": [
+            4,
+            20
+          ],
+          "scoreable_fraction": 1.0,
+          "unflagged_hits": 3023,
+          "unflagged_relevance_precision": 0.1934224838441359,
+          "unflagged_slots": 15629,
+          "v3_concordance_same_pairs": 0.5352836879432624
+        },
+        "by_activity": {
+          "cold_0": {
+            "actionable_hits_top20": 0,
+            "new_hits_top20": 0,
+            "users": 10
+          },
+          "heavy_201_plus": {
+            "actionable_hits_top20": 935,
+            "new_hits_top20": 992,
+            "users": 633
+          },
+          "light_1_50": {
+            "actionable_hits_top20": 21,
+            "new_hits_top20": 21,
+            "users": 61
+          },
+          "medium_51_200": {
+            "actionable_hits_top20": 628,
+            "new_hits_top20": 654,
+            "users": 556
+          }
+        },
+        "top_lists": {
+          "20": {
+            "actionable_marginal_precision": 0.14047534586732885,
+            "actionable_new_hits": 1584,
+            "actionable_new_slots": 11276,
+            "aux_hits": 4559,
+            "common_pool_aux_hits": 5815,
+            "common_pool_v3_hits": 7295,
+            "marginal_precision": 0.0824553593510412,
+            "mean_jaccard": 0.2139193910263564,
+            "new_hits": 1667,
+            "new_slots": 20217,
+            "users_with_actionable_hit": 761,
+            "v3_hits_same_list_length": 7295
+          },
+          "50": {
+            "actionable_marginal_precision": 0.1249032711924024,
+            "actionable_new_hits": 3551,
+            "actionable_new_slots": 28430,
+            "aux_hits": 7150,
+            "common_pool_aux_hits": 9535,
+            "common_pool_v3_hits": 10122,
+            "marginal_precision": 0.0668153813469301,
+            "mean_jaccard": 0.2703363869363909,
+            "new_hits": 3774,
+            "new_slots": 56484,
+            "users_with_actionable_hit": 986,
+            "v3_hits_same_list_length": 10122
+          }
+        },
+        "unknown_user_rows": 15,
+        "useful_for_small_boost": true
+      },
+      "content_novel_hits_beyond_als": 479,
+      "joint_gate_v3_pool": "Top50, conservative subset of allowed native Top100"
+    },
+    "methods": {
+      "als50_1": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "config": {
+            "confidence_alpha": 10,
+            "factors": 32,
+            "iterations": 20,
+            "regularization": 0.1,
+            "weighting": "log_count"
+          },
+          "family": "als"
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.27483236791293664,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.2088888888888889,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.30355415667466024,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.2834885361552028
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.27614109347442684,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.26004535147392294,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.3085486491976437,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.28946155231406445
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.32623737503308803,
+          "recommend_seconds": 0.006983957951888442
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 183,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.2411629188712522,
+          "paired_bootstrap_95_interval": [
+            -0.25930709876543206,
+            -0.22390808531746031
+          ],
+          "relevant_recommendations_added": 891,
+          "relevant_recommendations_removed": 1966,
+          "seed": 42,
+          "users_improved": 195,
+          "users_worsened": 869
+        }
+      },
+      "als50_2": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "config": {
+            "confidence_alpha": 10,
+            "factors": 16,
+            "iterations": 20,
+            "regularization": 0.1,
+            "weighting": "log_count"
+          },
+          "family": "als"
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.355511233982798,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.2351183970856102,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.33167216227018387,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.3376975308641975
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.3572041446208113,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2926984126984127,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.3371292910826732,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.34481271384837026
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.23363379098009318,
+          "recommend_seconds": 0.006244209012947977
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 134,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.18695392416225748,
+          "paired_bootstrap_95_interval": [
+            -0.20313570877425044,
+            -0.17115873567019402
+          ],
+          "relevant_recommendations_added": 854,
+          "relevant_recommendations_removed": 1708,
+          "seed": 42,
+          "users_improved": 246,
+          "users_worsened": 780
+        }
+      },
+      "boost_als50_2_0.05": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "components": {
+            "als50_2": {
+              "config": {
+                "confidence_alpha": 10,
+                "factors": 16,
+                "iterations": 20,
+                "regularization": 0.1,
+                "weighting": "log_count"
+              },
+              "family": "als"
+            }
+          },
+          "family": "agreement",
+          "strength": 0.05
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6149271546427945,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23904371584699455,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4609557354116707,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.5252621252204586
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6178553791887125,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2975850340136055,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46854001625025393,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5363292364487665
+          }
+        },
+        "timing": {
+          "component_cost_excluded": true,
+          "fit_seconds": 0,
+          "recommend_seconds": 0.15572908299509436
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 223,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0006106701940035276,
+          "paired_bootstrap_95_interval": [
+            -0.000774834656084656,
+            0.0019020833333333327
+          ],
+          "relevant_recommendations_added": 28,
+          "relevant_recommendations_removed": 25,
+          "seed": 42,
+          "users_improved": 30,
+          "users_worsened": 24
+        }
+      },
+      "boost_als50_2_0.10": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "components": {
+            "als50_2": {
+              "config": {
+                "confidence_alpha": 10,
+                "factors": 16,
+                "iterations": 20,
+                "regularization": 0.1,
+                "weighting": "log_count"
+              },
+              "family": "als"
+            }
+          },
+          "family": "agreement",
+          "strength": 0.1
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6154379497981394,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23904371584699455,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4613514188649081,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.5256933421516755
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.61836860670194,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2975850340136055,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46894221003453185,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5367695389879344
+          }
+        },
+        "timing": {
+          "component_cost_excluded": true,
+          "fit_seconds": 0,
+          "recommend_seconds": 0.1556834999937564
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 218,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0010418871252204588,
+          "paired_bootstrap_95_interval": [
+            -0.0008771825396825394,
+            0.003028119488536155
+          ],
+          "relevant_recommendations_added": 55,
+          "relevant_recommendations_removed": 49,
+          "seed": 42,
+          "users_improved": 46,
+          "users_worsened": 40
+        }
+      },
+      "boost_both_0.05": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "components": {
+            "als50_2": {
+              "config": {
+                "confidence_alpha": 10,
+                "factors": 16,
+                "iterations": 20,
+                "regularization": 0.1,
+                "weighting": "log_count"
+              },
+              "family": "als"
+            },
+            "content50": {
+              "config": {
+                "feature_set": "extended",
+                "history_weighting": "log1p"
+              },
+              "family": "content"
+            }
+          },
+          "family": "agreement",
+          "strength": 0.05
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6124363700193084,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23904371584699455,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46198890887290167,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.5244667107583775
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.615352733686067,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2975850340136055,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46959018890920173,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5355170628489105
+          }
+        },
+        "timing": {
+          "component_cost_excluded": true,
+          "fit_seconds": 0,
+          "recommend_seconds": 0.3392750408966094
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 224,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.00018474426807760117,
+          "paired_bootstrap_95_interval": [
+            -0.0017692019400352731,
+            0.0012834325396825393
+          ],
+          "relevant_recommendations_added": 41,
+          "relevant_recommendations_removed": 44,
+          "seed": 42,
+          "users_improved": 45,
+          "users_worsened": 46
+        }
+      },
+      "boost_content50_0.05": {
+        "actual_training_unknown_users": null,
+        "audit": {},
+        "fallback_users": 15,
+        "recipe": {
+          "components": {
+            "content50": {
+              "config": {
+                "feature_set": "extended",
+                "history_weighting": "log1p"
+              },
+              "family": "content"
+            }
+          },
+          "family": "agreement",
+          "strength": 0.05
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6119795506406881,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23959016393442623,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4610336730615508,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.5238421516754851
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6148937389770723,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.298265306122449,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46861923623806623,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5348793444984693
+          }
+        },
+        "timing": {
+          "component_cost_excluded": true,
+          "fit_seconds": 0,
+          "recommend_seconds": 0.2388325829524547
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 227,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.0008093033509700173,
+          "paired_bootstrap_95_interval": [
+            -0.003028163580246913,
+            0.0014089781746031746
+          ],
+          "relevant_recommendations_added": 69,
+          "relevant_recommendations_removed": 75,
+          "seed": 42,
+          "users_improved": 75,
+          "users_worsened": 75
+        }
+      },
+      "content50": {
+        "actual_training_unknown_users": null,
+        "audit": {
+          "feature_set": "extended",
+          "features": 11885,
+          "history_weighting": "log1p",
+          "idf": "log((1 + number_of_train_metadata_items)/(1 + item_document_frequency)) + 1",
+          "item_feature_nnz": 45301,
+          "items_without_features": 0,
+          "metadata_items": 5842,
+          "metadata_scope": "provided calendar-train metadata only; no future attributes",
+          "normalisation": "L2 item vectors and L2 weighted-sum user profiles",
+          "profile_feature_nnz": 536193,
+          "tf": "binary presence per item, not schedule airing frequency",
+          "train_observed_items": 2649,
+          "train_observed_items_without_metadata": 0,
+          "train_users": 4781,
+          "users_without_profile": 0
+        },
+        "fallback_users": 15,
+        "recipe": {
+          "config": {
+            "feature_set": "extended",
+            "history_weighting": "log1p"
+          },
+          "family": "content"
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.2572428471125153,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.14112021857923496,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.22685851318944844,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.23752755731922398
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.25846781305114636,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.17568027210884352,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.23059110298598415,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.24253218980731137
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.049885916989296675,
+          "recommend_seconds": 0.04657320794649422
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 256,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": -0.28712389770723107,
+          "paired_bootstrap_95_interval": [
+            -0.30166911375661376,
+            -0.2722565145502645
+          ],
+          "relevant_recommendations_added": 402,
+          "relevant_recommendations_removed": 1857,
+          "seed": 42,
+          "users_improved": 80,
+          "users_worsened": 984
+        }
+      },
+      "ppr_k100": {
+        "actual_training_unknown_users": null,
+        "audit": {
+          "availability_strength": 0.25,
+          "convergence": {
+            "all_seeded_rows_converged": true,
+            "batch_size": 32,
+            "continuation_probability": 0.7,
+            "dangling_items": 0,
+            "dangling_policy": "redistribute dangling mass to the same user's seed",
+            "elapsed_seconds": 2.227203708025627,
+            "iterations_per_batch": [
+              29,
+              29,
+              29,
+              29,
+              29,
+              30,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              30,
+              29,
+              29,
+              29,
+              29,
+              29,
+              30,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              29,
+              30
+            ],
+            "known_candidate_columns": 1977,
+            "max_iter": 200,
+            "max_iterations_used": 30,
+            "max_l1_residual": 9.49719773730848e-09,
+            "max_probability_mass_error": 7.105427357601002e-15,
+            "query_rows": 1260,
+            "repeat_policy": "seed items remain eligible; no already-watched filter",
+            "restart_probability": 0.3,
+            "seed_normalisation": "own train binary/log1p counts divided by row sum",
+            "seeded_user_rows": 1245,
+            "tol_l1_per_user": 1e-08,
+            "unknown_candidate_columns": 4407,
+            "unknown_user_rows": 15,
+            "unseeded_known_user_rows": 0,
+            "weighting": "log_count"
+          },
+          "graph": {
+            "block_size": 64,
+            "dangling_items": 0,
+            "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+            "edge_tie_break": "similarity descending, numeric item ID ascending",
+            "edges": 251750,
+            "elapsed_seconds": 0.16091270791366696,
+            "full_dense_item_matrix_created": false,
+            "history_signal": "binary train interactions; raw counts do not weight graph edges",
+            "items": 2649,
+            "max_nonempty_row_sum_error": 4.440892098500626e-16,
+            "max_out_degree": 100,
+            "max_similarity_block_nnz": 112013,
+            "max_similarity_block_shape": [
+              64,
+              2649
+            ],
+            "neighbors": 100,
+            "normalisation": "user_cosine",
+            "train_user_item_pairs": 154718,
+            "user_normalisation": "divide each binary user row by sqrt(user degree)",
+            "users": 4781
+          },
+          "native_candidate_limit": 100
+        },
+        "fallback_users": 15,
+        "recipe": {
+          "family": "ppr",
+          "neighbors": 100,
+          "restart": 0.3
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6187054590135159,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23811475409836066,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.46189148681055153,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.5275282186948853
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6216516754850089,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.29642857142857143,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4694911639244363,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.5386430758148748
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.1636542920023203,
+          "graph_reused": false,
+          "recommend_seconds": 2.366399999940768
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 235,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.002876763668430334,
+          "paired_bootstrap_95_interval": [
+            -0.001327265211640212,
+            0.00710092041446208
+          ],
+          "relevant_recommendations_added": 251,
+          "relevant_recommendations_removed": 223,
+          "seed": 42,
+          "users_improved": 198,
+          "users_worsened": 200
+        }
+      },
+      "v3_control": {
+        "actual_training_unknown_users": null,
+        "audit": {
+          "availability_strength": 0.25,
+          "convergence": {
+            "all_seeded_rows_converged": true,
+            "batch_size": 32,
+            "continuation_probability": 0.7,
+            "dangling_items": 0,
+            "dangling_policy": "redistribute dangling mass to the same user's seed",
+            "elapsed_seconds": 1.7104462089482695,
+            "iterations_per_batch": [
+              36,
+              36,
+              37,
+              36,
+              36,
+              37,
+              37,
+              37,
+              37,
+              36,
+              36,
+              36,
+              36,
+              37,
+              36,
+              37,
+              37,
+              36,
+              36,
+              37,
+              36,
+              37,
+              37,
+              37,
+              36,
+              35,
+              37,
+              37,
+              37,
+              36,
+              37,
+              36,
+              36,
+              36,
+              37,
+              36,
+              36,
+              37,
+              36,
+              37
+            ],
+            "known_candidate_columns": 1977,
+            "max_iter": 200,
+            "max_iterations_used": 37,
+            "max_l1_residual": 9.948726801740869e-09,
+            "max_probability_mass_error": 7.105427357601002e-15,
+            "query_rows": 1260,
+            "repeat_policy": "seed items remain eligible; no already-watched filter",
+            "restart_probability": 0.3,
+            "seed_normalisation": "own train binary/log1p counts divided by row sum",
+            "seeded_user_rows": 1245,
+            "tol_l1_per_user": 1e-08,
+            "unknown_candidate_columns": 4407,
+            "unknown_user_rows": 15,
+            "unseeded_known_user_rows": 0,
+            "weighting": "log_count"
+          },
+          "graph": {
+            "block_size": 64,
+            "dangling_items": 0,
+            "edge_policy": "directed per-row top-K column cosine, no self loops and no symmetric closure",
+            "edge_tie_break": "similarity descending, numeric item ID ascending",
+            "edges": 130067,
+            "elapsed_seconds": 0.14494929101783782,
+            "full_dense_item_matrix_created": false,
+            "history_signal": "binary train interactions; raw counts do not weight graph edges",
+            "items": 2649,
+            "max_nonempty_row_sum_error": 4.440892098500626e-16,
+            "max_out_degree": 50,
+            "max_similarity_block_nnz": 112013,
+            "max_similarity_block_shape": [
+              64,
+              2649
+            ],
+            "neighbors": 50,
+            "normalisation": "user_cosine",
+            "train_user_item_pairs": 154718,
+            "user_normalisation": "divide each binary user row by sqrt(user degree)",
+            "users": 4781
+          },
+          "native_candidate_limit": 100
+        },
+        "fallback_users": 15,
+        "recipe": {
+          "family": "ppr",
+          "neighbors": 50,
+          "restart": 0.3
+        },
+        "strict_protocol": {
+          "submission_all": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.17083333333333334,
+                "users": 10,
+                "users_without_validation_truth": 2
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6147059856064595,
+                "users": 633,
+                "users_without_validation_truth": 3
+              },
+              "light_1_50": {
+                "map_at_5": 0.23904371584699455,
+                "users": 61,
+                "users_without_validation_truth": 12
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4598236410871303,
+                "users": 556,
+                "users_without_validation_truth": 9
+              }
+            },
+            "map_at_5": 0.524651455026455
+          },
+          "submission_nonempty_validation": {
+            "by_train_activity": {
+              "cold_0": {
+                "map_at_5": 0.21354166666666669,
+                "users": 8,
+                "users_without_validation_truth": 0
+              },
+              "heavy_201_plus": {
+                "map_at_5": 0.6176331569664902,
+                "users": 630,
+                "users_without_validation_truth": 0
+              },
+              "light_1_50": {
+                "map_at_5": 0.2975850340136055,
+                "users": 49,
+                "users_without_validation_truth": 0
+              },
+              "medium_51_200": {
+                "map_at_5": 0.4673892951452367,
+                "users": 547,
+                "users_without_validation_truth": 0
+              }
+            },
+            "map_at_5": 0.535705699621826
+          }
+        },
+        "timing": {
+          "fit_seconds": 0.14589275000616908,
+          "graph_reused": false,
+          "recommend_seconds": 1.8524735840037465
+        },
+        "training_source": "data/processed/session_train_50.csv",
+        "unique_recommended_programmes": 228,
+        "versus_v3": {
+          "bootstrap_samples": 1000,
+          "limitation": "descriptive post-selection bootstrap; not corrected for model selection and not an independent test",
+          "mean_map_delta": 0.0,
+          "paired_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "relevant_recommendations_added": 0,
+          "relevant_recommendations_removed": 0,
+          "seed": 42,
+          "users_improved": 0,
+          "users_worsened": 0
+        }
+      }
+    },
+    "runtime_seconds": 21.268548207939602,
+    "schedule_audit": {
+      "calendar_slot": "weekday and three-hour bin of max(airing_start, forecast_start), in original calendar labels",
+      "candidate_count": 6384,
+      "candidate_pool_unchanged": true,
+      "candidates_with_exposure": 6384,
+      "canonical_forecast_airings": 121587,
+      "elapsed_seconds": 5.927197291981429,
+      "end_exclusive": "2020-07-27 00:00:00",
+      "exposure_unit": "one fully unambiguous canonical channel/airing intersecting forecast window",
+      "forecast_source_rows_including_zero": 1074644,
+      "preference_normalisation": "train event count / user's maximum event count; mean over canonical forecast airings",
+      "source_attributes_used": [
+        "tv_show_id",
+        "channel_id",
+        "start_time",
+        "duration"
+      ],
+      "source_schedule_rows": 2148629,
+      "start_inclusive": "2020-05-18 00:00:00"
+    }
+  },
+  "new_configurations": 8,
+  "post_run_review": {
+    "actual_comparison_groups": {
+      "als50_2": {
+        "flagged_slots": 12777,
+        "gate_unchanged": true,
+        "unflagged_slots": 8388
+      },
+      "content50": {
+        "flagged_slots": 5536,
+        "gate_unchanged": true,
+        "unflagged_slots": 15629
+      }
+    },
+    "configuration_selection_unchanged": true,
+    "guard_fix": "Fail closed when unflagged comparison group is empty; added a synthetic regression test.",
+    "model_runs_repeated": false,
+    "reviewed_implementation": {
+      "scripts/complement_ppr.py": "760b3587d6b152d2db77f848dda1c6fa34bc92b809499efc67c8b73bf5b49569",
+      "src/content_based.py": "65a4bc46abb457e8ccac1bcd2b585f18df55d1bfd8b6570577e1d32720c13070",
+      "src/fusion.py": "0bce36192d41953fa0628dac16a004edce10eae78172aa5633f44672653d1d8c",
+      "src/history_reranking.py": "f6377fd254aef6419d32ecf2b07e7e0867deb960ffdd54b45af263324d1437cb",
+      "src/matrix_factorization.py": "5d21da49f72906fa65dfe7f05a24639bf770bdfe9ed404a16d7a054d0ac5c056",
+      "src/personalized_pagerank.py": "bf6929e3572f514b7c47603bc38ab645c6d015edc34ef4d58b0aab6389fd0276"
+    },
+    "tests_passed": 120
+  },
+  "protocol": {
+    "candidates": 6384,
+    "fallback": "unchanged unique-user popularity from 60s train",
+    "ground_truth": "unchanged single-session >80%",
+    "seed": 42,
+    "train": [
+      "2020-03-09 00:00:00",
+      "2020-05-18 00:00:00"
+    ],
+    "users": 1260,
+    "validation": [
+      "2020-05-18 00:00:00",
+      "2020-07-27 00:00:00"
+    ]
+  },
+  "reported_kaggle_v3": {
+    "private": 0.39105,
+    "source": "user-reported, never used for parameter selection"
+  },
+  "runtime": {
+    "peak_rss_mib": 914.65625,
+    "wall_seconds": 31.333577416022308
+  },
+  "selected": "ppr_k100",
+  "signal_gate": {
+    "actionable_novel_hits_top20_min": 63,
+    "boundary_flagged_slots_min": 126,
+    "boundary_relevance_lift_min": 1.05,
+    "scope": "exploratory aggregate selection only; no per-user validation-dependent policy"
+  }
+}

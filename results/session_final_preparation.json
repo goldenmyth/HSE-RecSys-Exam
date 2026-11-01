@@ -1,0 +1,114 @@
+{
+  "implementation_sha256": "e0b52c203afbea3749b488a2d382884a7a3624713da37dcebe938c2b698f1754",
+  "inputs_sha256": {
+    "data/dataset11-30.csv": "8c9e5f058157041e5c33f13e64dc1625a5177cc6d5e434ba18cd8a69afafb53b",
+    "data/export_arh_11-20-final.csv": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c",
+    "data/export_arh_21-30-final.csv": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4",
+    "data/export_arh_31-42-final.csv": "5cc01f4619bd94886d83744f00bbc15cc5fa23384d297244a7dc2207450c4088",
+    "data/submission.csv": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02"
+  },
+  "outputs": {
+    "final_train_50": {
+      "bytes": 20106874,
+      "path": "data/processed/session_final_train_50.csv",
+      "programmes": 4025,
+      "sha256": "4a99f9845d5659244240be57219a06320e544ff5c58593bdc27d0fc6a69a5bdf",
+      "total_watch_seconds": 2089345170,
+      "user_programme_pairs": 290867,
+      "users": 4866,
+      "watch_count": 736490
+    },
+    "final_train_80": {
+      "bytes": 11902313,
+      "path": "data/processed/session_final_train_80.csv",
+      "programmes": 3741,
+      "sha256": "f9564bccabe0db1a13174a3845781b69ceea7f6315cf15314467cc6efec61a78",
+      "total_watch_seconds": 1293871898,
+      "user_programme_pairs": 172341,
+      "users": 4834,
+      "watch_count": 460958
+    }
+  },
+  "periods": {
+    "final_train": [
+      "2020-03-09 00:00:00",
+      "2020-07-27 00:00:00"
+    ]
+  },
+  "policy": {
+    "airing_deduplication": "one qualifying user/channel/airing irrespective of qualifying source-row count",
+    "channel_ambiguity": "remove simultaneous different-channel time; each remaining continuous piece is independent",
+    "comparison": "strictly greater, integer cross multiplication",
+    "denominator": "full canonical airing duration; period clipping never shortens denominator",
+    "id": "single-session-unambiguous-v1",
+    "schedule_policy": "existing half-open channel/time index, zero IDs and conflicting airings excluded",
+    "sitting": "one original log row after exact deduplication; no merging across original rows",
+    "source_status": "participant description, not confirmed Kaggle judge code; devices and actual switches unobservable",
+    "thresholds_percent": [
+      50,
+      80
+    ]
+  },
+  "protected_sha256": {
+    "data/processed/final_interactions.csv": "2b3115d8a904f1fc50d24094da958af297a07569208140f821db7cb92ebd2f69",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/final_submission.json": "9abce440e52334d82f235f7f3d9c5672edcd708e46d9c3c70a042d6e6ed83fb9",
+    "results/model_comparison.json": "26d5a8060d7efc62c60042de27b88358673529bf426679e1260e621022ecd07a",
+    "results/model_recommendations.csv": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "submission.csv": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854"
+  },
+  "runtime": {
+    "peak_rss_mib": 324.359375,
+    "wall_seconds": 58.30020808300469
+  },
+  "schedule_audit": {
+    "ambiguous_seconds": 1800,
+    "ambiguous_segments": 1,
+    "ambiguous_with_zero_seconds": 1800,
+    "canonical_airings": 2148624,
+    "invalid_intervals": 1,
+    "labelled_seconds": 793067880,
+    "merged_overlapping_same_item_rows": 4,
+    "segments": 2148624,
+    "source_rows": 2148629,
+    "unlabelled_seconds": 4031954280
+  },
+  "session_diagnostics": {
+    "final_train": {
+      "absent_channel_piece_seconds": 100899786,
+      "absent_channel_session_rows": 113578,
+      "ambiguous_schedule_overlap_seconds": 0,
+      "continuous_pieces": 5579024,
+      "cross_channel_ambiguous_user_channel_seconds": 1155124045,
+      "cross_channel_ambiguous_user_seconds": 524314274,
+      "cross_channel_mask_evaluated_users": 4914,
+      "deduplicated_session_rows": 5821970,
+      "deduplicated_session_seconds": 8619206214,
+      "exact_duplicate_session_rows": 17,
+      "fully_ambiguous_session_rows": 490597,
+      "matched_labelled_pieces": 3592945,
+      "outside_schedule_piece_seconds": 345021549,
+      "qualified_user_airings_50": 736536,
+      "qualified_user_airings_80": 460961,
+      "qualifying_pieces_50": 742961,
+      "qualifying_pieces_80": 464381,
+      "row_weighted_cross_channel_ambiguous_seconds": 1215065113,
+      "sessions_split_by_cross_channel_overlap": 117944,
+      "sessions_with_cross_channel_overlap": 793427,
+      "source_session_rows": 5821987,
+      "source_session_seconds": 8619215224,
+      "total_unique_seconds_50": 2089345170,
+      "total_unique_seconds_80": 1293871898,
+      "unique_user_channel_covered_seconds": 8502989921,
+      "unlabelled_overlap_seconds": 3044313192,
+      "user_programme_pairs_50": 290867,
+      "user_programme_pairs_80": 172341,
+      "watch_count_50": 736490,
+      "watch_count_80": 460958
+    }
+  },
+  "source_view_rows": 5821987
+}

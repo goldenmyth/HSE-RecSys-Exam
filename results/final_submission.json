@@ -1,0 +1,178 @@
+{
+  "checks": {
+    "full_window_rebuilt_from_raw_views": true,
+    "no_split_pairs_lost": true,
+    "old_results_and_inputs_unchanged": true,
+    "popularity_reconciled": true,
+    "seconds_partition_reconciled": true,
+    "unit_test_output": "test_batch_boundary_and_invalid_configuration (test_content_based.ContentBasedTests.test_batch_boundary_and_invalid_configuration) ... ok\ntest_binary_and_log_profiles_match_manual_cosines_and_unknown_users (test_content_based.ContentBasedTests.test_binary_and_log_profiles_match_manual_cosines_and_unknown_users) ... ok\ntest_calendar_train_filter_excludes_future_metadata_and_boundary_touch (test_content_based.ContentBasedTests.test_calendar_train_filter_excludes_future_metadata_and_boundary_touch) ... ok\ntest_extended_feature_set_and_missing_observed_metadata (test_content_based.ContentBasedTests.test_extended_feature_set_and_missing_observed_metadata) ... ok\ntest_metadata_union_handles_genre_order_names_and_initial_year (test_content_based.ContentBasedTests.test_metadata_union_handles_genre_order_names_and_initial_year) ... ok\ntest_tfidf_uses_train_item_documents_and_scores_unobserved_known_item (test_content_based.ContentBasedTests.test_tfidf_uses_train_item_documents_and_scores_unobserved_known_item) ... ok\ntest_duplicate_population_user_is_rejected (test_evaluation.MetricTests.test_duplicate_population_user_is_rejected) ... ok\ntest_duplicate_prediction_occupies_rank_without_extra_hit (test_evaluation.MetricTests.test_duplicate_prediction_occupies_rank_without_extra_hit) ... ok\ntest_duplicate_truth_does_not_inflate_denominator (test_evaluation.MetricTests.test_duplicate_truth_does_not_inflate_denominator) ... ok\ntest_empty_population_is_zero (test_evaluation.MetricTests.test_empty_population_is_zero) ... ok\ntest_empty_truth_or_predictions (test_evaluation.MetricTests.test_empty_truth_or_predictions) ... ok\ntest_explicit_population_includes_missing_truth_and_predictions (test_evaluation.MetricTests.test_explicit_population_includes_missing_truth_and_predictions) ... ok\ntest_iterable_inputs (test_evaluation.MetricTests.test_iterable_inputs) ... ok\ntest_nonpositive_k_raises_even_for_empty_inputs (test_evaluation.MetricTests.test_nonpositive_k_raises_even_for_empty_inputs) ... ok\ntest_one_relevant_item_at_third_rank (test_evaluation.MetricTests.test_one_relevant_item_at_third_rank) ... ok\ntest_only_first_k_ranks_are_evaluated (test_evaluation.MetricTests.test_only_first_k_ranks_are_evaluated) ... ok\ntest_perfect_lists_use_minimum_of_k_and_truth_size (test_evaluation.MetricTests.test_perfect_lists_use_minimum_of_k_and_truth_size) ... ok\ntest_two_hits_at_first_and_third_rank (test_evaluation.MetricTests.test_two_hits_at_first_and_third_rank) ... ok\ntest_unavailable_relevant_item_remains_in_denominator (test_evaluation.MetricTests.test_unavailable_relevant_item_remains_in_denominator) ... ok\ntest_fit_all_variants_and_preserve_long_user_ids (test_evaluation.PopularityTests.test_fit_all_variants_and_preserve_long_user_ids) ... ok\ntest_fit_rejects_repeated_pair_across_user_groups (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_across_user_groups) ... ok\ntest_fit_rejects_repeated_pair_within_user_group (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_within_user_group) ... ok\ntest_fit_rejects_validation_rows (test_evaluation.PopularityTests.test_fit_rejects_validation_rows) ... ok\ntest_nonpositive_candidate_id_is_rejected (test_evaluation.PopularityTests.test_nonpositive_candidate_id_is_rejected) ... ok\ntest_too_few_distinct_candidates_is_rejected (test_evaluation.PopularityTests.test_too_few_distinct_candidates_is_rejected) ... ok\ntest_top_five_uses_allowed_candidates_and_numeric_ties (test_evaluation.PopularityTests.test_top_five_uses_allowed_candidates_and_numeric_ties) ... ok\ntest_zero_score_fallback_still_has_five_distinct_candidates (test_evaluation.PopularityTests.test_zero_score_fallback_still_has_five_distinct_candidates) ... ok\ntest_accepted_split_parts_are_one_airing_in_final_window (test_final_submission.FinalTrainingWindowTests.test_accepted_split_parts_are_one_airing_in_final_window) ... ok\ntest_distinct_airings_cannot_combine_seconds_to_reach_threshold (test_final_submission.FinalTrainingWindowTests.test_distinct_airings_cannot_combine_seconds_to_reach_threshold) ... ok\ntest_final_end_clips_crossing_views_and_excludes_test_only_item (test_final_submission.FinalTrainingWindowTests.test_final_end_clips_crossing_views_and_excludes_test_only_item) ... ok\ntest_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds (test_final_submission.FinalTrainingWindowTests.test_fragmented_duplicate_views_crossing_old_cutoff_count_unique_seconds) ... ok\ntest_short_parts_of_one_airing_qualify_only_in_full_window (test_final_submission.FinalTrainingWindowTests.test_short_parts_of_one_airing_qualify_only_in_full_window) ... ok\ntest_calendar_candidates_include_overnight_airing_from_previous_file (test_final_submission.SubmissionFileTests.test_calendar_candidates_include_overnight_airing_from_previous_file) ... ok\ntest_invalid_top_five_and_template_row_count_are_rejected (test_final_submission.SubmissionFileTests.test_invalid_top_five_and_template_row_count_are_rejected) ... ok\ntest_popularity_default_rejects_final_and_validation_cannot_be_fit (test_final_submission.SubmissionFileTests.test_popularity_default_rejects_final_and_validation_cannot_be_fit) ... ok\ntest_popularity_explicit_final_period_counts_unique_users (test_final_submission.SubmissionFileTests.test_popularity_explicit_final_period_counts_unique_users) ... ok\ntest_submission_cannot_overwrite_original_template (test_final_submission.SubmissionFileTests.test_submission_cannot_overwrite_original_template) ... ok\ntest_submission_preserves_long_user_ids_order_schema_and_rank (test_final_submission.SubmissionFileTests.test_submission_preserves_long_user_ids_order_schema_and_rank) ... ok\ntest_binary_confidence_preserves_sparse_unseen_and_input (test_matrix_factorization.MatrixFactorizationTests.test_binary_confidence_preserves_sparse_unseen_and_input) ... ok\ntest_invalid_stored_counts_are_rejected (test_matrix_factorization.MatrixFactorizationTests.test_invalid_stored_counts_are_rejected) ... ok\ntest_log_count_confidence_uses_log1p_only_for_observed_entries (test_matrix_factorization.MatrixFactorizationTests.test_log_count_confidence_uses_log1p_only_for_observed_entries) ... ok\ntest_manual_factor_products_and_unknown_nan (test_matrix_factorization.MatrixFactorizationTests.test_manual_factor_products_and_unknown_nan) ... ok\ntest_real_tiny_fit_has_user_item_orientation_and_cpu_settings (test_matrix_factorization.MatrixFactorizationTests.test_real_tiny_fit_has_user_item_orientation_and_cpu_settings) ... ok\ntest_two_seeded_fits_have_equal_scores_and_ranking (test_matrix_factorization.MatrixFactorizationTests.test_two_seeded_fits_have_equal_scores_and_ranking) ... ok\ntest_ambiguous_seconds_do_not_help_reach_threshold (test_prepare_interactions.IntervalPreparationTests.test_ambiguous_seconds_do_not_help_reach_threshold) ... ok\ntest_back_to_back_airings_of_same_item_count_separately (test_prepare_interactions.IntervalPreparationTests.test_back_to_back_airings_of_same_item_count_separately) ... ok\ntest_clock_gap_timestamp_roundtrip_preserves_calendar_labels (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_timestamp_roundtrip_preserves_calendar_labels) ... ok\ntest_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap) ... ok\ntest_cross_period_seconds_cannot_combine_to_pass_threshold (test_prepare_interactions.IntervalPreparationTests.test_cross_period_seconds_cannot_combine_to_pass_threshold) ... ok\ntest_duplicate_and_nested_same_item_airings_do_not_repeat_seconds (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_nested_same_item_airings_do_not_repeat_seconds) ... ok\ntest_duplicate_and_overlapping_views_are_unioned_before_counting (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_overlapping_views_are_unioned_before_counting) ... ok\ntest_fragmented_view_reaches_threshold_within_one_airing (test_prepare_interactions.IntervalPreparationTests.test_fragmented_view_reaches_threshold_within_one_airing) ... ok\ntest_long_view_finds_every_intersection_across_gaps (test_prepare_interactions.IntervalPreparationTests.test_long_view_finds_every_intersection_across_gaps) ... ok\ntest_merge_unsorted_overlapping_and_touching_views (test_prepare_interactions.IntervalPreparationTests.test_merge_unsorted_overlapping_and_touching_views) ... ok\ntest_missing_calendar_hour_is_rejected (test_prepare_interactions.IntervalPreparationTests.test_missing_calendar_hour_is_rejected) ... ok\ntest_nested_conflicting_airings_are_ambiguous_only_in_overlap (test_prepare_interactions.IntervalPreparationTests.test_nested_conflicting_airings_are_ambiguous_only_in_overlap) ... ok\ntest_one_view_can_intersect_multiple_airings (test_prepare_interactions.IntervalPreparationTests.test_one_view_can_intersect_multiple_airings) ... ok\ntest_period_slices_clip_and_exclude_right_boundary (test_prepare_interactions.IntervalPreparationTests.test_period_slices_clip_and_exclude_right_boundary) ... ok\ntest_same_item_on_two_channels_does_not_double_count_time_or_airings (test_prepare_interactions.IntervalPreparationTests.test_same_item_on_two_channels_does_not_double_count_time_or_airings) ... ok\ntest_strict_merge_preserves_adjacent_airings (test_prepare_interactions.IntervalPreparationTests.test_strict_merge_preserves_adjacent_airings) ... ok\ntest_threshold_is_inclusive (test_prepare_interactions.IntervalPreparationTests.test_threshold_is_inclusive) ... ok\ntest_touching_intervals_have_no_overlap (test_prepare_interactions.IntervalPreparationTests.test_touching_intervals_have_no_overlap) ... ok\ntest_zero_and_labelled_overlap_is_not_silently_assigned (test_prepare_interactions.IntervalPreparationTests.test_zero_and_labelled_overlap_is_not_silently_assigned) ... ok\ntest_fusion_uses_ranks_not_raw_score_scale (test_ranking.RankingTests.test_fusion_uses_ranks_not_raw_score_scale) ... ok\ntest_invalid_fallback_rejected (test_ranking.RankingTests.test_invalid_fallback_rejected) ... ok\ntest_numeric_tie_and_fallback_without_repeats (test_ranking.RankingTests.test_numeric_tie_and_fallback_without_repeats) ... ok\ntest_seen_items_are_not_filtered (test_ranking.RankingTests.test_seen_items_are_not_filtered) ... ok\ntest_unknown_user_fusion_is_same_popularity (test_ranking.RankingTests.test_unknown_user_fusion_is_same_popularity) ... ok\n\n----------------------------------------------------------------------\nRan 68 tests in 0.041s\n\nOK",
+    "unit_tests_passed": true
+  },
+  "combined_window_verification": {
+    "additional_pair_examples": [
+      {
+        "tv_show_id": 90079690,
+        "user_id": "15223976299060790014"
+      },
+      {
+        "tv_show_id": 90047926,
+        "user_id": "9058758449153598258"
+      },
+      {
+        "tv_show_id": 90079690,
+        "user_id": "8865936296869937127"
+      },
+      {
+        "tv_show_id": 90080635,
+        "user_id": "11107721812945249891"
+      }
+    ],
+    "additional_pairs_after_unsplit_threshold": 4,
+    "final_user_programme_pairs": 1350451,
+    "lost_pairs": 0,
+    "split_union_user_programme_pairs": 1350447
+  },
+  "final_train": {
+    "absent_channel_seconds": 115801429,
+    "accepted_user_airings": 2938133,
+    "bytes": 92747419,
+    "end_exclusive": "2020-07-27 00:00:00",
+    "fraction_0.10": 1860839,
+    "fraction_0.25": 1366878,
+    "fraction_0.50": 938133,
+    "labelled_overlap_seconds": 4497257030,
+    "matched_labelled_user_airings": 3014157,
+    "outside_schedule_seconds": 390678800,
+    "overlap_seconds_sum_before_threshold": 4497257030,
+    "path": "data/processed/final_interactions.csv",
+    "seconds_120": 2559270,
+    "seconds_30": 2976212,
+    "seconds_300": 2078922,
+    "seconds_60": 2938133,
+    "seconds_60_and_fraction_0.10": 1859653,
+    "sha256": "2b3115d8a904f1fc50d24094da958af297a07569208140f821db7cb92ebd2f69",
+    "source_users": 4914,
+    "source_view_rows_entering_final_window": 5821987,
+    "start_inclusive": "2020-03-09 00:00:00",
+    "total_watch_seconds": 4494921801,
+    "unique_programmes": 4362,
+    "unique_user_channel_view_seconds": 8502989921,
+    "unlabelled_overlap_seconds": 3499252662,
+    "user_programme_pairs": 1350451,
+    "users_with_interactions": 4895,
+    "users_without_interactions": 19,
+    "watch_count": 2936290
+  },
+  "kaggle_private_score": null,
+  "kaggle_submitted": false,
+  "parameters": {
+    "algorithm": "global popularity by distinct final-train users",
+    "interval_rule": "same verified channel and half-open overlap; previous match_user/build_channel_index reused",
+    "period_label": "final_train",
+    "personalisation": false,
+    "ranking": "unique users descending, numeric tv_show_id ascending",
+    "same_zero_id_and_conflict_and_duplicate_policies": true,
+    "test_views_used": false,
+    "threshold_seconds": 60,
+    "time_normalisation": "f(t)=naive_calendar_seconds(t)-3600 for t>=2020-03-29 04:00; identity earlier; timestamps in the missing hour are rejected",
+    "view_rule": "unique seconds per user and canonical airing, on the full unsplit final-train window"
+  },
+  "protected_sha256": {
+    "data/dataset11-30.csv": "8c9e5f058157041e5c33f13e64dc1625a5177cc6d5e434ba18cd8a69afafb53b",
+    "data/export_arh_11-20-final.csv": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c",
+    "data/export_arh_21-30-final.csv": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4",
+    "data/export_arh_31-42-final.csv": "5cc01f4619bd94886d83744f00bbc15cc5fa23384d297244a7dc2207450c4088",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "data/submission.csv": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02",
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/model_comparison.json": "26d5a8060d7efc62c60042de27b88358673529bf426679e1260e621022ecd07a",
+    "results/model_recommendations.csv": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba"
+  },
+  "runtime": {
+    "cpu_seconds": 62.173168000000004,
+    "peak_rss_mib": 341.3125,
+    "python": "3.12.14",
+    "wall_seconds": 62.53036091593094
+  },
+  "schedule_audit": {
+    "history_index": {
+      "ambiguous_seconds": 1800,
+      "ambiguous_segments": 1,
+      "ambiguous_with_zero_seconds": 1800,
+      "canonical_airings": 2148624,
+      "invalid_intervals": 1,
+      "labelled_seconds": 793067880,
+      "merged_overlapping_same_item_rows": 4,
+      "segments": 2148624,
+      "source_rows": 2148629,
+      "unlabelled_seconds": 4031954280
+    },
+    "test_candidate_count_by_source": {
+      "export_arh_11-20-final.csv": 0,
+      "export_arh_21-30-final.csv": 172,
+      "export_arh_31-42-final.csv": 6632
+    },
+    "title_policy": "most frequent nonempty title among test-overlapping airings; lexical tie break; display only"
+  },
+  "submission": {
+    "bytes": 76150,
+    "columns": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "five_distinct_positive_candidate_ids_per_row": true,
+    "no_empty_values_or_extra_columns": true,
+    "path": "submission.csv",
+    "rows": 1260,
+    "sha256": "b93c6be89daedf39cbc33bbf739f670b59d7d3fbe4ad040568832464e42dd854",
+    "user_ids_preserved_as_strings": true,
+    "users_and_order_match_template": true
+  },
+  "test": {
+    "candidate_count": 6649,
+    "end_exclusive": "2020-10-19 00:00:00",
+    "start_inclusive": "2020-07-27 00:00:00"
+  },
+  "top5": [
+    {
+      "final_unique_users": 4618,
+      "title": "ТСН.",
+      "tv_show_id": 2400480
+    },
+    {
+      "final_unique_users": 4441,
+      "title": "Факты.",
+      "tv_show_id": 240081
+    },
+    {
+      "final_unique_users": 4252,
+      "title": "'Мир наизнанку'.",
+      "tv_show_id": 6500479
+    },
+    {
+      "final_unique_users": 4214,
+      "title": "Сегодня.",
+      "tv_show_id": 2400508
+    },
+    {
+      "final_unique_users": 4132,
+      "title": "'Викна-Новости'.",
+      "tv_show_id": 2400467
+    }
+  ],
+  "top5_comparison": {
+    "added": [],
+    "identical_order": false,
+    "removed": []
+  },
+  "validation_top5": [
+    2400480,
+    240081,
+    2400508,
+    6500479,
+    2400467
+  ]
+}

@@ -1,0 +1,71 @@
+method,artifact_method,user_id,rank,tv_show_id,title,category,strict_validation_relevant,strict_gt_size,ap_at_5,ap_fraction,training_source,recommendations_source
+Popularity,saved_popularity,11595812149006555679,1,2400480,ТСН.,Инфо,1,13,0.4533333333333333,34/75,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,11595812149006555679,2,240081,Факты.,Инфо,0,13,0.4533333333333333,34/75,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,11595812149006555679,3,2400508,Сегодня.,Инфо,1,13,0.4533333333333333,34/75,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,11595812149006555679,4,6500479,'Мир наизнанку'.,Познавательное,0,13,0.4533333333333333,34/75,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,11595812149006555679,5,2400467,'Викна-Новости'.,Инфо,1,13,0.4533333333333333,34/75,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Repeat,repeat_1,11595812149006555679,1,2400480,ТСН.,Инфо,1,13,0.3,3/10,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,11595812149006555679,2,240081,Факты.,Инфо,0,13,0.3,3/10,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,11595812149006555679,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,0,13,0.3,3/10,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,11595812149006555679,4,2400508,Сегодня.,Инфо,1,13,0.3,3/10,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,11595812149006555679,5,5800509,Реальная мистика.,Развлечения,0,13,0.3,3/10,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,11595812149006555679,1,2400480,ТСН.,Инфо,1,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,11595812149006555679,2,240081,Факты.,Инфо,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,11595812149006555679,3,2400508,Сегодня.,Инфо,1,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,11595812149006555679,4,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,11595812149006555679,5,5800509,Реальная мистика.,Развлечения,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/strict_recommendations.csv
+ALS,als50_2,11595812149006555679,1,10003014,"Т/с 'Отдел 44', 19 с.",Сериалы,0,13,0.1,1/10,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,11595812149006555679,2,10003102,"Т/с 'Опер по вызову', 2 сезон, 12 с.",Сериалы,1,13,0.1,1/10,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,11595812149006555679,3,10003178,"Т/с 'Агенты справедливости', 3 сезон.",Сериалы,0,13,0.1,1/10,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,11595812149006555679,4,200432,Дизель-шоу. Дайджест.,Развлечения,0,13,0.1,1/10,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,11595812149006555679,5,1000381,"Т/с 'CSI: Место преступления', 11 сезон, 1 с.",Сериалы,0,13,0.1,1/10,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,11595812149006555679,1,2400508,Сегодня.,Инфо,1,13,0.2,1/5,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,11595812149006555679,2,5900256,Утро с Украиной.,Инфо,0,13,0.2,1/5,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,11595812149006555679,3,5900276,'Центральное телевидение' с Вадимом Такменевым.,Инфо,0,13,0.2,1/5,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,11595812149006555679,4,5900275,'Утро России'.,Инфо,0,13,0.2,1/5,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,11595812149006555679,5,5900484,Премьера. 'С бодрым утром!'.,Инфо,0,13,0.2,1/5,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,11595812149006555679,1,2400480,ТСН.,Инфо,1,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,11595812149006555679,2,240081,Факты.,Инфо,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,11595812149006555679,3,2400508,Сегодня.,Инфо,1,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,11595812149006555679,4,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,11595812149006555679,5,5800509,Реальная мистика.,Развлечения,0,13,0.3333333333333333,1/3,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+Popularity,saved_popularity,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Popularity,saved_popularity,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/train_interactions.csv (60 seconds),results/strict_recommendations.csv
+Repeat,repeat_1,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+Repeat,repeat_1,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+PPR,ppr_2,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/strict_recommendations.csv
+ALS,als50_2,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+ALS,als50_2,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+CBF,content50,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+V3,v3_control,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/session_train_50.csv,results/ppr_complement_recommendations.csv
+HGB,D,11595812149006555679,1,2400508,Сегодня.,Инфо,1,13,0.3333333333333333,1/3,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,11595812149006555679,2,240081,Факты.,Инфо,0,13,0.3333333333333333,1/3,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,11595812149006555679,3,2400480,ТСН.,Инфо,1,13,0.3333333333333333,1/3,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,11595812149006555679,4,5900256,Утро с Украиной.,Инфо,0,13,0.3333333333333333,1/3,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,11595812149006555679,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,0,13,0.3333333333333333,1/3,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,8150816946177670084,1,2400480,ТСН.,Инфо,0,1,0.5,1/2,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,8150816946177670084,2,240081,Факты.,Инфо,1,1,0.5,1/2,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,8150816946177670084,3,2400508,Сегодня.,Инфо,0,1,0.5,1/2,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,8150816946177670084,4,6500479,'Мир наизнанку'.,Познавательное,0,1,0.5,1/2,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv
+HGB,D,8150816946177670084,5,2400467,'Викна-Новости'.,Инфо,0,1,0.5,1/2,data/processed/hgb/early.npz (features cutoff 2020-04-13; targets 2020-04-13..2020-05-18),results/hgb_recommendations.csv

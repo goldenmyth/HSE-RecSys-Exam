@@ -1,0 +1,1301 @@
+{
+  "baseline_audit": {
+    "ap_user_counts": {
+      "one": 734,
+      "partial": 480,
+      "zero_empty": 14,
+      "zero_nonempty": 32
+    },
+    "ground_truth_source": "validation_interactions.csv; SHA-256 and period/date checks passed; never replaced by train",
+    "manual_examples": {
+      "one": {
+        "ap": 1.0,
+        "ap_fraction": "1",
+        "denominator": 5,
+        "gt_size": 171,
+        "hits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "precision_sum": "5",
+        "user_id": "8377619604347126107"
+      },
+      "partial": {
+        "ap": 0.55,
+        "ap_fraction": "11/20",
+        "denominator": 5,
+        "gt_size": 19,
+        "hits": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "precision_sum": "11/4",
+        "user_id": "8381667675275833309"
+      },
+      "zero_empty": {
+        "ap": 0.0,
+        "ap_fraction": "0",
+        "denominator": 0,
+        "gt_size": 0,
+        "hits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision_sum": "0",
+        "user_id": "9584093283580667317"
+      },
+      "zero_nonempty": {
+        "ap": 0.0,
+        "ap_fraction": "0",
+        "denominator": 5,
+        "gt_size": 87,
+        "hits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision_sum": "0",
+        "user_id": "8862658586351001207"
+      }
+    },
+    "map_at_5": 0.7947830687830688,
+    "map_exact_fraction": "75107/94500",
+    "passed": true,
+    "popularity_fit_seconds": 0.0015752909239381552,
+    "popularity_rank_seconds": 0.008290208992548287,
+    "top5": [
+      2400480,
+      240081,
+      2400508,
+      6500479,
+      2400467
+    ],
+    "top5_hit_count_distribution": {
+      "0": 46,
+      "1": 43,
+      "2": 66,
+      "3": 119,
+      "4": 252,
+      "5": 734
+    },
+    "top5_train_unique_users": [
+      4482,
+      4243,
+      3961,
+      3944,
+      3809
+    ],
+    "user_id_length_distribution": {
+      "17": 8,
+      "18": 64,
+      "19": 578,
+      "20": 610
+    },
+    "user_ids_are_strings": true,
+    "users": 1260,
+    "validation_hit_users": [
+      1138,
+      1078,
+      974,
+      1035,
+      985
+    ]
+  },
+  "best_independent_models": {
+    "als": "als_2",
+    "content": "content_3"
+  },
+  "candidate_coverage": {
+    "candidate_count": 6384,
+    "with_train_factors": 2206,
+    "with_train_metadata": 3993
+  },
+  "checks": {
+    "all_top5_valid_unique_and_complete": true,
+    "best_independent_models_refit_same_top5": true,
+    "full_relevance_retained": true,
+    "protected_inputs_unchanged": true,
+    "same_cold_start_fallback": true,
+    "train_only_fit_and_metadata": true,
+    "unit_test_output": "test_batch_boundary_and_invalid_configuration (test_content_based.ContentBasedTests.test_batch_boundary_and_invalid_configuration) ... ok\ntest_binary_and_log_profiles_match_manual_cosines_and_unknown_users (test_content_based.ContentBasedTests.test_binary_and_log_profiles_match_manual_cosines_and_unknown_users) ... ok\ntest_calendar_train_filter_excludes_future_metadata_and_boundary_touch (test_content_based.ContentBasedTests.test_calendar_train_filter_excludes_future_metadata_and_boundary_touch) ... ok\ntest_extended_feature_set_and_missing_observed_metadata (test_content_based.ContentBasedTests.test_extended_feature_set_and_missing_observed_metadata) ... ok\ntest_metadata_union_handles_genre_order_names_and_initial_year (test_content_based.ContentBasedTests.test_metadata_union_handles_genre_order_names_and_initial_year) ... ok\ntest_tfidf_uses_train_item_documents_and_scores_unobserved_known_item (test_content_based.ContentBasedTests.test_tfidf_uses_train_item_documents_and_scores_unobserved_known_item) ... ok\ntest_duplicate_population_user_is_rejected (test_evaluation.MetricTests.test_duplicate_population_user_is_rejected) ... ok\ntest_duplicate_prediction_occupies_rank_without_extra_hit (test_evaluation.MetricTests.test_duplicate_prediction_occupies_rank_without_extra_hit) ... ok\ntest_duplicate_truth_does_not_inflate_denominator (test_evaluation.MetricTests.test_duplicate_truth_does_not_inflate_denominator) ... ok\ntest_empty_population_is_zero (test_evaluation.MetricTests.test_empty_population_is_zero) ... ok\ntest_empty_truth_or_predictions (test_evaluation.MetricTests.test_empty_truth_or_predictions) ... ok\ntest_explicit_population_includes_missing_truth_and_predictions (test_evaluation.MetricTests.test_explicit_population_includes_missing_truth_and_predictions) ... ok\ntest_iterable_inputs (test_evaluation.MetricTests.test_iterable_inputs) ... ok\ntest_nonpositive_k_raises_even_for_empty_inputs (test_evaluation.MetricTests.test_nonpositive_k_raises_even_for_empty_inputs) ... ok\ntest_one_relevant_item_at_third_rank (test_evaluation.MetricTests.test_one_relevant_item_at_third_rank) ... ok\ntest_only_first_k_ranks_are_evaluated (test_evaluation.MetricTests.test_only_first_k_ranks_are_evaluated) ... ok\ntest_perfect_lists_use_minimum_of_k_and_truth_size (test_evaluation.MetricTests.test_perfect_lists_use_minimum_of_k_and_truth_size) ... ok\ntest_two_hits_at_first_and_third_rank (test_evaluation.MetricTests.test_two_hits_at_first_and_third_rank) ... ok\ntest_unavailable_relevant_item_remains_in_denominator (test_evaluation.MetricTests.test_unavailable_relevant_item_remains_in_denominator) ... ok\ntest_fit_all_variants_and_preserve_long_user_ids (test_evaluation.PopularityTests.test_fit_all_variants_and_preserve_long_user_ids) ... ok\ntest_fit_rejects_repeated_pair_across_user_groups (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_across_user_groups) ... ok\ntest_fit_rejects_repeated_pair_within_user_group (test_evaluation.PopularityTests.test_fit_rejects_repeated_pair_within_user_group) ... ok\ntest_fit_rejects_validation_rows (test_evaluation.PopularityTests.test_fit_rejects_validation_rows) ... ok\ntest_nonpositive_candidate_id_is_rejected (test_evaluation.PopularityTests.test_nonpositive_candidate_id_is_rejected) ... ok\ntest_too_few_distinct_candidates_is_rejected (test_evaluation.PopularityTests.test_too_few_distinct_candidates_is_rejected) ... ok\ntest_top_five_uses_allowed_candidates_and_numeric_ties (test_evaluation.PopularityTests.test_top_five_uses_allowed_candidates_and_numeric_ties) ... ok\ntest_zero_score_fallback_still_has_five_distinct_candidates (test_evaluation.PopularityTests.test_zero_score_fallback_still_has_five_distinct_candidates) ... ok\ntest_binary_confidence_preserves_sparse_unseen_and_input (test_matrix_factorization.MatrixFactorizationTests.test_binary_confidence_preserves_sparse_unseen_and_input) ... ok\ntest_invalid_stored_counts_are_rejected (test_matrix_factorization.MatrixFactorizationTests.test_invalid_stored_counts_are_rejected) ... ok\ntest_log_count_confidence_uses_log1p_only_for_observed_entries (test_matrix_factorization.MatrixFactorizationTests.test_log_count_confidence_uses_log1p_only_for_observed_entries) ... ok\ntest_manual_factor_products_and_unknown_nan (test_matrix_factorization.MatrixFactorizationTests.test_manual_factor_products_and_unknown_nan) ... ok\ntest_real_tiny_fit_has_user_item_orientation_and_cpu_settings (test_matrix_factorization.MatrixFactorizationTests.test_real_tiny_fit_has_user_item_orientation_and_cpu_settings) ... ok\ntest_two_seeded_fits_have_equal_scores_and_ranking (test_matrix_factorization.MatrixFactorizationTests.test_two_seeded_fits_have_equal_scores_and_ranking) ... ok\ntest_ambiguous_seconds_do_not_help_reach_threshold (test_prepare_interactions.IntervalPreparationTests.test_ambiguous_seconds_do_not_help_reach_threshold) ... ok\ntest_back_to_back_airings_of_same_item_count_separately (test_prepare_interactions.IntervalPreparationTests.test_back_to_back_airings_of_same_item_count_separately) ... ok\ntest_clock_gap_timestamp_roundtrip_preserves_calendar_labels (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_timestamp_roundtrip_preserves_calendar_labels) ... ok\ntest_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap (test_prepare_interactions.IntervalPreparationTests.test_clock_gap_uses_elapsed_seconds_for_view_and_airing_overlap) ... ok\ntest_cross_period_seconds_cannot_combine_to_pass_threshold (test_prepare_interactions.IntervalPreparationTests.test_cross_period_seconds_cannot_combine_to_pass_threshold) ... ok\ntest_duplicate_and_nested_same_item_airings_do_not_repeat_seconds (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_nested_same_item_airings_do_not_repeat_seconds) ... ok\ntest_duplicate_and_overlapping_views_are_unioned_before_counting (test_prepare_interactions.IntervalPreparationTests.test_duplicate_and_overlapping_views_are_unioned_before_counting) ... ok\ntest_fragmented_view_reaches_threshold_within_one_airing (test_prepare_interactions.IntervalPreparationTests.test_fragmented_view_reaches_threshold_within_one_airing) ... ok\ntest_long_view_finds_every_intersection_across_gaps (test_prepare_interactions.IntervalPreparationTests.test_long_view_finds_every_intersection_across_gaps) ... ok\ntest_merge_unsorted_overlapping_and_touching_views (test_prepare_interactions.IntervalPreparationTests.test_merge_unsorted_overlapping_and_touching_views) ... ok\ntest_missing_calendar_hour_is_rejected (test_prepare_interactions.IntervalPreparationTests.test_missing_calendar_hour_is_rejected) ... ok\ntest_nested_conflicting_airings_are_ambiguous_only_in_overlap (test_prepare_interactions.IntervalPreparationTests.test_nested_conflicting_airings_are_ambiguous_only_in_overlap) ... ok\ntest_one_view_can_intersect_multiple_airings (test_prepare_interactions.IntervalPreparationTests.test_one_view_can_intersect_multiple_airings) ... ok\ntest_period_slices_clip_and_exclude_right_boundary (test_prepare_interactions.IntervalPreparationTests.test_period_slices_clip_and_exclude_right_boundary) ... ok\ntest_same_item_on_two_channels_does_not_double_count_time_or_airings (test_prepare_interactions.IntervalPreparationTests.test_same_item_on_two_channels_does_not_double_count_time_or_airings) ... ok\ntest_strict_merge_preserves_adjacent_airings (test_prepare_interactions.IntervalPreparationTests.test_strict_merge_preserves_adjacent_airings) ... ok\ntest_threshold_is_inclusive (test_prepare_interactions.IntervalPreparationTests.test_threshold_is_inclusive) ... ok\ntest_touching_intervals_have_no_overlap (test_prepare_interactions.IntervalPreparationTests.test_touching_intervals_have_no_overlap) ... ok\ntest_zero_and_labelled_overlap_is_not_silently_assigned (test_prepare_interactions.IntervalPreparationTests.test_zero_and_labelled_overlap_is_not_silently_assigned) ... ok\ntest_fusion_uses_ranks_not_raw_score_scale (test_ranking.RankingTests.test_fusion_uses_ranks_not_raw_score_scale) ... ok\ntest_invalid_fallback_rejected (test_ranking.RankingTests.test_invalid_fallback_rejected) ... ok\ntest_numeric_tie_and_fallback_without_repeats (test_ranking.RankingTests.test_numeric_tie_and_fallback_without_repeats) ... ok\ntest_seen_items_are_not_filtered (test_ranking.RankingTests.test_seen_items_are_not_filtered) ... ok\ntest_unknown_user_fusion_is_same_popularity (test_ranking.RankingTests.test_unknown_user_fusion_is_same_popularity) ... ok\n\n----------------------------------------------------------------------\nRan 57 tests in 0.031s\n\nOK",
+    "unit_tests_passed": true,
+    "validation_only_used_for_evaluation_and_selection": true
+  },
+  "content_metadata_audit": {
+    "aggregation": "set union per programme ID; no frequency weight from schedule repetitions",
+    "basic_item_token_pairs": 16588,
+    "basic_items_without_features": 0,
+    "basic_unique_tokens": 71,
+    "calendar_train_end_exclusive": "2020-05-18 00:00:00",
+    "calendar_train_start_inclusive": "2020-03-09 00:00:00",
+    "excluded_nonpositive_id_or_duration_rows": 958622,
+    "excluded_outside_train_rows": 297,
+    "extended_item_token_pairs": 45301,
+    "extended_items_without_features": 0,
+    "extended_unique_tokens": 11885,
+    "included_rows_without_valid_initial_year": 643,
+    "included_train_airing_rows": 115316,
+    "items": 5842,
+    "metadata_scope": "positive-duration nonzero-ID airings intersecting calendar train only",
+    "normalisation": "casefold and collapsed whitespace; no transliteration or title matching",
+    "people_delimiters": [
+      ",",
+      ";",
+      " / "
+    ],
+    "source_rows": 1074235,
+    "title_used": false,
+    "year_policy": "observed initial year in [1800, 2020]; decade only; no inferred end year"
+  },
+  "environment": {
+    "als_threads": 1,
+    "blas_threads": 1,
+    "dependencies": {
+      "implicit": "0.7.3",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "threadpoolctl": "3.7.0"
+    },
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python": "3.12.14",
+    "seed": 42,
+    "threadpools": []
+  },
+  "inputs_sha256": {
+    "data/dataset11-30.csv": "8c9e5f058157041e5c33f13e64dc1625a5177cc6d5e434ba18cd8a69afafb53b",
+    "data/export_arh_11-20-final.csv": "7888aa00c20db3db23f95000c721eccf2878e5f58bf5383bb25b99f078b1033c",
+    "data/export_arh_21-30-final.csv": "bdc9fa9850239aaed608bece9cdb200011e690300470fe85b980457d8c0cb2d4",
+    "data/processed/train_interactions.csv": "9399e769631a7facd8039f3e27781a18aa06ed0180a9e8663b37cf05be666af2",
+    "data/processed/validation_interactions.csv": "7699940139f2def96c147b8b2b088fcbdb3d5a96db6733fda0637f4db18449e5",
+    "data/submission.csv": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02"
+  },
+  "limitations": [
+    "All selection uses one hold-out; improvements are not independent test estimates.",
+    "MF cannot score items without train factors; CBF cannot score items without train metadata.",
+    "Future metadata and future viewing are excluded from fitting; no item attributes are invented.",
+    "Fallback fractions count users requiring supplemental popularity, not normal popularity participation in fusion.",
+    "Thread/seed reproducibility is checked in this pinned environment, not promised across BLAS implementations."
+  ],
+  "methods": {
+    "als_1": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.2075144813059505,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.42273224043715846,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4369364508393285,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.32102380952380954
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.2075144813059505,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.49589743589743585,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4393068113321278,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.32463081861958265
+        }
+      },
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "binary"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 1672.216507936508,
+        "mean_validation_hits_at_5": 2.100793650793651,
+        "recommended_pairs_seen_in_train_fraction": 0.6992063492063492
+      },
+      "recommendation_candidate_fraction": 0.11654135338345864,
+      "timing": {
+        "recommend_seconds": 0.1135542910778895,
+        "train_seconds": 1.4398688749643043
+      },
+      "unique_recommended_programmes": 744,
+      "versus_popularity": {
+        "users_with_equal_ap": 174,
+        "users_with_higher_ap": 104,
+        "users_with_lower_ap": 982
+      }
+    },
+    "als_2": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.21997367035281729,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.4393989071038252,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.4660131894484413,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.3409206349206349
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.21997367035281729,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.5154487179487179,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.46854128993369504,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.34475120385232744
+        }
+      },
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 1761.5733333333333,
+        "mean_validation_hits_at_5": 2.2182539682539684,
+        "recommended_pairs_seen_in_train_fraction": 0.7323809523809524
+      },
+      "recommendation_candidate_fraction": 0.10025062656641603,
+      "timing": {
+        "recommend_seconds": 0.11311841697897762,
+        "train_seconds": 1.4591011661104858
+      },
+      "unique_recommended_programmes": 640,
+      "versus_popularity": {
+        "users_with_equal_ap": 181,
+        "users_with_higher_ap": 117,
+        "users_with_lower_ap": 962
+      }
+    },
+    "als_3": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.07796208530805687,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.346775956284153,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.14146282973621105,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.12187830687830688
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.07796208530805687,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.4067948717948718,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.14223025919228452,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.12324772605671482
+        }
+      },
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 32,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 794.5469841269842,
+        "mean_validation_hits_at_5": 0.9682539682539683,
+        "recommended_pairs_seen_in_train_fraction": 0.3547619047619048
+      },
+      "recommendation_candidate_fraction": 0.17293233082706766,
+      "timing": {
+        "recommend_seconds": 0.11398387502413243,
+        "train_seconds": 1.4428007090464234
+      },
+      "unique_recommended_programmes": 1104,
+      "versus_popularity": {
+        "users_with_equal_ap": 81,
+        "users_with_higher_ap": 42,
+        "users_with_lower_ap": 1137
+      }
+    },
+    "als_4": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.13635071090047393,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.46316939890710385,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.32122901678657073,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.23617195767195767
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.13635071090047393,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.5433333333333333,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.3229716696805304,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.23882557517388978
+        }
+      },
+      "config": {
+        "confidence_alpha": 10,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 1366.8011111111111,
+        "mean_validation_hits_at_5": 1.6761904761904762,
+        "recommended_pairs_seen_in_train_fraction": 0.6433333333333333
+      },
+      "recommendation_candidate_fraction": 0.11654135338345864,
+      "timing": {
+        "recommend_seconds": 0.11526749993208796,
+        "train_seconds": 2.5323466659756377
+      },
+      "unique_recommended_programmes": 744,
+      "versus_popularity": {
+        "users_with_equal_ap": 113,
+        "users_with_higher_ap": 79,
+        "users_with_lower_ap": 1068
+      }
+    },
+    "als_5": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.06570300157977883,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.3477595628415301,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.0969484412470024,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.09612433862433863
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.06570300157977883,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.40794871794871795,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.09747438215792646,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.0972043873729267
+        }
+      },
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 0.1,
+        "weighting": "log_count"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 674.7996825396825,
+        "mean_validation_hits_at_5": 0.7690476190476191,
+        "recommended_pairs_seen_in_train_fraction": 0.21158730158730157
+      },
+      "recommendation_candidate_fraction": 0.17199248120300753,
+      "timing": {
+        "recommend_seconds": 0.11788908299058676,
+        "train_seconds": 2.518156416947022
+      },
+      "unique_recommended_programmes": 1098,
+      "versus_popularity": {
+        "users_with_equal_ap": 74,
+        "users_with_higher_ap": 30,
+        "users_with_lower_ap": 1156
+      }
+    },
+    "als_6": {
+      "audit": {
+        "confidence_formula": "c=1+confidence_alpha*f(watch_count); library alpha=1",
+        "known_candidate_count": 2206,
+        "seed": 42,
+        "threads": 1
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.06957872564507636,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.36158469945355187,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.09702038369304557,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.09877248677248678
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.06957872564507636,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.42416666666666664,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.09754671488848704,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.09988228999464954
+        }
+      },
+      "config": {
+        "confidence_alpha": 40,
+        "factors": 64,
+        "iterations": 20,
+        "regularization": 1.0,
+        "weighting": "log_count"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "als",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 675.3107936507937,
+        "mean_validation_hits_at_5": 0.780952380952381,
+        "recommended_pairs_seen_in_train_fraction": 0.21158730158730157
+      },
+      "recommendation_candidate_fraction": 0.17763157894736842,
+      "timing": {
+        "recommend_seconds": 0.11453675001394004,
+        "train_seconds": 2.5930136250099167
+      },
+      "unique_recommended_programmes": 1134,
+      "versus_popularity": {
+        "users_with_equal_ap": 71,
+        "users_with_higher_ap": 35,
+        "users_with_lower_ap": 1154
+      }
+    },
+    "content_1": {
+      "audit": {
+        "feature_set": "basic",
+        "features": 71,
+        "history_weighting": "binary",
+        "idf": "log((1 + number_of_train_metadata_items)/(1 + item_document_frequency)) + 1",
+        "item_feature_nnz": 16588,
+        "items_without_features": 0,
+        "metadata_items": 5842,
+        "metadata_scope": "provided calendar-train metadata only; no future attributes",
+        "normalisation": "L2 item vectors and L2 weighted-sum user profiles",
+        "profile_feature_nnz": 197471,
+        "tf": "binary presence per item, not schedule airing frequency",
+        "train_observed_items": 2972,
+        "train_observed_items_without_metadata": 0,
+        "train_users": 4841,
+        "users_without_profile": 0
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.04568193786203265,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.06158469945355192,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.023393285371702637,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.03975396825396826
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.04568193786203265,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.07224358974358974,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.023520192887281494,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.04020064205457464
+        }
+      },
+      "config": {
+        "feature_set": "basic",
+        "history_weighting": "binary"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "content",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 199.95634920634922,
+        "mean_validation_hits_at_5": 0.4301587301587302,
+        "recommended_pairs_seen_in_train_fraction": 0.06126984126984127
+      },
+      "recommendation_candidate_fraction": 0.03712406015037594,
+      "timing": {
+        "recommend_seconds": 0.16740862501319498,
+        "train_seconds": 0.03684154199436307
+      },
+      "unique_recommended_programmes": 237,
+      "versus_popularity": {
+        "users_with_equal_ap": 48,
+        "users_with_higher_ap": 15,
+        "users_with_lower_ap": 1197
+      }
+    },
+    "content_2": {
+      "audit": {
+        "feature_set": "extended",
+        "features": 11885,
+        "history_weighting": "binary",
+        "idf": "log((1 + number_of_train_metadata_items)/(1 + item_document_frequency)) + 1",
+        "item_feature_nnz": 45301,
+        "items_without_features": 0,
+        "metadata_items": 5842,
+        "metadata_scope": "provided calendar-train metadata only; no future attributes",
+        "normalisation": "L2 item vectors and L2 weighted-sum user profiles",
+        "profile_feature_nnz": 2688972,
+        "tf": "binary presence per item, not schedule airing frequency",
+        "train_observed_items": 2972,
+        "train_observed_items_without_metadata": 0,
+        "train_users": 4841,
+        "users_without_profile": 0
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.16533438651922064,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.14387978142076505,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.14883093525179855,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.1592010582010582
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.16533438651922064,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.1687820512820513,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.14963833634719712,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.16098983413590154
+        }
+      },
+      "config": {
+        "feature_set": "extended",
+        "history_weighting": "binary"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "content",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 1378.579365079365,
+        "mean_validation_hits_at_5": 1.269047619047619,
+        "recommended_pairs_seen_in_train_fraction": 0.5085714285714286
+      },
+      "recommendation_candidate_fraction": 0.03790726817042606,
+      "timing": {
+        "recommend_seconds": 0.28308079205453396,
+        "train_seconds": 0.15395925007760525
+      },
+      "unique_recommended_programmes": 242,
+      "versus_popularity": {
+        "users_with_equal_ap": 51,
+        "users_with_higher_ap": 29,
+        "users_with_lower_ap": 1180
+      }
+    },
+    "content_3": {
+      "audit": {
+        "feature_set": "extended",
+        "features": 11885,
+        "history_weighting": "log1p",
+        "idf": "log((1 + number_of_train_metadata_items)/(1 + item_document_frequency)) + 1",
+        "item_feature_nnz": 45301,
+        "items_without_features": 0,
+        "metadata_items": 5842,
+        "metadata_scope": "provided calendar-train metadata only; no future attributes",
+        "normalisation": "L2 item vectors and L2 weighted-sum user profiles",
+        "profile_feature_nnz": 2688972,
+        "tf": "binary presence per item, not schedule airing frequency",
+        "train_observed_items": 2972,
+        "train_observed_items_without_metadata": 0,
+        "train_users": 4841,
+        "users_without_profile": 0
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.275724065297525,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.20912568306010929,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.22461630695443646,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.25125925925925924
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.275724065297525,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.24532051282051281,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.22583484026522002,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.2540823970037453
+        }
+      },
+      "config": {
+        "feature_set": "extended",
+        "history_weighting": "log1p"
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "content",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 1730.61,
+        "mean_validation_hits_at_5": 1.8452380952380953,
+        "recommended_pairs_seen_in_train_fraction": 0.5507936507936508
+      },
+      "recommendation_candidate_fraction": 0.03320802005012531,
+      "timing": {
+        "recommend_seconds": 0.26843066699802876,
+        "train_seconds": 0.14922212495002896
+      },
+      "unique_recommended_programmes": 212,
+      "versus_popularity": {
+        "users_with_equal_ap": 49,
+        "users_with_higher_ap": 50,
+        "users_with_lower_ap": 1161
+      }
+    },
+    "popularity": {
+      "audit": {},
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.9008056872037915,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.45180327868852455,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.7180695443645084,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.7947830687830687
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.9008056872037915,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.53,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.721965039180229,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.803713215623328
+        }
+      },
+      "config": {
+        "variant": "unique_users"
+      },
+      "fallback_user_fraction": 0.0,
+      "fallback_users": 0,
+      "family": "popularity",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 4087.8,
+        "mean_validation_hits_at_5": 4.134920634920635,
+        "recommended_pairs_seen_in_train_fraction": 0.9001587301587302
+      },
+      "recommendation_candidate_fraction": 0.0007832080200501253,
+      "timing": {
+        "independent_audit_seconds": 0.02032379200682044,
+        "recommend_seconds": 0.008337293053045869,
+        "train_seconds": 0.0015752909239381552
+      },
+      "unique_recommended_programmes": 5,
+      "versus_popularity": {
+        "users_with_equal_ap": 1260,
+        "users_with_higher_ap": 0,
+        "users_with_lower_ap": 0
+      }
+    },
+    "rrf_0.2": {
+      "audit": {
+        "cold_user_has_identical_popularity_order": true,
+        "scores_are_reciprocal_ranks": true
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.9001843075302792,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.45180327868852455,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.7178657074340528,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.7943809523809523
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.9001843075302792,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.53,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.7217600964436407,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.80330658105939
+        }
+      },
+      "config": {
+        "personal_method": "als_2",
+        "personal_weight": 0.2,
+        "popularity_weight": 0.8,
+        "rank_offset": 10
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "rank_fusion",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 4086.5115873015875,
+        "mean_validation_hits_at_5": 4.131746031746032,
+        "recommended_pairs_seen_in_train_fraction": 0.8998412698412699
+      },
+      "recommendation_candidate_fraction": 0.0009398496240601503,
+      "timing": {
+        "additional_train_seconds": 0.0,
+        "includes_personal_inference": true,
+        "recommend_seconds": 0.292240250040777,
+        "train_seconds": 1.4591011661104858
+      },
+      "unique_recommended_programmes": 6,
+      "versus_popularity": {
+        "users_with_equal_ap": 1240,
+        "users_with_higher_ap": 11,
+        "users_with_lower_ap": 9
+      }
+    },
+    "rrf_0.5": {
+      "audit": {
+        "cold_user_has_identical_popularity_order": true,
+        "scores_are_reciprocal_ranks": true
+      },
+      "cohorts": {
+        "submission_all": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.441,
+              "users": 10,
+              "users_without_validation_truth": 2
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.7267351237493417,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.4462295081967213,
+              "users": 61,
+              "users_without_validation_truth": 9
+            },
+            "medium_51_200": {
+              "map_at_5": 0.702847721822542,
+              "users": 556,
+              "users_without_validation_truth": 3
+            }
+          },
+          "map_at_5": 0.7003465608465609
+        },
+        "submission_nonempty_validation": {
+          "by_train_activity": {
+            "cold_0": {
+              "map_at_5": 0.55125,
+              "users": 8,
+              "users_without_validation_truth": 0
+            },
+            "heavy_201_plus": {
+              "map_at_5": 0.7267351237493417,
+              "users": 633,
+              "users_without_validation_truth": 0
+            },
+            "light_1_50": {
+              "map_at_5": 0.5234615384615384,
+              "users": 52,
+              "users_without_validation_truth": 0
+            },
+            "medium_51_200": {
+              "map_at_5": 0.70666063893912,
+              "users": 553,
+              "users_without_validation_truth": 0
+            }
+          },
+          "map_at_5": 0.7082156233279829
+        }
+      },
+      "config": {
+        "personal_method": "als_2",
+        "personal_weight": 0.5,
+        "popularity_weight": 0.5,
+        "rank_offset": 10
+      },
+      "fallback_user_fraction": 0.007936507936507936,
+      "fallback_users": 10,
+      "family": "rank_fusion",
+      "ranking_diagnostics": {
+        "mean_train_unique_user_popularity_of_recommended_items": 3601.784761904762,
+        "mean_validation_hits_at_5": 3.7515873015873016,
+        "recommended_pairs_seen_in_train_fraction": 0.8744444444444445
+      },
+      "recommendation_candidate_fraction": 0.0599937343358396,
+      "timing": {
+        "additional_train_seconds": 0.0,
+        "includes_personal_inference": true,
+        "recommend_seconds": 0.30437129200436175,
+        "train_seconds": 1.4591011661104858
+      },
+      "unique_recommended_programmes": 383,
+      "versus_popularity": {
+        "users_with_equal_ap": 661,
+        "users_with_higher_ap": 128,
+        "users_with_lower_ap": 471
+      }
+    }
+  },
+  "protected_sha256": {
+    "results/data_preparation.json": "a2e549ba0f86433bc1c73189d619b6aa09425c4cbe73919ce65f05be4b670e01",
+    "results/popularity_baseline.json": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+    "scripts/prepare_interactions.py": "f20506f54ec997b9715a50460b6bcdb7033703f3d893364bdf56e609152e74ba",
+    "src/metrics.py": "877a107266c06239dd76da5e7af2986cef0e92cd4327a37a19b7cb7ead9d5604",
+    "src/popularity.py": "350a6b3a800585366a9a8e60cb951002bb81a0e47ef09fa2a3dbfafd80e75a18"
+  },
+  "protocol": {
+    "activity_bands": [
+      "cold_0",
+      "light_1_50",
+      "medium_51_200",
+      "heavy_201_plus"
+    ],
+    "activity_measure": "number of unique train programmes",
+    "ap_denominator": "min(5, number of unique full validation-relevant programmes)",
+    "candidate_count": 6384,
+    "candidate_definition": "positive-duration nonzero programme airings overlapping [validation_start, validation_end); union of first two schedule files",
+    "cold_start_definition": "no train interactions",
+    "duplicate_prediction_policy": "occupies its original rank; only first occurrence can hit",
+    "empty_evaluation_population_map": 0.0,
+    "empty_ground_truth_ap": 0.0,
+    "fallback_variant": "unique_users",
+    "ground_truth": "all unique validation interaction IDs; never filtered to candidates or train items",
+    "id": "sweet-tv-offline-v1",
+    "k": 5,
+    "metric": "MAP@5",
+    "primary_cohort": "submission_all",
+    "required_output": "exactly five distinct positive candidate IDs per user",
+    "score_tie_break": "numeric tv_show_id ascending",
+    "seen_programmes_allowed": true,
+    "selection": "highest submission_all MAP@5; variant-order tie break",
+    "unseen_train_item_popularity": 0,
+    "validation_end_exclusive": "2020-07-27 00:00:00",
+    "validation_start_inclusive": "2020-05-18 00:00:00",
+    "variant_order": [
+      "unique_users",
+      "watch_count",
+      "watch_seconds"
+    ]
+  },
+  "protocol_id": "sweet-tv-offline-v1",
+  "protocol_sha256": "4c35934b97096da5163554a2ebcc7f08dd740b5f302e6168b2c78f6418eb4d59",
+  "recommendations": {
+    "path": "results/model_recommendations.csv",
+    "rows": 15120,
+    "sha256": "f827c5ca118e17956fe0eda20eec1b774dce7e796a37d2c9a24eff1183a0922e"
+  },
+  "runtime": {
+    "cpu_seconds": 22.406749,
+    "data_load_seconds": 1.6005954159190878,
+    "peak_rss_mib": 547.25,
+    "wall_seconds": 22.70430658303667
+  },
+  "selected_strategy": "popularity",
+  "training_matrix": {
+    "density": 0.05854038644229708,
+    "nnz": 842247,
+    "shape": [
+      4841,
+      2972
+    ]
+  }
+}
